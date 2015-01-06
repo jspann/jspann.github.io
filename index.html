@@ -1,0 +1,352 @@
+<!--
+Colors:
+Blue:	http://en.wikipedia.org/wiki/Electric_blue_%28color%29
+Grey:#C7C7CC
+#8E8E93
+
+Black?
+-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<title>Hello world!</title>
+
+<!--
+A James Spann production
+-->
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-itunes-app" content="app-id=418682206">
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<!--<link rel="stylesheet" type="text/css" href="design.css">-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+body{
+	background:#035096;
+	margin:0;
+	border:0;
+}
+
+button{
+	margin:0;
+	border:0;
+	padding:0;
+}
+
+img{
+	/*position:relative;
+    height: 100%;
+	width:auto;*/ /* you can use % */
+
+}
+
+.circular {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(tux.png) no-repeat;
+}
+
+
+#myheader{
+	background:#2C75FF;
+	opacity: 0.7;
+	filter: alpha(opacity=40); /* For IE8 and earlier */
+	float:right;
+    top: 0px;
+	margin: 0px;
+	height:10%;
+	width:100%;
+	position: fixed;
+	z-index:3;
+}
+
+#masthead{
+	width:100%;
+	/*background:red;*/
+	position: relative;
+	padding-top:10%;
+}
+
+#mastimg{
+	float:right;
+	border:0;
+	margin:0;
+}
+
+#masttext{
+	color: white;
+	position: absolute;
+	z-index:10;
+	float:center;
+	width:100%;
+	padding: 5px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-weight: bold;
+	font-family: "Open Sans", Times, serif;
+}
+
+#ultimatewrapper{
+    position: absolute;
+	width: 100%;
+
+}
+
+#headerback{
+	margin: 0px auto;
+    margin-top: 10px;
+	overflow: hidden;
+	width: 100%;
+	background-color: red;
+	border: 1px solid #000000;
+	margin: 0 auto;
+}
+</style>
+
+<style>
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+</style>
+
+<script>
+	function bio(){//bluritout
+		console.log("bio");
+	    document.getElementById("totaloptimus").setAttribute("style","-webkit-filter:blur(4px)");
+	    document.getElementById("masttext").style.display = 'block';
+	    document.getElementById("masttext").setAttribute("style","-webkit-filter:blur(0px)");
+	}
+	
+	function ubio(){//unbluritout
+		console.log("ubio");
+		document.getElementById("totaloptimus").setAttribute("style","-webkit-filter:blur(0px)");		
+		    document.getElementById("masttext").style.display = 'none';
+		    
+
+	}
+	
+	function drawmasthead(){
+	}
+	
+	function onstartup(){
+		document.getElementById("masttext").style.display = 'none';
+		drawmasthead();
+		init();
+	}
+	
+//http://jsfiddle.net/fWSUk/484/	
+var unit = 100, canvas, context, canvas2, context2, height, width, xAxis, yAxis, draw;
+
+function init() {
+    
+    canvas = document.getElementById("sineCanvas");
+    
+    //canvas.width = 1000;
+    //canvas.height = 300;
+    canvas.width = screen.width;
+    context = canvas.getContext("2d");
+    //context.font = '18px sans-serif';
+    context.strokeStyle = '#000';
+    context.lineJoin = 'round';
+    
+    height = canvas.height;
+    width = canvas.width;
+    
+    xAxis = Math.floor(height/2);
+    yAxis = Math.floor(width/4);
+    
+    context.save();
+    draw();
+}
+
+draw = function () {
+    
+    // Clear the canvas
+    context.clearRect(0, 0, width, height);
+    
+    // Set styles for animated graphics
+    context.save();
+    //context.strokeStyle = '#00f';
+    context.strokeStyle = '#ff8d00';
+    context.fillStyle = '#fff';
+    context.lineWidth = 4;
+
+    // Draw the sine curve at time draw.t, as well as the circle.
+    context.beginPath();
+    drawSine(draw.t);
+    //console.log(draw.t);
+    context.strokeStyle = '#ff0000';
+    //drawCosine(draw.t);
+    context.stroke();
+    
+    // Restore original styles
+    context.restore();
+    
+    // Update the time and draw again
+    draw.seconds = draw.seconds - .007;
+    draw.t = draw.seconds*Math.PI;
+    setTimeout(draw, 10);
+};
+draw.seconds = 0;
+draw.t = 0;
+
+function drawSine(t) {
+
+    // Set the initial x and y, starting at 0,0 and translating to the origin on
+    // the canvas.
+    var x = t;
+    var y = Math.sin(x);
+    context.moveTo(yAxis, unit*y+xAxis);
+    
+    // Loop to draw segments
+    for (i = yAxis; i <= width; i += 10) {
+        x = t+(-yAxis+i)/unit;
+        y = Math.sin(x);
+        context.lineTo(i, unit*y+xAxis);
+    }
+}
+
+function drawCosine(t) {
+
+    // Set the initial x and y, starting at 0,0 and translating to the origin on
+    // the canvas.
+    var x = t;
+    var y = Math.sin(x);
+    context.moveTo(yAxis, unit*y+xAxis);
+    
+    // Loop to draw segments
+    for (i = yAxis; i <= width; i += 10) {
+        x = t+(-yAxis+i)/unit;
+        y = Math.sin(x);
+        context.lineTo(i+300, unit*y+xAxis);
+    }
+}
+</script>
+
+<body onload="onstartup()">
+	<div id="myheader">
+		<!--Youtube,itunes,github-->
+		<div id="buttoncontainer" style="float:right;">
+			<button type="button" class="headbttn" onclick="window.open(&quot;https://itunes.apple.com/us/app/iessay/id418682206?mt=8&quot;);"><img src="iebig.png" alt="Smiley face" height="42" width="42"></button>
+			<button type="button" class="headbttn" onclick="window.open(&quot;http://www.github.com/jspann&quot;);"><img src="ghbig.png" alt="Smiley face" height="42" width="42"></button>
+			<button type="button" class="headbttn" onclick="window.open(&quot;https://itunes.apple.com/us/app/fish-flyer/id542901827?mt=8&quot;);"><img src="ffbig.png" alt="Smiley face" height="42" width="42"></button>
+		</div>
+	</div>
+	
+	<div id="ultimatewrapper">
+		<div id="masthead" onmouseover="bio()" onmouseout="ubio()">
+		<p id="masttext" style="">"I believe that at the end of the century the use of words and general educated opinion will have altered so much that one will be able to speak of machines thinking without expecting to be contradicted." -Alan Turing</p>
+		<div id="totaloptimus">
+			<div id="circlehead" class="circular"/>
+			<!--<div id="canvas-container" width="800px" height="200%">-->
+				<canvas id="sineCanvas" width="100%" height="250%" style="z-index:-1; position:absolute; left:0px;"></canvas>
+			<!--</div>-->
+			
+		</div>
+	</div>
+	
+	</div>
+	<!--<div id="headerback" style="position:absolute; z-index:-1; top:0px; width:100%; height:10%;"></div>-->
+
+	</div>
+	<div id="supercoolcontent">
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+		<b>insert cool words here</b></br>
+	</div>
+</body>
+</html>
