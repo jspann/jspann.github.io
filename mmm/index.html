@@ -18,8 +18,14 @@ $(document).ready(function(){
   var d = new Date();
   var n = d.getFullYear();
   document.getElementById("jamescopyright").value = "© James Spann " + n;
+
 </script>
 
+<style type="text/css">
+  #jamescopyright{
+    padding-bottom:35px;
+  }
+</style>
 
 <script>
   // This is called with the results from from FB.getLoginStatus().
@@ -111,7 +117,7 @@ $(document).ready(function(){
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
-<div id="status">
+<div id="status" style="background-color:blue;">
 </div>
 
 <div id="bottombar"><p id="jamescopyright"></div>
