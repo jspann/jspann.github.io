@@ -42,7 +42,7 @@ function domReady() {
     padding-bottom:35px;
   }
   #bottombar{
-    background-color:blue;
+    background-color:gray;
   }
 
   #topbar{
@@ -53,6 +53,7 @@ function domReady() {
 </style>
 
 <script>
+  var forevername = "";
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -127,8 +128,11 @@ function domReady() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+      //document.getElementById('status').innerHTML =
+        //'Thanks for logging in, ' + response.name + '!';
+        forevername = response.name;
+        document.getElementById('uname').innerHTML = forevername;
+        
     });
   }
 </script>
@@ -145,8 +149,12 @@ function domReady() {
 <div id="status">
 </div>
 
-<div id="topbar">HELP ME ROSE TYLER</div>
+<div id="topbar"><p id="uname"></p></div>
 
-<div id="bottombar"><a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a> <a href="http://www.jspann.me">My website</a> <p id="jamescopyright">hey</p> </div>
+<div id="bottombar">
+<a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a>
+<a href="http://www.jspann.me">My website</a>
+<p id="jamescopyright">hey</p>
+</div>
 </body>
 </html>
