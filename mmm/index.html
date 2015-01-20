@@ -135,6 +135,10 @@ function domReady() {
         console.log(response);
     });
 
+FB.api('/me', {fields: 'last_name'}, function(response) {
+  console.log(response);
+});
+
     FB.api("/me/picture",
     {
         "redirect": false,
@@ -142,12 +146,13 @@ function domReady() {
         "type": "normal",
         "width": "200"
     },
-    function (response) {
-      if (response && !response.error) {
+    function (responsez) {
+      if (responsez && !responsez.error) {
         /* handle the result */
-        document.getElementById('myimage').src = response;
         console.log("woahh");
-        console.log(response);
+        console.log(responsez);
+        document.getElementById('myimage').src = responsez;
+        
       }
     }
 );
