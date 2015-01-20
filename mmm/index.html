@@ -146,7 +146,7 @@ function domReady() {
       if (response && !response.error) {
         /* handle the result */
         document.getElementById('myimage').src = response;
-        console.log(woahh);
+        console.log("woahh");
         console.log(response);
       }
     }
@@ -160,7 +160,7 @@ function domReady() {
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,user_photos,email,user_birthday,user_education_history,user_likes" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
