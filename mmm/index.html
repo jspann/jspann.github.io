@@ -151,7 +151,8 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
         /* handle the result */
         console.log("woahh");
         console.log(responsez);
-        document.getElementById('myimage').src = responsez.url;
+        console.log(responsez.data.url);
+        document.getElementById('myimage').src = responsez.data.url;
         
       }
     }
