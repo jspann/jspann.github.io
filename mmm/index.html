@@ -131,9 +131,25 @@ function domReady() {
       //document.getElementById('status').innerHTML =
         //'Thanks for logging in, ' + response.name + '!';
         forevername = response.name;
-        document.getElementById('uname').innerHTML = forevername;
+        document.getElementById('uname').innerHTML = forevername ;
         console.log(response);
     });
+
+    FB.api("/me/picture",
+    {
+        "redirect": false,
+        "height": "200",
+        "type": "normal",
+        "width": "200"
+    },
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+        document.getElementById('myimage').src = response;
+        console.log(response);
+      }
+    }
+);
   }
 </script>
 
@@ -152,6 +168,7 @@ function domReady() {
 <div id="topbar"><p id="uname"></p></div>
 
 <div id="bottombar">
+<img id="myimage" src="" alt="profile photo"/>
 <a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a>
 <a href="http://www.jspann.me">My website</a>
 <p id="jamescopyright">hey</p>
