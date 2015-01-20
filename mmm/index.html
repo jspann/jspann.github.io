@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Facebook Login JavaScript Example</title>
+<title>Magic Machine Matchmaker</title>
 <meta charset="UTF-8">
 </head>
 <body>
@@ -15,10 +15,26 @@ $(document).ready(function(){
 </script>
 
 <script type="text/javascript">
+(function () {
+    if (window.addEventListener) {
+        window.addEventListener('DOMContentLoaded', domReady, false);
+    } else {
+        window.attachEvent('onload', domReady);
+    }
+} ());
+
+function domReady() {
+
   var d = new Date();
   var n = d.getFullYear();
-  document.getElementById("jamescopyright").value = "© James Spann " + n;
-
+  var t = "© James Spann " + n;
+  document.getElementById("jamescopyright").innerHTML = t;
+  console.log(t);
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   // some code..
+   alert("Warning!\nThis program might not function properly when viewed on a mobile device!");
+  }
+}
 </script>
 
 <style type="text/css">
@@ -27,6 +43,12 @@ $(document).ready(function(){
   }
   #bottombar{
     background-color:blue;
+  }
+
+  #topbar{
+    top:0;
+    background-color: green;
+    float: right;
   }
 </style>
 
@@ -123,6 +145,8 @@ $(document).ready(function(){
 <div id="status">
 </div>
 
-<div id="bottombar"><p id="jamescopyright"></div>
+<div id="topbar">HELP ME ROSE TYLER</div>
+
+<div id="bottombar"><a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a> <a href="http://www.jspann.me">My website</a> <p id="jamescopyright">hey</p> </div>
 </body>
 </html>
