@@ -5,6 +5,22 @@
 <meta charset="UTF-8">
 </head>
 <body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+
+<script type="text/javascript">
+  var d = new Date();
+  var n = d.getFullYear();
+  document.getElementById("jamescopyright").value = "© James Spann " + n;
+</script>
+
+
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -98,5 +114,6 @@
 <div id="status">
 </div>
 
+<div id="bottombar"><p id="jamescopyright"></div>
 </body>
 </html>
