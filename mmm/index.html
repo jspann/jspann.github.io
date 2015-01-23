@@ -35,10 +35,19 @@ function domReady() {
    alert("Warning!\nThis program might not function properly when viewed on a mobile device!");
   }
 
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
   ctx.fillStyle = "#FF0000";
   ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
+
+  setInterval(function(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  var r=Math.random()*255, g=Math.random()*255, b=Math.random()*255;
+  ctx.fillStyle = 'rgb('+r+','+g+','+b+')';
+  var w=Math.random()*canvas.width,     h=Math.random()*canvas.height;
+  var x=Math.random()*(canvas.width-w), y=Math.random()*(canvas.height-h);
+  ctx.fillRect(x,y,w,h);
+},1000/15);
 }
 </script>
 
@@ -61,7 +70,7 @@ function domReady() {
     top:0;
     background-color: green;
     float: right;
-    position: fixed;
+    position: inherit;
   }
 
   #myCanvas{
