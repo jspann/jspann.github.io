@@ -34,21 +34,40 @@ function domReady() {
    // some code..
    alert("Warning!\nThis program might not function properly when viewed on a mobile device!");
   }
+
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+  ctx.fillRect(0,0,document.getElementById("myCanvas").width;
+,75);
 }
 </script>
 
 <style type="text/css">
   #jamescopyright{
-    padding-bottom:35px;
+    padding-bottom:0px;
+    display:inline;
+    float: right;
+    margin: 0;
   }
   #bottombar{
-    background-color:gray;
+    background-color:transparent;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    margin: 0;
   }
 
   #topbar{
     top:0;
     background-color: green;
     float: right;
+    position: fixed;
+  }
+
+  #myCanvas{
+    width: 100%;
+    height: 100%;
   }
 </style>
 
@@ -142,9 +161,9 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
     FB.api("/me/picture",
     {
         "redirect": false,
-        "height": "200",
+        "height": "100",
         "type": "normal",
-        "width": "200"
+        "width": "100"
     },
     function (responsez) {
       if (responsez && !responsez.error) {
@@ -166,19 +185,29 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
   the FB.login() function when clicked.
 -->
 
+
+
 <fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes" onlogin="checkLoginState();">
 </fb:login-button>
+
 
 <div id="status">
 </div>
 
-<div id="topbar"><p id="uname"></p></div>
+<div id="topbar">
+<img id="myimage" src="unknown.jpg" height="30px" width="30px"/>
+<p id="uname"></p>
+</div>
 
 <div id="bottombar">
-<img id="myimage" src="" alt="profile photo"/>
 <a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a>
 <a href="http://www.jspann.me">My website</a>
 <p id="jamescopyright">hey</p>
+
 </div>
+
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
 </body>
 </html>
