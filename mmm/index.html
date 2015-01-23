@@ -38,8 +38,7 @@ function domReady() {
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
   ctx.fillStyle = "#FF0000";
-  ctx.fillRect(0,0,document.getElementById("myCanvas").width;
-,75);
+  ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
 }
 </script>
 
@@ -68,6 +67,19 @@ function domReady() {
   #myCanvas{
     width: 100%;
     height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  #uname{
+    display: inline;
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
   }
 </style>
 
@@ -91,8 +103,7 @@ function domReady() {
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
+      //document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
     }
   }
 
@@ -195,8 +206,8 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
 </div>
 
 <div id="topbar">
-<img id="myimage" src="unknown.jpg" height="30px" width="30px"/>
-<p id="uname"></p>
+<img id="myimage" src="unknown.jpg" height="50px" width="50px"/>
+<p id="uname" ></p>
 </div>
 
 <div id="bottombar">
@@ -207,7 +218,7 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
 </div>
 
 
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+<canvas id="myCanvas" style="border:1px solid #000000;">
 </canvas>
 </body>
 </html>
