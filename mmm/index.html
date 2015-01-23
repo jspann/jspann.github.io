@@ -23,6 +23,19 @@ $(document).ready(function(){
     }
 } ());
 
+function rgbj(r, g, b){
+  return "rgb("+r+","+g+","+b+")";
+}
+
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
 function domReady() {
 
   var d = new Date();
@@ -37,17 +50,15 @@ function domReady() {
 
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d");
-  ctx.fillStyle = "#FF0000";
+  //ctx.fillStyle = "#FF0000";
   ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
 
-  setInterval(function(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  var r=Math.random()*255, g=Math.random()*255, b=Math.random()*255;
-  ctx.fillStyle = 'rgb('+r+','+g+','+b+')';
-  var w=Math.random()*canvas.width,     h=Math.random()*canvas.height;
-  var x=Math.random()*(canvas.width-w), y=Math.random()*(canvas.height-h);
-  ctx.fillRect(x,y,w,h);
-},1000/15);
+  var grd = ctx.createLinearGradient(0, 200, 0, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "purple");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
 }
 </script>
 
