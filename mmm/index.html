@@ -81,6 +81,7 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
     bottom:0;
     width: 100%;
     margin: 0;
+    float: bottom;
   }
 
   #topbar{
@@ -239,9 +240,13 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
 <fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes" onlogin="checkLoginState();">
 </fb:login-button>
 
+
 <img id="myimage" src="unknown.jpg" height="50px" width="50px"/>
 <p id="uname" ></p>
 </div>
+
+<canvas id="myCanvas" style="border:1px solid #000000;">
+</canvas>
 
 <div id="bottombar">
 <a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a>
@@ -251,7 +256,6 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
 </div>
 
 
-<canvas id="myCanvas" style="border:1px solid #000000;">
-</canvas>
+
 </body>
 </html>
