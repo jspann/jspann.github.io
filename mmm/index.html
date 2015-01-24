@@ -116,14 +116,16 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   var forevername = "";
   var myimglocation;
   var numFriends;//all of the friends that you have
-  var myidentifier;
+  var myidentifier;//Main user's facebook id
   var myFriends;//array of friends
   var totalavilnum;//totalnumber of available freinds
+
   function compute(myid){
-    for (var i = 0; i < totalavilnum; i++) {
-      
+    for (var i = 0; i < myFriends.length-1; i++) {
+      myFriends[i] 
     };
   }
+
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -278,7 +280,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
 <div id="maximumwin">
   <b>Magic Machine Matchmaker</b>
-  <input type="button" value="Find my match!" onclick="runmethod()">
+  <input type="button" value="Find my match!" id="gobutton">
 </div>
 
 </body>
