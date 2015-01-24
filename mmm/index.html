@@ -18,10 +18,10 @@
   });
 });*/
 $(document).ready(function(){
- $('#maximumwin').animate({top: "150px"}, 2000);
+ $('#maximumwin').animate({top: "50%"}, 2000);
 
  $('#myimage').click(function() {
-  $('#maximumwin').animate({top: "-500px"}, 750);
+  $('#maximumwin').animate({top: "300px"}, 750);
  });
 });
 </script>
@@ -121,7 +121,7 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
     color: white;
     /*float: center;*/
     
-    top: 50%;
+    top: -300px;
     left: 50%;
     margin-top: -200px;
     margin-left: -200px;
@@ -138,6 +138,7 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
 
 <script>
   var forevername = "";
+  var myimglocation;
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -220,9 +221,9 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
         console.log(response);
     });
 
-FB.api('/me', {fields: 'last_name'}, function(response) {
-  console.log(response);
-});
+    FB.api('/me', {fields: 'last_name'}, function(response) {
+      console.log(response);
+    });
 
     FB.api("/me/picture",
     {
@@ -237,13 +238,19 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
         console.log("woahh");
         console.log(responsez);
         console.log(responsez.data.url);
-        var myimglocation = responsez.data.url;
+        myimglocation = responsez.data.url;
         document.getElementById('myimage').src = myimglocation;
         
       }
     }
-);
+    );
+
+    FB.api('me/friends', { fields: 'id, first_name,picture', limit: 200},function(response){
+
+    console.log(response);
+    });
   }
+  
 </script>
 
 <!--
