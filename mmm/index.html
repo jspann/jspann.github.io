@@ -115,7 +115,15 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 <script>
   var forevername = "";
   var myimglocation;
-  var numFriends;
+  var numFriends;//all of the friends that you have
+  var myidentifier;
+  var myFriends;//array of friends
+  var totalavilnum;//totalnumber of available freinds
+  function compute(myid){
+    for (var i = ; i < totalavilnum; i++) {
+      
+    };
+  }
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -202,6 +210,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     FB.api('/me', {fields: 'last_name'}, function(response) {
       console.log("Second call");
       console.log(response);
+      myidentifier = response.id;
     });
 
     FB.api("/me/picture",
@@ -226,6 +235,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
     FB.api("/me/friends", { fields: 'id, first_name,picture', limit: 6},function(responsef){
       console.log("Fourth Call");
+      console.log(responsef);
       numFriends = responsef.summary.total_count;
     //console.log(responsef.summary.total_count);
     });
