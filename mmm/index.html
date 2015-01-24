@@ -6,6 +6,11 @@
 </head>
 <body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!--<script src="http://www.jspann.me/mmm/machine.js"></script>-->
+<script src="machine.js"></script>
+
+
 <script>
 $(document).ready(function(){
   $("p").click(function(){
@@ -71,7 +76,8 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
   }
   #bottombar{
     background-color:transparent;
-    position:absolute;
+    /*position:absolute;*/
+    position: absolute;
     bottom:0;
     width: 100%;
     margin: 0;
@@ -81,7 +87,10 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
     top:0;
     background-color: green;
     float: right;
-    position: inherit;
+    /*position: inherit;*/
+    /*position:absolute;*/
+    position:relative;
+    z-index: 3;
   }
 
   #myCanvas{
@@ -91,6 +100,7 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
     margin: 0;
     padding: 0;
     border: 0;
+    position: fixed;
   }
 
   #uname{
