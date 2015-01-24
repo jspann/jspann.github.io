@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Magic Machine Matchmaker</title>
 <meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="author" content="">
 </head>
+
 <body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <!--<script src="http://www.jspann.me/mmm/machine.js"></script>-->
 <script src="machine.js"></script>
-
+<script src="interfacemethods.js"></script>
 
 <script>
-/*$(document).ready(function(){
-  $("p").click(function(){
-    $(this).hide();
-  });
-});*/
 $(document).ready(function(){
  $('#maximumwin').animate({top: "50%"}, 2000);
 
@@ -24,54 +22,6 @@ $(document).ready(function(){
   $('#maximumwin').animate({top: "300px"}, 750);
  });
 });
-</script>
-
-<script type="text/javascript">
-(function () {
-    if (window.addEventListener) {
-        window.addEventListener('DOMContentLoaded', domReady, false);
-    } else {
-        window.attachEvent('onload', domReady);
-    }
-} ());
-
-function rgbj(r, g, b){
-  return "rgb("+r+","+g+","+b+")";
-}
-
-function componentToHex(c) {
-    var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
-}
-
-function rgbToHex(r, g, b) {
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-}
-
-function domReady() {
-
-  var d = new Date();
-  var n = d.getFullYear();
-  var t = "© James Spann " + n;
-  document.getElementById("jamescopyright").innerHTML = t;
-  console.log(t);
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-   // some code..
-   alert("Warning!\nThis program might not function properly when viewed on a mobile device!");
-  }
-
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
-  //ctx.fillStyle = "#FF0000";
-  ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
-
-  var grd = ctx.createLinearGradient(0, 200, 0, 0);
-grd.addColorStop(0, "red");
-grd.addColorStop(1, "purple");
-
-ctx.fillStyle = grd;
-ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
-}
 </script>
 
 <style type="text/css">
@@ -93,12 +43,11 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
 
   #topbar{
     top:0;
-    background-color: green;
+    background-color: #C0C0C0;
     float: right;
-    /*position: inherit;*/
-    /*position:absolute;*/
     position:relative;
     z-index: 3;
+    opacity: 0.7;
   }
 
   #myCanvas{
@@ -134,11 +83,39 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
     margin: 0;
     padding: 0;
   }
+
+  /* #Alizarin Flat Button
+http://cssdeck.com/labs/beautiful-flat-buttons*/
+.awesomebutton {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #e74c3c;
+  border: 0;
+  border-bottom: 2px solid #db4334;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #db4334;
+  box-shadow: inset 0 -2px #db4334;
+}
+.awesomebutton {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 </style>
 
 <script>
   var forevername = "";
   var myimglocation;
+  var numFriends;
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -218,10 +195,12 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
         forevername = response.name;
         document.getElementById('uname').innerHTML = forevername ;
         document.getElementById('fblikebttn').style.display = "none";
+        console.log("First call");
         console.log(response);
     });
 
     FB.api('/me', {fields: 'last_name'}, function(response) {
+      console.log("Second call");
       console.log(response);
     });
 
@@ -235,7 +214,7 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
     function (responsez) {
       if (responsez && !responsez.error) {
         /* handle the result */
-        console.log("woahh");
+        console.log("Third Call");
         console.log(responsez);
         console.log(responsez.data.url);
         myimglocation = responsez.data.url;
@@ -246,8 +225,14 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
     );
 
     FB.api("/me/friends", { fields: 'id, first_name,picture', limit: 6},function(responsef){
+      console.log("Fourth Call");
+      numFriends = responsef.summary.total_count;
+    //console.log(responsef.summary.total_count);
+    });
 
-    console.log(responsef);
+    FB.api("/me/friends", { fields: 'id, first_name,picture', limit: numFriends},function(responsef){
+      
+
     });
   }
 
@@ -261,14 +246,11 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
 
 
 
-
-
-
 <div id="status">
 </div>
 
 <div id="topbar">
-  <fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes,user_friends" onlogin="checkLoginState();" id="fblikebttn">
+  <fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes,user_friends,read_friendlist" onlogin="checkLoginState();" id="fblikebttn">
   </fb:login-button>
   <img id="myimage" src="unknown.jpg" height="50px" width="50px"/>
   <p id="uname" ></p>
@@ -284,7 +266,8 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
 </div>
 
 <div id="maximumwin">
-  Saying cool words here!
+  <b>Magic Machine Matchmaker</b>
+  <input type="button" value="Find my match!" onclick="runmethod()">
 </div>
 
 </body>
