@@ -235,7 +235,8 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
     FB.api("/me/friends", { fields: 'id, first_name,picture', limit: 6},function(responsef){
       console.log("Fourth Call");
-      console.log(responsef);
+      console.log(responsef.data);
+      myFriends = responsef.data;
       numFriends = responsef.summary.total_count;
     //console.log(responsef.summary.total_count);
     });
