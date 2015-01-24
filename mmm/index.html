@@ -12,10 +12,17 @@
 
 
 <script>
-$(document).ready(function(){
+/*$(document).ready(function(){
   $("p").click(function(){
     $(this).hide();
   });
+});*/
+$(document).ready(function(){
+ $('#maximumwin').animate({top: "150px"}, 2000);
+
+ $('#myimage').click(function() {
+  $('#maximumwin').animate({top: "-500px"}, 750);
+ });
 });
 </script>
 
@@ -107,6 +114,21 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
   #uname{
     display: inline;
   }
+
+  #maximumwin{
+    position: absolute;
+    background-color: #333399;
+    color: white;
+    /*float: center;*/
+    
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+
+    width: 200px;
+    height: 200px;
+  }
   
   body{
     margin: 0;
@@ -126,6 +148,7 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
+
       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
@@ -193,6 +216,7 @@ ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementBy
         //'Thanks for logging in, ' + response.name + '!';
         forevername = response.name;
         document.getElementById('uname').innerHTML = forevername ;
+        document.getElementById('fblikebttn').style.display = "none";
         console.log(response);
     });
 
@@ -213,7 +237,8 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
         console.log("woahh");
         console.log(responsez);
         console.log(responsez.data.url);
-        document.getElementById('myimage').src = responsez.data.url;
+        var myimglocation = responsez.data.url;
+        document.getElementById('myimage').src = myimglocation;
         
       }
     }
@@ -236,26 +261,24 @@ FB.api('/me', {fields: 'last_name'}, function(response) {
 </div>
 
 <div id="topbar">
-
-<fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes" onlogin="checkLoginState();">
-</fb:login-button>
-
-
-<img id="myimage" src="unknown.jpg" height="50px" width="50px"/>
-<p id="uname" ></p>
+  <fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes" onlogin="checkLoginState();" id="fblikebttn">
+  </fb:login-button>
+  <img id="myimage" src="unknown.jpg" height="50px" width="50px"/>
+  <p id="uname" ></p>
 </div>
 
 <canvas id="myCanvas" style="border:1px solid #000000;">
 </canvas>
 
 <div id="bottombar">
-<a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a>
-<a href="http://www.jspann.me">My website</a>
-<p id="jamescopyright">hey</p>
-
+  <a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a>
+  <a href="http://www.jspann.me">My website</a>
+  <p id="jamescopyright">hey</p>
 </div>
 
-
+<div id="maximumwin">
+  Saying cool words here!
+</div>
 
 </body>
 </html>
