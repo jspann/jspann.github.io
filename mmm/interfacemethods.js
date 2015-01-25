@@ -20,14 +20,20 @@ function rgbToHex(r, g, b) {
 }
 
 function domReady() {
+
   var d = new Date();
   var n = d.getFullYear();
   var t = "© James Spann " + n;
   document.getElementById("jamescopyright").innerHTML = t;
   console.log(t);
   if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    alert("Warning!\nThis program might not function properly when viewed on a mobile device!");
+   // some code..
+   alert("Warning!\nThis program might not function properly when viewed on a mobile device!");
   }
+
+  document.getElementById("gobutton").onclick = function() {
+   alert("button was clicked");
+};
 
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d");
@@ -35,14 +41,9 @@ function domReady() {
   ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
 
   var grd = ctx.createLinearGradient(0, 200, 0, 0);
-  grd.addColorStop(0, "red");
-  grd.addColorStop(1, "purple");
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "purple");
 
-  ctx.fillStyle = grd;
-  ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
 }
-
-document.getElementById("gobutton").onclick = function() {
-   alert("button was clicked");
-   compute(myidentifier);
-}​;​
