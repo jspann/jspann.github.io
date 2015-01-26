@@ -39,6 +39,12 @@ function domReady() {
    compute(myidentifier);
 };
 
+document.getElementById("hidealertbutton").onclick = function() {
+  hideAlert();
+   $('#maximumwin').animate({top: "-50%"}, 2000);
+
+};
+
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d");
   //ctx.fillStyle = "#FF0000";
