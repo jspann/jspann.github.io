@@ -15,6 +15,18 @@
 <script src="interfacemethods.js"></script>
 
 <script>
+
+document.getElementById("hidealertbutton").onclick = function() {
+  hideAlert();
+   $('#maximumwin').animate({top: "-50%"}, 2000);
+
+};
+
+function notloggedinalert(){
+  setupAlert();
+ $('#maximumwin').animate({top: "50%"}, 2000);
+}
+
 $(document).ready(function(){
  $('#maximumwin').animate({top: "50%"}, 2000);
 
@@ -64,6 +76,20 @@ $(document).ready(function(){
     display: inline;
   }
 
+.dimwin {
+    height:100%;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:1 !important;
+    background-color:black;
+    filter: alpha(opacity=75); /* internet explorer */
+    -khtml-opacity: 0.75;      /* khtml, old safari */
+      -moz-opacity: 0.75;      /* mozilla, netscape */
+           opacity: 0.75;      /* fx, safari, opera */
+}
+
   #maximumwin{
     position: absolute;
     background-color: #333399;
@@ -77,8 +103,17 @@ $(document).ready(function(){
 
     width: 200px;
     height: 200px;
+    z-index: 5;
   }
   
+  #maxalerttitletext{
+   text-align: center;
+  }
+  
+  #hidealertbutton{
+
+  }
+
   body{
     margin: 0;
     padding: 0;
@@ -119,6 +154,14 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   var myidentifier;//Main user's facebook id
   var myFriends;//array of friends
   var totalavilnum;//totalnumber of available freinds
+
+  function setupAlert () {
+    document.getElementById("derpyalert").style.display = "block";
+  }
+
+  function hideAlert () {
+    document.getElementById("derpyalert").style.display = "none";
+  }
 
   function compute(myid){
     for (var i = 0; i < myFriends.length-1; i++) {
@@ -162,9 +205,10 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
-      document.getElementById("uname").innerHTML = 'Please log ' +
-        'into this app.';
-        console.log("unauthorized. I need you to log in");
+      document.getElementById("uname").innerHTML = 'Please log ' + 'into this app.';
+
+      notloggedinalert();
+      console.log("unauthorized. I need you to log in");
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
@@ -302,9 +346,17 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   <p id="jamescopyright">hey</p>
 </div>
 
+<div id="mainview">
+ <input type="button" value="Find my match!" id="gobutton">
+</div>
+<!-- The first DIV for creating an Overlay -->
+<div id="derpyalert" class="dimwin"  title="Event">
+</div>  
+
 <div id="maximumwin">
-  <b>Magic Machine Matchmaker</b>
-  <input type="button" value="Find my match!" id="gobutton">
+  <b id="maxalerttitletext">Whoops!</b>
+  <p id="maxalertminitext">It appears as though you are not logged into facebook. Please press "Log in" to continue.</p>
+  <input type="button" value="Got it!" id="hidealertbutton">
 </div>
 
 </body>
