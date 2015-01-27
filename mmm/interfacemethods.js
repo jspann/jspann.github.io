@@ -42,9 +42,9 @@ function domReady() {
 };
 
 document.getElementById("hidealertbutton").onclick = function() {
-  hideAlert();
-   $('#maximumwin').animate({top: "-50%"}, 2000);
-
+  //hideAlert();
+  // $('#maximumwin').animate({top: "-50%"}, 2000);
+  compute(myidentifier);
 };
 
   var canvas = document.getElementById("myCanvas");
