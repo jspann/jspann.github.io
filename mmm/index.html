@@ -8,10 +8,29 @@
 </head>
 
 <body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <!--<script src="http://www.jspann.me/mmm/machine.js"></script>-->
-<!--<script src="machine.js"></script>
-<script src="interfacemethods.js"></script>-->
+<script src="machine.js"></script>
+<script src="interfacemethods.js"></script>
+
+<script>
+
+
+
+function notloggedinalert(){
+  setupAlert();
+ $('#maximumwin').animate({top: "50%"}, 2000);
+}
+
+$(document).ready(function(){
+ $('#maximumwin').animate({top: "50%"}, 2000);
+
+ $('#myimage').click(function() {
+  $('#maximumwin').animate({top: "300px"}, 750);
+ });
+});
+</script>
 
 <style type="text/css">
   #jamescopyright{
@@ -123,7 +142,51 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 }
 
 </style>
+
 <script>
+  var forevername = "";
+  var myimglocation;
+  var numFriends;//all of the friends that you have
+  var myidentifier;//Main user's facebook id
+  var myFriends;//array of friends
+  var totalavilnum;//totalnumber of available freinds
+
+  function setupAlert () {
+    document.getElementById("derpyalert").style.display = "block";
+  }
+
+  function hideAlert () {
+    //document.getElementById("derpyalert").style.display = "none";
+  }
+
+  function compute(myid){
+    for (var i = 0; i < myFriends.length-1; i++) {
+      console.log("woo!");
+      console.log(myFriends[i]);
+
+      FB.api("/"+myFriends[i].id+"/picture",
+      {
+        "redirect": false,
+        "height": "100",
+        "type": "normal",
+        "width": "100"
+      },
+      function (responsez) {
+        if (responsez && !responsez.error) {
+          /* handle the result */
+          console.log("algorithim Call");
+          console.log(responsez);
+          console.log(responsez.data.url);
+          myimglocation = responsez.data.url;
+          document.getElementById('myimage').src = myimglocation;
+        }
+      }
+      );
+
+    }//end of for loop
+
+  }//end of compute
+
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -134,16 +197,19 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
+      console.log("connected to facebook");
       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+      document.getElementById("uname").innerHTML = 'Please log ' + 'into this app.';
+
+      notloggedinalert();
+      console.log("unauthorized. I need you to log in");
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
+      //document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
+      console.log("lol what?");
     }
   }
 
@@ -164,6 +230,11 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.1' // use version 2.1
   });
+
+
+$(".fb_login").click(function() {
+                   FB.login(Facebook_login);
+                }); 
 
   // Now that we've initialized the JavaScript SDK, we call 
   // FB.getLoginStatus().  This function gets the state of the
@@ -188,7 +259,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
+    js.src = "http://connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
@@ -198,30 +269,72 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+      //document.getElementById('status').innerHTML =
+        //'Thanks for logging in, ' + response.name + '!';
+        forevername = response.name;
+        document.getElementById('uname').innerHTML = forevername ;
+        //document.getElementById('fblikebttn').style.display = "none";
+        console.log("First call");
+        console.log(response);
+    });
+
+    FB.api('/me', {fields: 'last_name'}, function(response) {
+      console.log("Second call");
+      console.log(response);
+      myidentifier = response.id;
+    });
+
+    FB.api("/me/picture",
+    {
+        "redirect": false,
+        "height": "100",
+        "type": "normal",
+        "width": "100"
+    },
+    function (responsez) {
+      if (responsez && !responsez.error) {
+        /* handle the result */
+        console.log("Third Call");
+        console.log(responsez);
+        console.log(responsez.data.url);
+        myimglocation = responsez.data.url;
+        document.getElementById('myimage').src = myimglocation;
+        
+      }
+    }
+    );
+
+    FB.api("/me/friends", { fields: 'id, first_name,picture', limit: 6},function(responsef){
+      console.log("Fourth Call");
+      console.log(responsef.data);
+      myFriends = responsef.data;
+      numFriends = responsef.summary.total_count;
+    //console.log(responsef.summary.total_count);
+    });
+
+    FB.api("/me/friends", { fields: 'id, first_name,picture', limit: numFriends},function(responsef){
+      
+
     });
   }
+
 </script>
 
 <!--
-
-
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
 -->
 
+
+
 <div id="status">
 </div>
 
-<fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes,user_friends,read_friendlist" onlogin="checkLoginState();" id="fblikebttn">
-  </fb:login-button>
-
 <div id="topbar">
-  
+  <!--<fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes,user_friends,read_friendlist" onlogin="checkLoginState();" id="fblikebttn">
+  </fb:login-button>-->
+  <button class="fb_login">Login with Facebook</button>
   <img id="myimage" src="randimg0.jpg" height="50px" width="50px"/>
   <p id="uname" ></p>
 </div>
@@ -247,7 +360,6 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   <p id="maxalertminitext">It appears as though you are not logged into facebook. Please press "Log in" to continue.</p>
   <input type="button" value="Got it!" id="hidealertbutton">
 </div>
-<div id="fb-root"></div>
 
 </body>
 </html>
