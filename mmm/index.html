@@ -11,8 +11,27 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <!--<script src="http://www.jspann.me/mmm/machine.js"></script>-->
-<script src="machine.js"></script>
-<script src="interfacemethods.js"></script>
+<!--<script src="machine.js"></script>
+<script src="interfacemethods.js"></script>-->
+
+<script>
+
+
+
+function notloggedinalert(){
+  setupAlert();
+ $('#maximumwin').animate({top: "50%"}, 2000);
+}
+
+$(document).ready(function(){
+ $('#maximumwin').animate({top: "50%"}, 2000);
+
+ $('#myimage').click(function() {
+  $('#maximumwin').animate({top: "300px"}, 750);
+ });
+});
+</script>
+
 <style type="text/css">
   #jamescopyright{
     padding-bottom:0px;
@@ -205,16 +224,45 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 </script>
 
 <!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
+
 
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
 </div>
+-->
 
+<div id="status">
+</div>
+
+<div id="topbar">
+  <fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes,user_friends,read_friendlist" onlogin="checkLoginState();" id="fblikebttn">
+  </fb:login-button>
+  <img id="myimage" src="randimg0.jpg" height="50px" width="50px"/>
+  <p id="uname" ></p>
+</div>
+
+<canvas id="myCanvas" style="border:1px solid #000000;">
+</canvas>
+
+<div id="bottombar">
+  <a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a>
+  <a href="http://www.jspann.me">My website</a>
+  <p id="jamescopyright">hey</p>
+</div>
+
+<div id="mainview">
+ <input type="button" value="Find my match!" id="gobutton">
+</div>
+<!-- The first DIV for creating an Overlay -->
+<!--<div id="derpyalert" class="dimwin"  title="Event">
+</div>  -->
+
+<div id="maximumwin">
+  <b id="maxalerttitletext">Whoops!</b>
+  <p id="maxalertminitext">It appears as though you are not logged into facebook. Please press "Log in" to continue.</p>
+  <input type="button" value="Got it!" id="hidealertbutton">
+</div>
 </body>
 </html>
