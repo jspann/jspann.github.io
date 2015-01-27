@@ -253,6 +253,59 @@ function Facebook_login () {
     js.src = "http://connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      //document.getElementById('status').innerHTML =
+        //'Thanks for logging in, ' + response.name + '!';
+        forevername = response.name;
+        document.getElementById('uname').innerHTML = forevername ;
+        //document.getElementById('fblikebttn').style.display = "none";
+        console.log("First call");
+        console.log(response);
+    });
+
+    FB.api('/me', {fields: 'last_name'}, function(response) {
+      console.log("Second call");
+      console.log(response);
+      myidentifier = response.id;
+    });
+
+    FB.api("/me/picture",
+    {
+        "redirect": false,
+        "height": "100",
+        "type": "normal",
+        "width": "100"
+    },
+    function (responsez) {
+      if (responsez && !responsez.error) {
+        /* handle the result */
+        console.log("Third Call");
+        console.log(responsez);
+        console.log(responsez.data.url);
+        myimglocation = responsez.data.url;
+        document.getElementById('myimage').src = myimglocation;
+        
+      }
+    }
+    );
+
+    FB.api("/me/friends", { fields: 'id, first_name,picture', limit: 6},function(responsef){
+      console.log("Fourth Call");
+      console.log(responsef.data);
+      myFriends = responsef.data;
+      numFriends = responsef.summary.total_count;
+    //console.log(responsef.summary.total_count);
+    });
+
+    FB.api("/me/friends", { fields: 'id, first_name,picture', limit: numFriends},function(responsef){
+      
+
+    });
+  }
 </script>
 
 <!--
