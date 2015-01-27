@@ -32,7 +32,7 @@ function domReady() {
 
   //document.getElementById("myimage").src = "http://jspann.me/mmm/randimg" + Math.floor((Math.random() * 3) + 0) + ".jpg";
   document.getElementById("myimage").src = "randimg" + Math.floor((Math.random() * 4) + 0) + ".jpg";
-  document.getElementById("derpyalert").style.display = "none";
+  //document.getElementById("derpyalert").style.display = "none";
 
   document.getElementById("gobutton").onclick = function() {
    alert("button was clicked");
