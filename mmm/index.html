@@ -26,9 +26,9 @@ function notloggedinalert(){
 $(document).ready(function(){
  $('#maximumwin').animate({top: "50%"}, 2000);
 
- $('#myimage').click(function() {
+ /*$('#myimage').click(function() {
   $('#maximumwin').animate({top: "300px"}, 750);
- });
+ });*/
 });
 </script>
 
@@ -201,6 +201,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   }
 
   function compute(myid){
+    console.log("We are computuing!!!" + myid);
     for (var i = 0; i < myFriends.length-1; i++) {
       console.log("woo!");
       console.log(myFriends[i]);
@@ -244,7 +245,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
       // The person is logged into Facebook, but not your app.
       document.getElementById("uname").innerHTML = 'Please log ' + 'into this app.';
 
-      notloggedinalert();
+      //notloggedinalert();
       console.log("unauthorized. I need you to log in");
     } else {
       // The person is not logged into Facebook, so we're not sure if
