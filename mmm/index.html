@@ -1,5 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<title>Magic Machine Matchmaker</title>
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="author" content="">
+</head>
+
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!--<script src="http://www.jspann.me/mmm/machine.js"></script>-->
+<script src="machine.js"></script>
+<script src="interfacemethods.js"></script>
+
+<script>
+
+
+
+function notloggedinalert(){
+  setupAlert();
+ $('#maximumwin').animate({top: "50%"}, 2000);
+}
+
+$(document).ready(function(){
+ $('#maximumwin').animate({top: "50%"}, 2000);
+
+ $('#myimage').click(function() {
+  $('#maximumwin').animate({top: "300px"}, 750);
+ });
+});
+</script>
+
+<style type="text/css">
+  #jamescopyright{
+    padding-bottom:0px;
+    display:inline;
+    float: right;
+    margin: 0;
+  }
+  #bottombar{
+    background-color:transparent;
+    /*position:absolute;*/
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    margin: 0;
+    float: bottom;
+  }
+
+  #topbar{
+    top:0;
+    background-color: #C0C0C0;
+    float: right;
+    position:relative;
+    z-index: 3;
+    opacity: 0.7;
+  }
+
+  #myCanvas{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: fixed;
+  }
+
+  #uname{
+    display: inline;
+  }
+
+.dimwin {
+    height:100%;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:1 !important;
+    background-color:black;
+    filter: alpha(opacity=75); /* internet explorer */
+    -khtml-opacity: 0.75;      /* khtml, old safari */
+      -moz-opacity: 0.75;      /* mozilla, netscape */
+           opacity: 0.75;      /* fx, safari, opera */
+}
+
+  #maximumwin{
+    position: absolute;
+    background-color: #333399;
+    color: white;
+    /*float: center;*/
+    
+    top: -300px;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+
+    width: 200px;
+    height: 200px;
+    z-index: 5;
+  }
+  
+  #maxalerttitletext{
+   text-align: center;
+  }
+  
+  #hidealertbutton{
+
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+  }
+
+  /* #Alizarin Flat Button
+http://cssdeck.com/labs/beautiful-flat-buttons*/
+.awesomebutton {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #e74c3c;
+  border: 0;
+  border-bottom: 2px solid #db4334;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #db4334;
+  box-shadow: inset 0 -2px #db4334;
+}
+.awesomebutton {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+</style>
+
+<script>
+  var forevername = "";
+  var myimglocation;
+  var numFriends;//all of the friends that you have
+  var myidentifier;//Main user's facebook id
+  var myFriends;//array of friends
+  var totalavilnum;//totalnumber of available freinds
+
+  function setupAlert () {
+    document.getElementById("derpyalert").style.display = "block";
+  }
+
+  function hideAlert () {
+    document.getElementById("derpyalert").style.display = "none";
+  }
+
+  function compute(myid){
+    for (var i = 0; i < myFriends.length-1; i++) {
+      console.log("woo!");
+      console.log(myFriends[i]);
+
+      FB.api("/"+myFriends[i].id+"/picture",
+      {
+        "redirect": false,
+        "height": "100",
+        "type": "normal",
+        "width": "100"
+      },
+      function (responsez) {
+        if (responsez && !responsez.error) {
+          /* handle the result */
+          console.log("algorithim Call");
+          console.log(responsez);
+          console.log(responsez.data.url);
+          myimglocation = responsez.data.url;
+          document.getElementById('myimage').src = myimglocation;
+        }
+      }
+      );
+
+    }//end of for loop
+
+  }//end of compute
+
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      console.log("connected to facebook");
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById("uname").innerHTML = 'Please log ' + 'into this app.';
+
+      notloggedinalert();
+      console.log("unauthorized. I need you to log in");
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      //document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
+      console.log("lol what?");
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '529397830528291',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.1' // use version 2.1
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "http://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      //document.getElementById('status').innerHTML =
+        //'Thanks for logging in, ' + response.name + '!';
+        forevername = response.name;
+        document.getElementById('uname').innerHTML = forevername ;
+        document.getElementById('fblikebttn').style.display = "none";
+        console.log("First call");
+        console.log(response);
+    });
+
+    FB.api('/me', {fields: 'last_name'}, function(response) {
+      console.log("Second call");
+      console.log(response);
+      myidentifier = response.id;
+    });
+
+    FB.api("/me/picture",
+    {
+        "redirect": false,
+        "height": "100",
+        "type": "normal",
+        "width": "100"
+    },
+    function (responsez) {
+      if (responsez && !responsez.error) {
+        /* handle the result */
+        console.log("Third Call");
+        console.log(responsez);
+        console.log(responsez.data.url);
+        myimglocation = responsez.data.url;
+        document.getElementById('myimage').src = myimglocation;
+        
+      }
+    }
+    );
+
+    FB.api("/me/friends", { fields: 'id, first_name,picture', limit: 6},function(responsef){
+      console.log("Fourth Call");
+      console.log(responsef.data);
+      myFriends = responsef.data;
+      numFriends = responsef.summary.total_count;
+    //console.log(responsef.summary.total_count);
+    });
+
+    FB.api("/me/friends", { fields: 'id, first_name,picture', limit: numFriends},function(responsef){
+      
+
+    });
+  }
+
+</script>
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+
+
+<div id="status">
+</div>
 
 <div id="topbar">
   <fb:login-button scope="public_profile,user_photos,user_religion_politics,email,user_birthday,user_education_history,user_likes,user_friends,read_friendlist" onlogin="checkLoginState();" id="fblikebttn">
@@ -8,4 +333,27 @@
   <p id="uname" ></p>
 </div>
 
+<canvas id="myCanvas" style="border:1px solid #000000;">
+</canvas>
+
+<div id="bottombar">
+  <a href="https://github.com/jspann/jspann.github.io/tree/master/mmm">Source code</a>
+  <a href="http://www.jspann.me">My website</a>
+  <p id="jamescopyright">hey</p>
+</div>
+
+<div id="mainview">
+ <input type="button" value="Find my match!" id="gobutton">
+</div>
+<!-- The first DIV for creating an Overlay -->
+<div id="derpyalert" class="dimwin"  title="Event">
+</div>  
+
+<div id="maximumwin">
+  <b id="maxalerttitletext">Whoops!</b>
+  <p id="maxalertminitext">It appears as though you are not logged into facebook. Please press "Log in" to continue.</p>
+  <input type="button" value="Got it!" id="hidealertbutton">
+</div>
+
+</body>
 </html>
