@@ -235,7 +235,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 $(".fb_login").click(function() {
                    FB.login(Facebook_login);
                 }); 
-
+});
   // Now that we've initialized the JavaScript SDK, we call 
   // FB.getLoginStatus().  This function gets the state of the
   // person visiting this page and can return one of three states to
@@ -247,12 +247,13 @@ $(".fb_login").click(function() {
   //    your app or not.
   //
   // These three cases are handled in the callback function.
+          function Facebook_login () {
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
-
-  };
+}
+  //};
 
   // Load the SDK asynchronously
   (function(d, s, id) {
