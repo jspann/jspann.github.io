@@ -199,7 +199,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   var interbookarray;//array of my tv interests
 
   var topPicks;
-  
+
   function setupAlert () {
     document.getElementById("derpyalert").style.display = "block";
   }
@@ -215,9 +215,10 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     
   getMyData();
 
-    for (var i = 0; i < myFriends.length; i++) {
+    for (var i = 0; i < 20000; i++) {
       console.log("woo!");
       console.log(myFriends[i]);
+
       document.getElementById("matchprogress").value = i+1;
 
       FB.api("/"+myFriends[i].id+"/picture",
@@ -235,8 +236,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
           myimglocation = responsez.data.url;
           document.getElementById('myimage').src = myimglocation;
         }
-      }
-      );//end of getting friend photo loop
+      });//end of getting friend photo loop
 
 
     }//end of for loop
