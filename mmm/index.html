@@ -214,30 +214,18 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     document.getElementById("matchprogress").max = myFriends.length;
     
   getMyData();
-
-    for (var i = 0; i < 20000; i++) {
+  getPhoto("me");
+  document.getElementById('myimage').src = myimglocation;
+    for (var i = 0; i < myFriends.length; i++) {
       console.log("woo!");
       console.log(myFriends[i]);
 
       document.getElementById("matchprogress").value = i+1;
+      
 
-      FB.api("/"+myFriends[i].id+"/picture",
-      {
-        "redirect": false,
-        "height": "100",
-        "type": "normal",
-        "width": "100"
-      },function (responsez) {
-        if (responsez && !responsez.error) {
-          /* handle the result */
-          console.log("algorithim Call");
-          console.log(responsez);
-          console.log(responsez.data.url);
-          myimglocation = responsez.data.url;
-          document.getElementById('myimage').src = myimglocation;
-        }
-      });//end of getting friend photo loop
 
+      getPhoto(myFriends[i].id);
+      document.getElementById('myimage').src = myimglocation;
 
     }//end of for loop
 
@@ -281,7 +269,22 @@ function getMyData(){
   }
   }
   });//end of movies api call
-
+  
+FB.api("/"+myid+"/picture",
+      {
+        "redirect": false,
+        "height": "100",
+        "type": "normal",
+        "width": "100"
+      },function (responsez) {
+        if (responsez && !responsez.error) {
+          console.log("algorithim Call");
+          console.log(responsez);
+          console.log(responsez.data.url);
+          myimglocation = responsez.data.url;
+          document.getElementById('myimage').src = myimglocation;
+        }
+      });//end of getting friend photo loop
   //MAYBE we'll do likes in the future
 }
   // This is called with the results from from FB.getLoginStatus().

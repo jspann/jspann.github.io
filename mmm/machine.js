@@ -63,3 +63,22 @@ function getMovies(myid){
 
   //MAYBE we'll do likes in the future
 }
+
+function getPhoto(myid){
+	FB.api("/"+myid+"/picture",
+      {
+        "redirect": false,
+        "height": "100",
+        "type": "normal",
+        "width": "100"
+      },function (responsez) {
+        if (responsez && !responsez.error) {
+          //console.log("algorithim Call");
+          //console.log(responsez);
+          //console.log(responsez.data.url);
+          return responsez.data.url;
+          //myimglocation = responsez.data.url;
+          //document.getElementById('myimage').src = myimglocation;
+        }
+      });//end of getting friend photo loop
+}
