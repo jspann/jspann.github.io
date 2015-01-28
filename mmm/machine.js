@@ -1,11 +1,11 @@
 function train(){
-	FB.api(
-    "/me/interests",
-    function (response) {
-      if (response && !response.error) {
+	FB.api("/me/interests",
+    function (responsei) {
+      if (responsei && !responsei.error) {
         /* handle the result */
         console.log("fisher");
-        console.log("My interests are: " + response);
+        console.log("My interests are: " + responsei);
+        console.log(responsei);
       }
     }
 );
