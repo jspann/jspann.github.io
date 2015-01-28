@@ -194,6 +194,12 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   var myFriends;//array of friends
   var totalavilnum;//totalnumber of available freinds
 
+  var intermusarray;//array of my music interests
+  var intertvarray;//array of my tv interests
+  var interbookarray;//array of my tv interests
+
+  var topPicks;
+  
   function setupAlert () {
     document.getElementById("derpyalert").style.display = "block";
   }
@@ -206,7 +212,9 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     console.log("We are computuing!!!" + myid);
     document.getElementById("matchprogress").style.display = "block";
     document.getElementById("matchprogress").max = myFriends.length;
-    train();
+    
+  getMyData();
+
     for (var i = 0; i < myFriends.length; i++) {
       console.log("woo!");
       console.log(myFriends[i]);
@@ -228,60 +236,54 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
           document.getElementById('myimage').src = myimglocation;
         }
       }
-      );
+      );//end of getting friend photo loop
 
 
-
-      var intermusarray;//array of my music interests
-      var intertvarray;//array of my tv interests
-      var interbookarray;//array of my tv interests
-
-      FB.api("/me/music",function (response) {
-            if (response && !response.error) {
-              intermusarray = response.data;
-              for(var p = 0; p < intermusarray.length; p++){
-                console.log(intermusarray[p]);
-              }
-              
-            }
-          }
-      );//end of music api call
-
-
-      FB.api("/me/television",function (response) {
-          if (response && !response.error) {
-          intertvarray = response.data;
-          for(var p = 0; p < intermusarray.length; p++){
-                console.log(intermusarray[p]);
-              }
-          }
-        }
-      );//end of tv api call
-
-      FB.api("/me/books",function (response) {
-      if (response && !response.error) {
-        interbookarray = response.data;
-        for(var p = 0; p < interbookarray.length; p++){
-                console.log(interbookarray[p]);
-          }
-        }
-      }
-    );//end of book api call
-      
-    FB.api("/me/movies",function (response) {
-      if (response && !response.error) {
-        interbookarray = response.data;
-        for(var p = 0; p < interbookarray.length; p++){
-                console.log(interbookarray[p]);
-        }
-      }
-    }
-
-);//end of movies api call
     }//end of for loop
 
   }//end of compute
 
+function getMyData(){
+  FB.api("/me/music",function (response) {
+  if (response && !response.error) {
+  intermusarray = response.data;
+  for(var p = 0; p < intermusarray.length; p++){
+  console.log(intermusarray[p]);
+  }
+  }
+  }
+  );//end of music api call
+
+
+  FB.api("/me/television",function (response) {
+    if (response && !response.error) {
+      intertvarray = response.data;
+      for(var p = 0; p < intertvarray.length; p++){
+      console.log(intertvarray[p]);
+      }
+    }
+  });//end of tv api call
+
+  FB.api("/me/books",function (response) {
+  if (response && !response.error) {
+  interbookarray = response.data;
+  for(var p = 0; p < interbookarray.length; p++){
+  console.log(interbookarray[p]);
+  }
+  }
+  });//end of book api call
+
+  FB.api("/me/movies",function (response) {
+  if (response && !response.error) {
+  interbookarray = response.data;
+  for(var p = 0; p < interbookarray.length; p++){
+  console.log(interbookarray[p]);
+  }
+  }
+  });//end of movies api call
+
+  //MAYBE we'll do likes in the future
+}
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
