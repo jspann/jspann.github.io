@@ -24,7 +24,7 @@ function notloggedinalert(){
 }
 
 $(document).ready(function(){
- $('#maximumwin').animate({top: "50%"}, 2000);
+ //$('#maximumwin').animate({top: "50%"}, 2000);
 
  /*$('#myimage').click(function() {
   $('#maximumwin').animate({top: "300px"}, 750);
@@ -308,6 +308,8 @@ function Facebook_login () {
         console.log("First call");
         console.log(response);
     });
+
+    $('#maximumwin').animate({top: "50%"}, 2000);
 
     FB.api('/me', {fields: 'last_name'}, function(response) {
       console.log("Second call");
