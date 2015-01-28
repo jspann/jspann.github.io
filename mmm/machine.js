@@ -1,4 +1,5 @@
 function train(){
+  	document.getElementById("matchprogress").style.display = "block";
 	FB.api("/me/interests",
     function (responsei) {
       if (responsei && !responsei.error) {
@@ -9,6 +10,8 @@ function train(){
       }
     }
 );
+
+
 }
 
 function runmethod(){

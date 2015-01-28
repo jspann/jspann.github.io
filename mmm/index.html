@@ -204,10 +204,13 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
   function compute(myid){
     console.log("We are computuing!!!" + myid);
+    document.getElementById("matchprogress").style.display = "block";
+    document.getElementById("matchprogress").max = myFriends.length;
     train();
     for (var i = 0; i < myFriends.length; i++) {
       console.log("woo!");
       console.log(myFriends[i]);
+      document.getElementById("matchprogress").value = i+1;
 
       FB.api("/"+myFriends[i].id+"/picture",
       {
@@ -215,8 +218,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
         "height": "100",
         "type": "normal",
         "width": "100"
-      },
-      function (responsez) {
+      },function (responsez) {
         if (responsez && !responsez.error) {
           /* handle the result */
           console.log("algorithim Call");
@@ -227,7 +229,6 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
         }
       }
       );
-
     }//end of for loop
 
   }//end of compute
