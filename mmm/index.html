@@ -196,7 +196,8 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
   var intermusarray;//array of my music interests
   var intertvarray;//array of my tv interests
-  var interbookarray;//array of my tv interests
+  var interbookarray;//array of my book interests
+  var intermoviearray;//array of my movie interests
 
   var topPicks;
 
@@ -216,7 +217,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   getMyData();
   getPhoto("me");
   document.getElementById('myimage').src = myimglocation;
-    for (var i = 0; i < myFriends.length; i++) {
+    for (var i = 0; i < myFriends.length+1; i++) {
       console.log("woo!");
       console.log(myFriends[i]);
 
@@ -263,14 +264,14 @@ function getMyData(){
 
   FB.api("/me/movies",function (response) {
   if (response && !response.error) {
-  interbookarray = response.data;
-  for(var p = 0; p < interbookarray.length; p++){
-  console.log(interbookarray[p]);
+  intermoviearray = response.data;
+  for(var p = 0; p < intermoviearray.length; p++){
+  console.log(intermoviearray[p]);
   }
   }
   });//end of movies api call
-  
-FB.api("/"+myid+"/picture",
+
+FB.api("/me/picture",
       {
         "redirect": false,
         "height": "100",
@@ -278,7 +279,6 @@ FB.api("/"+myid+"/picture",
         "width": "100"
       },function (responsez) {
         if (responsez && !responsez.error) {
-          console.log("algorithim Call");
           console.log(responsez);
           console.log(responsez.data.url);
           myimglocation = responsez.data.url;

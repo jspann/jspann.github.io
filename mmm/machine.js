@@ -19,12 +19,13 @@ function runmethod(){
 }
 
 function getMusic(myid){
-  FB.api("/me/music",function (response) {
+  FB.api("/"+myid+"/music",function (response) {
   if (response && !response.error) {
-  intermusarray = response.data;
+  /*intermusarray = response.data;
   for(var p = 0; p < intermusarray.length; p++){
   console.log(intermusarray[p]);
-  }
+  }*/
+  return response.data;
   }
   });//end of music api call
 }
@@ -32,32 +33,35 @@ function getMusic(myid){
 function getTelevison(myid){
   FB.api("/me/television",function (response) {
     if (response && !response.error) {
-      intertvarray = response.data;
+      /*intertvarray = response.data;
       for(var p = 0; p < intertvarray.length; p++){
       console.log(intertvarray[p]);
-      }
+      }*/
+      return response.data;
     }
   });//end of tv api call
 }
 
 function getBooks(myid){
-  FB.api("/me/books",function (response) {
+  FB.api("/"+myid+"/books",function (response) {
   if (response && !response.error) {
-  interbookarray = response.data;
+  /*interbookarray = response.data;
   for(var p = 0; p < interbookarray.length; p++){
   console.log(interbookarray[p]);
-  }
+  }*/
+return response.data;
   }
   });//end of book api call
 }
 
 function getMovies(myid){
-  FB.api("/me/movies",function (response) {
+  FB.api("/"+myid+"/movies",function (response) {
   if (response && !response.error) {
-  interbookarray = response.data;
+  /*interbookarray = response.data;
   for(var p = 0; p < interbookarray.length; p++){
   console.log(interbookarray[p]);
-  }
+  }*/
+	return response.data;
   }
   });//end of movies api call
 
