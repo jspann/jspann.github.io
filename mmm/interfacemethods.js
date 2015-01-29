@@ -47,6 +47,13 @@ document.getElementById("hidealertbutton").onclick = function() {
   compute(myidentifier);
 };
 
+if(window.location.hash) {
+  // Fragment exists
+  alert("To match your profile with your friends we will need to compare some of your Facebook information. We will not display or store this information in any way.");
+} else {
+  // Fragment doesn't exist
+}
+
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d");
   //ctx.fillStyle = "#FF0000";
