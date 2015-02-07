@@ -49,7 +49,7 @@ document.getElementById("hidealertbutton").onclick = function() {
 
 if(window.location.hash) {
   // Fragment exists
-  alert("To match your profile with your friends we will need to compare some of your Facebook information.
+  alert("To match your profile with your friends we will need to compare some of your Facebook information.\
    We will not display or store this information in any way.");
 } else {
   // Fragment doesn't exist
