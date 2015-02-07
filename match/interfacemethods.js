@@ -41,6 +41,36 @@ function domReady() {
    compute(myidentifier);
 };
 
+document.getElementById("hidealertbutton").onclick = function() {
+  //hideAlert();
+  // $('#maximumwin').animate({top: "-50%"}, 2000);
+  compute(myidentifier);
+};
+
+if(window.location.hash) {
+  // Fragment exists
+  alert("To match your profile with your friends we will need to compare some of your Facebook information.
+   We will not display or store this information in any way.");
+} else {
+  // Fragment doesn't exist
+}
+
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  //ctx.fillStyle = "#FF0000";
+  ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
+
+  var grd = ctx.createLinearGradient(0, 200, 0, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "purple");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
+}
+
+
+//EXPLOSION ANIMATION CODE
+
 // shim layer with setTimeout fallback
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       || 
@@ -53,10 +83,12 @@ window.requestAnimFrame = (function(){
       };
 })();
 
+var bigger = document.getElementById("maximumwin"),
+
 var canvas = document.getElementById("boom"),
   ctx = canvas.getContext("2d"),
-  W = window.innerWidth,
-  H = window.innerHeight,
+  W = bigger.innerWidth,
+  H = bigger.innerHeight,
   circles = [];
 
 canvas.width = W;
@@ -91,9 +123,9 @@ for (var i = 0; i < 500; i++) {
 function draw() {
   
   //Fill canvas with black color
-    ctx.globalCompositeOperation = "source-over";
+    /*ctx.globalCompositeOperation = "source-over";
     ctx.fillStyle = "rgba(0,0,0,0.15)";
-    ctx.fillRect(0, 0, W, H);
+    ctx.fillRect(0, 0, W, H);*/
   
   //Fill the canvas with circles
   for(var j = 0; j < circles.length; j++){
@@ -102,7 +134,7 @@ function draw() {
     //Create the circles
     ctx.beginPath();
     ctx.arc(c.x, c.y, c.radius, 0, Math.PI*2, false);
-        ctx.fillStyle = "rgba("+c.r+", "+c.g+", "+c.b+", 0.5)";
+    ctx.fillStyle = "rgba("+c.r+", "+c.g+", "+c.b+", 0.5)";
     ctx.fill();
     
     c.x += c.vx;
@@ -120,28 +152,3 @@ function animate() {
 }
 
 animate();
-document.getElementById("hidealertbutton").onclick = function() {
-  //hideAlert();
-  // $('#maximumwin').animate({top: "-50%"}, 2000);
-  compute(myidentifier);
-};
-
-if(window.location.hash) {
-  // Fragment exists
-  alert("To match your profile with your friends we will need to compare some of your Facebook information. We will not display or store this information in any way.");
-} else {
-  // Fragment doesn't exist
-}
-
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
-  //ctx.fillStyle = "#FF0000";
-  ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
-
-  var grd = ctx.createLinearGradient(0, 200, 0, 0);
-grd.addColorStop(0, "red");
-grd.addColorStop(1, "purple");
-
-ctx.fillStyle = grd;
-ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
-}
