@@ -201,6 +201,10 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
   var topPicks;
 
+  function nslog(stringa){
+    console.log(stringa);
+  }
+
   function setupAlert () {
     document.getElementById("derpyalert").style.display = "block";
   }
@@ -213,22 +217,24 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     console.log("We are computuing!!!" + myid);
     document.getElementById("matchprogress").style.display = "block";
     document.getElementById("matchprogress").max = myFriends.length;
-    
-  //getMyData();
-  getPhoto("me");
-  document.getElementById('myimage').src = myimglocation;
-    for (var i = 0; i < myFriends.length+1; i++) {
-      console.log("woo!");
-      console.log(myFriends[i]);
+    console.log("here is the total array");
+    console.log(myFriends);
+    //getMyData();
+    getPhoto("me");
+    document.getElementById('myimage').src = myimglocation;
 
-      document.getElementById("matchprogress").value = i+1;
-      
+      for (var i = 0; i < myFriends.length+1; i++) {
+        console.log("woo!");
+        console.log(myFriends[i]);
+
+        document.getElementById("matchprogress").value = i+1;
+        
 
 
-      getPhoto(myFriends[i].id);
-      document.getElementById('myimage').src = myimglocation;
+        getPhoto(myFriends[i].id);
+        document.getElementById('myimage').src = myimglocation;
 
-    }//end of for loop
+      }//end of for loop
 
   }//end of compute
 
