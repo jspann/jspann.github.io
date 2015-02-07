@@ -83,7 +83,7 @@ window.requestAnimFrame = (function(){
       };
 })();
 
-var bigger = document.getElementById("maximumwin"),
+var bigger = document.getElementById("maximumwin");
 
 var canvas = document.getElementById("boom"),
   ctx = canvas.getContext("2d"),
