@@ -99,7 +99,7 @@ $(document).ready(function(){
     margin-top: -200px;
     margin-left: -200px;
 
-    width: 200px;
+    width: 400px;
     height: 200px;
     z-index: 5;
   }
@@ -113,22 +113,22 @@ $(document).ready(function(){
   }
 
   progress {
-  width: 400px;
-  height: 14px;
-  margin: 50px auto;
-  display: block;
-  /* Important Thing */
-  -webkit-appearance: none;
-  border: none;
-}
+    width: 400px;
+    height: 14px;
+    margin: 50px auto;
+    display: block;
+    /* Important Thing */
+    -webkit-appearance: none;
+    border: none;
+  }
 
-/* All good till now. Now we'll style the background */
-progress::-webkit-progress-bar {
-  background: black;
-  border-radius: 50px;
-  padding: 2px;
-  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
-}
+  /* All good till now. Now we'll style the background */
+  progress::-webkit-progress-bar {
+    background: black;
+    border-radius: 50px;
+    padding: 2px;
+    box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+  }
 
 /* Now the value part */
 progress::-webkit-progress-value {
@@ -220,10 +220,10 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     console.log("here is the total array");
     console.log(myFriends);
     //getMyData();
-    getPhoto("me");
+    //dont think we need this getPhoto("me");
     document.getElementById('myimage').src = myimglocation;
 
-      for (var i = 0; i < myFriends.length+1; i++) {
+      for (var i = 0; i < myFriends.length; i++) {
         console.log("woo!");
         console.log(myFriends[i]);
 
@@ -458,7 +458,7 @@ function Facebook_login () {
   <p id="maxalertminitext">Press the button to find out who you have the most in common with!</p>
   <input type="button" value="Find my match!" id="hidealertbutton">
   <progress max="100" value="0" id="matchprogress"></progress>
-
+  <canvas id="boom"></canvas>
 </div>
 
 </body>

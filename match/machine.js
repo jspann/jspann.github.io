@@ -1,5 +1,5 @@
 function train(){
-  	document.getElementById("matchprogress").style.display = "block";
+  document.getElementById("matchprogress").style.display = "block";
 	FB.api("/me/interests",
     function (responsei) {
       if (responsei && !responsei.error) {
@@ -20,13 +20,13 @@ function runmethod(){
 
 function getMusic(myid){
   FB.api("/"+myid+"/music",function (response) {
-  if (response && !response.error) {
-  /*intermusarray = response.data;
-  for(var p = 0; p < intermusarray.length; p++){
-  console.log(intermusarray[p]);
-  }*/
-  return response.data;
-  }
+    if (response && !response.error) {
+      /*intermusarray = response.data;
+      for(var p = 0; p < intermusarray.length; p++){
+      console.log(intermusarray[p]);
+      }*/
+      return response.data;
+    }
   });//end of music api call
 }
 
@@ -44,25 +44,25 @@ function getTelevison(myid){
 
 function getBooks(myid){
   FB.api("/"+myid+"/books",function (response) {
-  if (response && !response.error) {
-  /*interbookarray = response.data;
-  for(var p = 0; p < interbookarray.length; p++){
-  console.log(interbookarray[p]);
-  }*/
-return response.data;
-  }
+    if (response && !response.error) {
+      /*interbookarray = response.data;
+      for(var p = 0; p < interbookarray.length; p++){
+      console.log(interbookarray[p]);
+      }*/
+      return response.data;
+    }
   });//end of book api call
 }
 
 function getMovies(myid){
   FB.api("/"+myid+"/movies",function (response) {
-  if (response && !response.error) {
-  /*interbookarray = response.data;
-  for(var p = 0; p < interbookarray.length; p++){
-  console.log(interbookarray[p]);
-  }*/
-	return response.data;
-  }
+    if (response && !response.error) {
+      /*interbookarray = response.data;
+      for(var p = 0; p < interbookarray.length; p++){
+      console.log(interbookarray[p]);
+      }*/
+    	return response.data;
+    }
   });//end of movies api call
 
   //MAYBE we'll do likes in the future
@@ -85,4 +85,20 @@ function getPhoto(myid){
           //document.getElementById('myimage').src = myimglocation;
         }
       });//end of getting friend photo loop
+}
+
+function shareMatch(){
+  FB.ui(
+  {
+    method: 'share',
+    href: 'http://jspann.me/match/',
+  },
+  function(response) {
+    if (response && !response.error_code) {
+      alert('Posting completed.');
+    } else {
+      alert('Error while posting.');
+    }
+  }
+);
 }
