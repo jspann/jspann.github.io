@@ -1,29 +1,9 @@
 //EXPLOSION ANIMATION CODE
 
-// shim layer with setTimeout fallback
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       || 
-      window.webkitRequestAnimationFrame || 
-      window.mozRequestAnimationFrame    || 
-      window.oRequestAnimationFrame      || 
-      window.msRequestAnimationFrame     || 
-      function( callback ){
-      window.setTimeout(callback, 1000 / 60);
-      };
-})();
 
-var bigger = document.getElementById("maximumwin");
-
-var canvas = document.getElementById("boom"),
-  ctx = canvas.getContext("2d"),
-  W = bigger.innerWidth,
-  H = bigger.innerHeight,
-  circles = [];
-
-canvas.width = W;
-canvas.height = H; 
-
-
+var circles = [];
+var W;
+var H;
 //Random Circles creator
 function create() {
   
@@ -77,9 +57,11 @@ function draw() {
 }
 
 function animate() {
-  startupexplo();
+  W = document.getElementById("boom").width;
+  H = document.getElementById("boom").height;
+  //startupexplo();
   requestAnimFrame(animate);
   draw();
 }
 
-animate();
+//animate();

@@ -39,6 +39,7 @@ function domReady() {
   document.getElementById("gobutton").onclick = function() {
    alert("button was clicked");
    compute(myidentifier);
+   animate();
 };
 
 document.getElementById("hidealertbutton").onclick = function() {
@@ -66,6 +67,28 @@ grd.addColorStop(1, "purple");
 
 ctx.fillStyle = grd;
 ctx.fillRect(0,0,document.getElementById("myCanvas").width,document.getElementById("myCanvas").height);
+
+
+//start explosion things
+// shim layer with setTimeout fallback
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       || 
+      window.webkitRequestAnimationFrame || 
+      window.mozRequestAnimationFrame    || 
+      window.oRequestAnimationFrame      || 
+      window.msRequestAnimationFrame     || 
+      function( callback ){
+      window.setTimeout(callback, 1000 / 60);
+      };
+})();
+
+var canvas = document.getElementById("boom"),
+  ctx = canvas.getContext("2d");
+  /*W = bigger.innerWidth,
+  H = bigger.innerHeight;*/
+
+/*canvas.width = W;
+canvas.height = H; */
 
 }
 

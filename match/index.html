@@ -15,6 +15,7 @@
 <!--<script src="http://www.jspann.me/mmm/machine.js"></script>-->
 <script src="machine.js"></script>
 <script src="interfacemethods.js"></script>
+<script src="explosion.js"></script>
 
 <script>
 
@@ -114,7 +115,15 @@ $(document).ready(function(){
 
   #boom{
     background-color: gray;
-    position: absolute;
+    z-index: 6;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: fixed;
   }
 
   progress {
@@ -451,9 +460,10 @@ function Facebook_login () {
   <p id="jamescopyright">hey</p>
 </div>
 
-<div id="mainview">
+I dont think we use this<div id="mainview">
  <input type="button" value="Find my match!" id="gobutton">
 </div>
+
 <!-- The first DIV for creating an Overlay -->
 <!--<div id="derpyalert" class="dimwin"  title="Event">
 </div>  -->
@@ -463,8 +473,8 @@ function Facebook_login () {
   <p id="maxalertminitext">Press the button to find out who you have the most in common with!</p>
   <input type="button" value="Find my match!" id="hidealertbutton">
   <progress max="100" value="0" id="matchprogress"></progress>
-  <canvas id="boom"></canvas>
 </div>
+<canvas id="boom"></canvas>
 
 </body>
 </html>
