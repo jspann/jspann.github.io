@@ -243,6 +243,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     newimg.setAttribute('id',newimgtag);
     newimg.setAttribute('src',myimglocation);
     newimg.setAttribute('class','matchedimg');
+    newimg.setAttribute('style','opacity:0;');
     currdiv.appendChild(newimg);
     currdiv.appendChild(newimg);
     currdiv.appendChild(newimg);
@@ -250,7 +251,10 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     $("#hidealertbutton").remove();
     $("#matchprogress").remove();
     $("#maxalertminitext").remove();
-    $(".matchedimg").effect( "bounce", {times:3}, 300 );
+    //$(".matchedimg").effect( "bounce", {times:3}, 300 );
+    $(".matchedimg").fadeIn(3000);
+    
+
   }
 
   function nslog(stringa){
