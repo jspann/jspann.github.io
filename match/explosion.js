@@ -7,6 +7,8 @@ var H;
 var anicanvas;
 var anictx;
 
+var countCir;//so we can stop after a certain point
+
 //Random Circles creator
 function create() {
   
@@ -29,16 +31,16 @@ function create() {
   this.b = Math.round(Math.random())*255;
 }
 
-for (var i = 0; i < 500; i++) {
+for (var i = 0; i < 12; i++) {
   circles.push(new create());
 }
 
 function draw() {
   
   //Fill canvas with black color
-    /*anictx.globalCompositeOperation = "source-over";
+    anictx.globalCompositeOperation = "source-over";
     anictx.fillStyle = "rgba(0,0,0,0.15)";
-    anictx.fillRect(0, 0, W, H);*/
+    anictx.fillRect(0, 0, W, H);
   
   //Fill the canvas with circles
   for(var j = 0; j < circles.length; j++){
@@ -71,4 +73,3 @@ function animate() {
   draw();
 }
 
-//animate();
