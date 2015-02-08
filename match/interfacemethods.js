@@ -40,8 +40,9 @@ function domReady() {
   document.getElementById("gobutton").onclick = function() {
    alert("button was clicked");
    compute(myidentifier);
+  updateMatch();
    animate();
-   updateMatch();
+
 };
 
 document.getElementById("hidealertbutton").onclick = function() {
@@ -49,7 +50,7 @@ document.getElementById("hidealertbutton").onclick = function() {
   // $('#maximumwin').animate({top: "-50%"}, 2000);
   compute(myidentifier);
   document.getElementById("boom").style.zIndex = "6";
-
+  updateMatch();
   animate();
 };
 
