@@ -246,6 +246,14 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     //newimg.setAttribute('style','opacity:0;');
     currdiv.appendChild(newimg);
     
+    var newimgt = document.createElement('img');
+    var newimgtag = 'myzDiv';
+    newimgt.setAttribute('id',newimgtag);
+    newimgt.setAttribute('src',myimglocation);
+    newimgt.setAttribute('class','matchedimg');
+    //newimg.setAttribute('style','opacity:0;');
+    currdiv.appendChild(newimgt);
+
     $("#hidealertbutton").remove();
     $("#matchprogress").remove();
     $("#maxalertminitext").remove();
