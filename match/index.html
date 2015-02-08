@@ -221,19 +221,22 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   var topPicks;
 
   function updateMatch(){
-    /*var ni = document.getElementById('maximumwin');//where we are appending it to
+    var ni = document.getElementById('maximumwin');
+    
     var newdiv = document.createElement('div');
-    var divIdName = 'myzDiv';
+    var divIdName = 'matchimages';
     newdiv.setAttribute('id',divIdName);
-    newdiv.innerHTML = 'Element Number 4 has been added! <a href=\'#\' onclick=\'removeElement('+divIdName+')\'>Remove the div "'+divIdName+'"</a>';
-    ni.appendChild(newdiv);*/
-    var ni = document.getElementById('maximumwin');//where we are appending it to
+    //newdiv.innerHTML = 'Element Number '+num+' has been added! <a href=\'#\' onclick=\'removeElement('+divIdName+')\'>Remove the div "'+divIdName+'"</a>';
+    ni.appendChild(newdiv);
+
+
+
+    var ni = document.getElementById('matchimages');//where we are appending it to
     var newdiv = document.createElement('img');
-    var divIdName = 'myzDiv';
-    newdiv.setAttribute('id',divIdName);
+    var divIdNamei = 'myzDiv';
+    newdiv.setAttribute('id',divIdNamei);
     newdiv.setAttribute('src',myimglocation);
     newdiv.setAttribute('class','matchedimg');
-    //newdiv.innerHTML = 'Element Number 4 has been added! <a href=\'#\' onclick=\'removeElement('+divIdName+')\'>Remove the div "'+divIdName+'"</a>';
     ni.appendChild(newdiv);
     ni.appendChild(newdiv);
 
