@@ -49,7 +49,7 @@ document.getElementById("hidealertbutton").onclick = function() {
   //hideAlert();
   // $('#maximumwin').animate({top: "-50%"}, 2000);
   compute(myidentifier);
-  document.getElementById("boom").style.zIndex = "6";
+  document.getElementById("boom").style.zIndex = "4";
   updateMatch();
   animate();
 };
