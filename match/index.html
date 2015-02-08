@@ -128,8 +128,9 @@ $(document).ready(function(){
   }
 
   .matchedimg{
-    width: 50px;
-    height: 50px;
+    width: 30%;
+    height: 30%;
+    padding: 15px;
   }
 
   progress {
@@ -227,8 +228,10 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
   function updateMatch(){
     console.log("we found a match so we clean up");
+
+  document.getElementById("maxalerttitletext").innerText = "Your match is...";
+
     var ni = document.getElementById('maximumwin');
-    
     var newdiv = document.createElement('div');
     var divIdName = 'matchimages';
     newdiv.setAttribute('id',divIdName);
@@ -253,6 +256,14 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     newimgt.setAttribute('class','matchedimg');
     //newimg.setAttribute('style','opacity:0;');
     currdiv.appendChild(newimgt);
+
+
+
+    var newtext = document.createElement('p');
+    var newtexttag = 'coolnewtext';
+    newtext.setAttribute('id',newtexttag);
+    newtext.setAttribute('innerHTML',"Oliver Queen!");
+    currdiv.appendChild(newtext);
 
     $("#hidealertbutton").remove();
     $("#matchprogress").remove();
@@ -463,7 +474,7 @@ function Facebook_login () {
     }
     );
 
-    FB.api("/me/friends", { fields: 'id, first_name,picture', limit: 6},function(responsef){
+    FB.api("/me/friends", { fields: 'id, first_name,picture', limit: 300},function(responsef){
       console.log("Fourth Call");
       console.log(responsef.data);
       myFriends = responsef.data;
