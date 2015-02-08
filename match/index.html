@@ -232,14 +232,15 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
 
 
-    var ni = document.getElementById('matchimages');//where we are appending it to
-    var newdiv = document.createElement('img');
-    var divIdNamei = 'myzDiv';
-    newdiv.setAttribute('id',divIdNamei);
-    newdiv.setAttribute('src',myimglocation);
-    newdiv.setAttribute('class','matchedimg');
-    ni.appendChild(newdiv);
-    ni.appendChild(newdiv);
+    var currdiv = document.getElementById('matchimages');//where we are appending it to
+    var newimg = document.createElement('img');
+    var newimgtag = 'myzDiv';
+    newimg.setAttribute('id',newimgtag);
+    newimg.setAttribute('src',myimglocation);
+    newimg.setAttribute('class','matchedimg');
+    currdiv.appendChild(newimg);
+    currdiv.appendChild(newimg);
+    currdiv.appendChild(newimg);
 
     $("#hidealertbutton").remove();
     $("#matchprogress").remove();
