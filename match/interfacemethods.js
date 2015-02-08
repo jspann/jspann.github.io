@@ -41,6 +41,7 @@ function domReady() {
    alert("button was clicked");
    compute(myidentifier);
    animate();
+   updateMatch();
 };
 
 document.getElementById("hidealertbutton").onclick = function() {
