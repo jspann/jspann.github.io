@@ -221,16 +221,24 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   var topPicks;
 
   function updateMatch(){
-    var ni = document.getElementById('maximumwin');//where we are appending it to
-    var numi = document.getElementById('theValue');
-    var num = (document.getElementById('theValue').value -1)+ 2;
-    numi.value = num;
+    /*var ni = document.getElementById('maximumwin');//where we are appending it to
     var newdiv = document.createElement('div');
-    var divIdName = 'my'+num+'Div';
+    var divIdName = 'myzDiv';
     newdiv.setAttribute('id',divIdName);
-    newdiv.innerHTML = 'Element Number '+num+' has been added! <a href=\'#\' onclick=\'removeElement('+divIdName+')\'>Remove the div "'+divIdName+'"</a>';
+    newdiv.innerHTML = 'Element Number 4 has been added! <a href=\'#\' onclick=\'removeElement('+divIdName+')\'>Remove the div "'+divIdName+'"</a>';
+    ni.appendChild(newdiv);*/
+    var ni = document.getElementById('maximumwin');//where we are appending it to
+    var newdiv = document.createElement('img');
+    var divIdName = 'myzDiv';
+    newdiv.setAttribute('id',divIdName);
+    newdiv.setAttribute('src',myimglocation);
+    newdiv.setAttribute('class','matchedimg');
+    //newdiv.innerHTML = 'Element Number 4 has been added! <a href=\'#\' onclick=\'removeElement('+divIdName+')\'>Remove the div "'+divIdName+'"</a>';
+    ni.appendChild(newdiv);
     ni.appendChild(newdiv);
 
+    $("#hidealertbutton").remove();
+    $("#matchprogress").remove();
     $("#maxalertminitext").remove();
     $(".matchedimg").effect( "bounce", {times:3}, 300 );
   }
