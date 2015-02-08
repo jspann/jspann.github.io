@@ -31,7 +31,7 @@ function create() {
   this.b = Math.round(Math.random())*255;
 }
 
-for (var i = 0; i < 12; i++) {
+for (var i = 0; i < 120; i++) {
   circles.push(new create());
 }
 

@@ -9,9 +9,7 @@ function train(){
         console.log(responsei);
       }
     }
-);
-
-
+  );
 }
 
 function runmethod(){
@@ -31,7 +29,7 @@ function getMusic(myid){
 }
 
 function getTelevison(myid){
-  FB.api("/me/television",function (response) {
+  FB.api("/"+myid+"/television",function (response) {
     if (response && !response.error) {
       /*intertvarray = response.data;
       for(var p = 0; p < intertvarray.length; p++){
@@ -85,6 +83,16 @@ function getPhoto(myid){
           //document.getElementById('myimage').src = myimglocation;
         }
       });//end of getting friend photo loop
+}
+
+function getInterests(myid){
+  FB.api("/me/interests",
+    function (responsei) {
+      if (responsei && !responsei.error) {
+        return responsei;
+      }
+    }
+  );
 }
 
 function shareMatch(){
