@@ -30,6 +30,7 @@ function domReady() {
    alert("Warning!\nThis program might not function properly when viewed on a mobile device!");
   }
 
+  document.getElementById("boom").style.zIndex = "-1";
   //document.getElementById("myimage").src = "http://jspann.me/mmm/randimg" + Math.floor((Math.random() * 3) + 0) + ".jpg";
   document.getElementById("myimage").src = "randimg" + Math.floor((Math.random() * 4) + 0) + ".jpg";
   //document.getElementById("derpyalert").style.display = "none";
@@ -46,6 +47,9 @@ document.getElementById("hidealertbutton").onclick = function() {
   //hideAlert();
   // $('#maximumwin').animate({top: "-50%"}, 2000);
   compute(myidentifier);
+  document.getElementById("boom").style.zIndex = "6";
+
+  animate();
 };
 
 if(window.location.hash) {
@@ -82,8 +86,6 @@ window.requestAnimFrame = (function(){
       };
 })();
 
-var canvas = document.getElementById("boom"),
-  ctx = canvas.getContext("2d");
   /*W = bigger.innerWidth,
   H = bigger.innerHeight;*/
 

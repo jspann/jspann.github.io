@@ -4,6 +4,9 @@
 var circles = [];
 var W;
 var H;
+var anicanvas;
+var anictx;
+
 //Random Circles creator
 function create() {
   
@@ -33,19 +36,19 @@ for (var i = 0; i < 500; i++) {
 function draw() {
   
   //Fill canvas with black color
-    /*ctx.globalCompositeOperation = "source-over";
-    ctx.fillStyle = "rgba(0,0,0,0.15)";
-    ctx.fillRect(0, 0, W, H);*/
+    /*anictx.globalCompositeOperation = "source-over";
+    anictx.fillStyle = "rgba(0,0,0,0.15)";
+    anictx.fillRect(0, 0, W, H);*/
   
   //Fill the canvas with circles
   for(var j = 0; j < circles.length; j++){
     var c = circles[j];
     
     //Create the circles
-    ctx.beginPath();
-    ctx.arc(c.x, c.y, c.radius, 0, Math.PI*2, false);
-    ctx.fillStyle = "rgba("+c.r+", "+c.g+", "+c.b+", 0.5)";
-    ctx.fill();
+    anictx.beginPath();
+    anictx.arc(c.x, c.y, c.radius, 0, Math.PI*2, false);
+    anictx.fillStyle = "rgba("+c.r+", "+c.g+", "+c.b+", 0.5)";
+    anictx.fill();
     
     c.x += c.vx;
     c.y += c.vy;
@@ -57,6 +60,10 @@ function draw() {
 }
 
 function animate() {
+  console.log("Look mom! I'm animated!");
+  anicanvas = document.getElementById("boom");
+  anictx = anicanvas.getContext("2d");
+
   W = document.getElementById("boom").width;
   H = document.getElementById("boom").height;
   //startupexplo();
