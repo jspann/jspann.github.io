@@ -62,7 +62,7 @@ function draw() {
 }
 
 function animate() {
-  console.log("Look mom! I'm animated!");
+  //THIS IS SO ANNOYING console.log("Look mom! I'm animated!");
   anicanvas = document.getElementById("boom");
   anictx = anicanvas.getContext("2d");
 
