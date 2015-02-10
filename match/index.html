@@ -248,12 +248,14 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
   var interbookarray;//array of my book interests
   var intermoviearray;//array of my movie interests
 
+  var bestmatchID;//the id of the # 1 match
+
   var topPicks;
 
   function updateMatch(){
     console.log("we found a match so we clean up");
 
-  document.getElementById("maxalerttitletext").innerText = "Your match is...";
+    document.getElementById("maxalerttitletext").innerText = "Your match is...";
 
     var ni = document.getElementById('maximumwin');
     var newdiv = document.createElement('div');
@@ -268,7 +270,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     var newimg = document.createElement('img');
     var newimgtag = 'myzDiv';
     newimg.setAttribute('id',newimgtag);
-    newimg.setAttribute('src',"testimg3.jpg");
+    newimg.setAttribute('src',myimglocation);
     newimg.setAttribute('class','matchedimg');
     //newimg.setAttribute('style','opacity:0;');
     currdiv.appendChild(newimg);
@@ -276,7 +278,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     var newimgt = document.createElement('img');
     var newimgtag = 'myzDiv';
     newimgt.setAttribute('id',newimgtag);
-    newimgt.setAttribute('src',"testimg1.jpg");
+    newimgt.setAttribute('src',myimglocation);
     newimgt.setAttribute('class','matchedimg');
     //newimg.setAttribute('style','opacity:0;');
     currdiv.appendChild(newimgt);
