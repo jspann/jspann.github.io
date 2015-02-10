@@ -264,7 +264,8 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     newtext.setAttribute('id',newtexttag);
     //newtext.setAttribute('innerHTML',"Oliver Queen!");
     currdiv.appendChild(newtext);
-
+  
+    document.getElementById('coolnewtext').style.marginTop = "0px";
     document.getElementById("coolnewtext").innerHTML = "Oliver Queen!";
 
     $("#hidealertbutton").remove();
@@ -294,10 +295,11 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     document.getElementById("matchprogress").max = myFriends.length;
     console.log("here is the total array");
     console.log(myFriends);
-    //getMyData();
-    //dont think we need this getPhoto("me");
+
     document.getElementById('myimage').src = myimglocation;
 
+      var totalResultsArray;
+      var mySexyInterests;
       for (var i = 0; i < myFriends.length; i++) {
         console.log("woo!");
         console.log(myFriends[i]);
@@ -313,61 +315,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
   }//end of compute
 
-/*function getMyData(){
-  FB.api("/me/music",function (response) {
-  if (response && !response.error) {
-  intermusarray = response.data;
-  for(var p = 0; p < intermusarray.length; p++){
-  console.log(intermusarray[p]);
-  }
-  }
-  }
-  );//end of music api call
 
-
-  FB.api("/me/television",function (response) {
-    if (response && !response.error) {
-      intertvarray = response.data;
-      for(var p = 0; p < intertvarray.length; p++){
-      console.log(intertvarray[p]);
-      }
-    }
-  });//end of tv api call
-
-  FB.api("/me/books",function (response) {
-  if (response && !response.error) {
-  interbookarray = response.data;
-  for(var p = 0; p < interbookarray.length; p++){
-  console.log(interbookarray[p]);
-  }
-  }
-  });//end of book api call
-
-  FB.api("/me/movies",function (response) {
-  if (response && !response.error) {
-  intermoviearray = response.data;
-  for(var p = 0; p < intermoviearray.length; p++){
-  console.log(intermoviearray[p]);
-  }
-  }
-  });//end of movies api call
-
-FB.api("/me/picture",
-      {
-        "redirect": false,
-        "height": "100",
-        "type": "normal",
-        "width": "100"
-      },function (responsez) {
-        if (responsez && !responsez.error) {
-          console.log(responsez);
-          console.log(responsez.data.url);
-          myimglocation = responsez.data.url;
-          document.getElementById('myimage').src = myimglocation;
-        }
-      });//end of getting friend photo loop
-  //MAYBE we'll do likes in the future
-}*/
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
