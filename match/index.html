@@ -262,8 +262,10 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     var newtext = document.createElement('p');
     var newtexttag = 'coolnewtext';
     newtext.setAttribute('id',newtexttag);
-    newtext.setAttribute('innerHTML',"Oliver Queen!");
+    //newtext.setAttribute('innerHTML',"Oliver Queen!");
     currdiv.appendChild(newtext);
+
+    document.getElementById("coolnewtext").innerHTML = "Oliver Queen!";
 
     $("#hidealertbutton").remove();
     $("#matchprogress").remove();
