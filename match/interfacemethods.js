@@ -23,12 +23,12 @@ function rgbToHex(r, g, b) {
 
 function showPrivacy(){
   $('#privacybox').animate({top: "50%"}, 2000);
-  privacyBool = 0;
+  privacyBool = 1;
 }
 
 function hidePrivacy(){
   $('#privacybox').animate({top: "-50%"}, 2000);
-  privacyBool = 1;
+  privacyBool = 0;
 }
 
 function domReady() {
