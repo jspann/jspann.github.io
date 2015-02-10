@@ -6,6 +6,8 @@
     }
 } ());
 
+var privacyBool;
+
 function rgbj(r, g, b){
   return "rgb("+r+","+g+","+b+")";
 }
@@ -17,6 +19,14 @@ function componentToHex(c) {
 
 function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+function showPrivacy(){
+  $('#hidemyprivacystuff').animate({top: "50%"}, 2000);
+}
+
+function hidePrivacy(){
+  $('#hidemyprivacystuff').animate({top: "-50%"}, 2000);
 }
 
 function domReady() {
@@ -37,10 +47,12 @@ function domReady() {
   document.getElementById("matchprogress").max = 100;
   document.getElementById("matchprogress").style.display = "none";
 
+  privacyBool = 0;
+
   document.getElementById("gobutton").onclick = function() {
    alert("button was clicked");
    compute(myidentifier);
-  updateMatch();
+   updateMatch();
    animate();
 
 };
@@ -54,10 +66,20 @@ document.getElementById("hidealertbutton").onclick = function() {
   animate();
 };
 
+document.getElementById("hidemyprivacystuff").onclick = function() {
+  if (privacyBool == 1) {//we need to hide it
+    hidePrivacy();
+  } else{//we need to show it
+    showPrivacy();
+  };
+
+};
+
 if(window.location.hash) {
   // Fragment exists
-  alert("To match your profile with your friends we will need to compare some of your Facebook information.\
-   We will not display or store this information in any way.");
+  //alert("To match your profile with your friends we will need to compare some of your Facebook information.\
+   //We will not display or store this information in any way.");
+  showPrivacy();
 } else {
   // Fragment doesn't exist
 }

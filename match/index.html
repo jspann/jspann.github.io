@@ -127,6 +127,30 @@ $(document).ready(function(){
     position: fixed;
   }
 
+  #privacybox{
+    position: absolute;
+    background-color: green;
+    color: white;
+    /*float: center;*/
+    
+    top: -300px;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+
+    width: 600px;
+    height: 600px;
+    z-index: 20;
+  }
+
+  #privacyboxtitle{
+
+  }
+
+  #privacyboxtext{
+
+  }
+
   .matchedimg{
     width: 30%;
     height: 30%;
@@ -482,6 +506,13 @@ I dont think we use this<div id="mainview">
   <p id="maxalertminitext">Press the button to find out who you have the most in common with!</p>
   <input type="button" value="Find my match!" id="hidealertbutton">
   <progress max="100" value="0" id="matchprogress"></progress>
+</div>
+
+<div id="privacybox">
+  <b id="privacyboxtitle">Privacy</b>
+  <p id="privacyboxtext">To match your profile with your friends we will need to compare some of your Facebook information.   We will not display or store this information in any way.</p>
+  <input type="button" value="ok." id="hidemyprivacystuff">
+  
 </div>
 <canvas id="boom"></canvas>
 
