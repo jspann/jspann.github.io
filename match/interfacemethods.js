@@ -22,11 +22,11 @@ function rgbToHex(r, g, b) {
 }
 
 function showPrivacy(){
-  $('#hidemyprivacystuff').animate({top: "50%"}, 2000);
+  $('#privacybox').animate({top: "50%"}, 2000);
 }
 
 function hidePrivacy(){
-  $('#hidemyprivacystuff').animate({top: "-50%"}, 2000);
+  $('#privacybox').animate({top: "-50%"}, 2000);
 }
 
 function domReady() {
