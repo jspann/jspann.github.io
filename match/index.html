@@ -339,8 +339,9 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
         //console.log(myFriends[i].id);
 
         document.getElementById("matchprogress").value = i+1;
-
+        console.log("HIS length is:" +tempLikeArray.length);
         tempLikeArray = getlikes(myFriends[i].id);
+        console.log(tempLikeArray);
         console.log("MY length is:" +mySexyInterests.length);
         for (var d = 0; d < mySexyInterests.length; d++){
           console.log("next me");
