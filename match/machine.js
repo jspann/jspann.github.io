@@ -95,6 +95,17 @@ function getlikes(myid){
     });
 }
 
+function getlikeCount(myid){
+  FB.api("/"+myid+"/likes",function (response) {
+      if (response && !response.error) {
+        
+        console.log(response);
+        console.log("response count: " + response.length);
+        return response.length;
+      }
+    });
+}
+
 function getInterests(myid){
   FB.api("/me/interests",
     function (responsei) {
