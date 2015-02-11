@@ -99,8 +99,8 @@ function getlikeCount(myid){
   FB.api("/"+myid+"/likes",function (response) {
       if (response && !response.error) {
         
-        console.log(response);
-        console.log("response count: " + response.length);
+        console.log(response.data);
+        console.log("response count: " + response.data.length);
         return response.length;
       }
     });
