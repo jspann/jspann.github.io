@@ -343,15 +343,16 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
         tempLikeArray = getlikes(myFriends[i].id);
 
         for (var d = 0; d < mySexyInterests.length; d++){
+          console.log("next me");
           for (var t = 0; t < tempLikeArray.length; t++) {
-            
+            console.log("david");
             if (mySexyInterests[d] == tempLikeArray[e]) {
               console.log("WE HAVE A MATCH:"+ mySexyInterests[d] + " |" +tempLikeArray[e]);
               likecount++;
             } else{
               //no match
             }
-            
+            console.log("after");
 
           }//end t for loop
           
