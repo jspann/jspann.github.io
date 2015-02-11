@@ -331,6 +331,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
     if (myFriends.length == 0) {
       //set the finalID equal to self
+      theMatch[1] = 1;//SELF
     } else{
       mySexyInterests = getlikes("me");
       for (var i = 0; i < myFriends.length; i++) {
@@ -339,19 +340,17 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
         //console.log(myFriends[i].id);
 
         document.getElementById("matchprogress").value = i+1;
-        //console.log("HIS length is:" +tempLikeArray.length);
         
-        getlikeCount("me");
-        getlikeCount(myFriends[i].id);
-        var tempLikeArray = getlikes(myFriends[i].id);
+        
 
         console.log(tempLikeArray.length);
         
-        if (tempLikeArray.length == 0) {
-
+        if (getlikeCount(myFriends[i].id) == 0) {
+			//Set theMatch id (1) equal to my id
         }else{
-          console.log(tempLikeArray);
-          console.log("MY length is:" +mySexyInterests.length);
+          var tempLikeArray = getlikes(myFriends[i].id);
+          //console.log(tempLikeArray);
+          //console.log("MY length is:" +mySexyInterests.length);
 
           for (var d = 0; d < mySexyInterests.length; d++){
             console.log("next me");
@@ -368,13 +367,25 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
               console.log("after");
             }//end t for loop
           }//end d for loop
+          
+			tempLikeArray = null;
+			if ((likecount/getlikeCount("me")) > theMatch[0]) {
+			  //set match
+			  theMatch[0] = (likecount/getlikeCount("me"));
+			  theMatch[1] = myFriends[i].id;
+			} else{
+			  //do nothing
+			}//end reset score if statement
+
         }//end of tempLikeArray exception if statement
         
         
+      }//end of friend for loop
 
-      }//end of for loop
+      //last rites
+      bestmatchID =  theMatch[1];
 
-    }
+    }//close of no friend if statement
 
   }//end of compute
 
