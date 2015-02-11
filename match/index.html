@@ -327,6 +327,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     var mySexyInterests;//ME interests
     var tempLikeArray;//FRIEND interests
     var likecount;//number that ME and friend have in common (incremented)
+    var theMatch = [0,0];//name, score
 
     if (myFriends.length == 0) {
       //set the finalID equal to self
@@ -335,13 +336,28 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
       for (var i = 0; i < myFriends.length; i++) {
         console.log("woo!");
         console.log(myFriends[i]);
-        console.log(myFriends[i].id);
+        //console.log(myFriends[i].id);
 
         document.getElementById("matchprogress").value = i+1;
 
-        getlikes(myFriends[i].id);
-        //getPhoto(myFriends[i].id);
-        //document.getElementById('myimage').src = myimglocation;
+        tempLikeArray = getlikes(myFriends[i].id);
+
+        for (var d = 0; d < mySexyInterests.length; d++){
+          for (var t = 0; t < tempLikeArray.length; t++) {
+            
+            if (mySexyInterests[d] == tempLikeArray[e]) {
+              console.log("WE HAVE A MATCH:"+ mySexyInterests[d] + " |" +tempLikeArray[e]);
+              likecount++;
+            } else{
+              //no match
+            }
+            
+
+          }//end t for loop
+          
+        }//end d for loop
+
+        
 
       }//end of for loop
 
