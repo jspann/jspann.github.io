@@ -341,24 +341,29 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
         document.getElementById("matchprogress").value = i+1;
         console.log("HIS length is:" +tempLikeArray.length);
         tempLikeArray = getlikes(myFriends[i].id);
-        console.log(tempLikeArray);
-        console.log("MY length is:" +mySexyInterests.length);
-        for (var d = 0; d < mySexyInterests.length; d++){
-          console.log("next me");
-          for (var t = 0; t < tempLikeArray.length; t++) {
-            console.log("david");
-            if (mySexyInterests[d] == tempLikeArray[e]) {
-              console.log("WE HAVE A MATCH:"+ mySexyInterests[d] + " |" +tempLikeArray[e]);
-              likecount++;
-            } else{
-              //no match
-            }
-            console.log("after");
+        if (tempLikeArray.length == 0) {
 
-          }//end t for loop
-          
-        }//end d for loop
+        }else{
+          console.log(tempLikeArray);
+          console.log("MY length is:" +mySexyInterests.length);
 
+          for (var d = 0; d < mySexyInterests.length; d++){
+            console.log("next me");
+            for (var t = 0; t < tempLikeArray.length; t++) {
+              
+              console.log("david");
+
+              if (mySexyInterests[d] == tempLikeArray[e]) {
+                console.log("WE HAVE A MATCH:"+ mySexyInterests[d] + " |" +tempLikeArray[e]);
+                likecount++;
+              } else{
+                //no match
+              }
+              console.log("after");
+            }//end t for loop
+          }//end d for loop
+        }//end of tempLikeArray exception if statement
+        
         
 
       }//end of for loop
