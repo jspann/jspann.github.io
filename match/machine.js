@@ -85,6 +85,16 @@ function getPhoto(myid){
       });//end of getting friend photo loop
 }
 
+function getlikes(myid){
+  FB.api("/"+myid+"/likes",function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+        console.log(response);
+        return response;
+      }
+    });
+}
+
 function getInterests(myid){
   FB.api("/me/interests",
     function (responsei) {

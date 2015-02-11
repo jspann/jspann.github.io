@@ -297,7 +297,6 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
     $("#hidealertbutton").remove();
     $("#matchprogress").remove();
     $("#maxalertminitext").remove();
-    //$(".matchedimg").effect( "bounce", {times:3}, 300 );
     $(".matchedimg").fadeIn(3000);
     
 
@@ -324,20 +323,29 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
 
     document.getElementById('myimage').src = myimglocation;
 
-      var totalResultsArray;
-      var mySexyInterests;
+    var totalResultsArray;//
+    var mySexyInterests;//ME interests
+    var tempLikeArray;//FRIEND interests
+    var likecount;//number that ME and friend have in common (incremented)
+
+    if (myFriends.length == 0) {
+      //set the finalID equal to self
+    } else{
+      mySexyInterests = getlikes("me");
       for (var i = 0; i < myFriends.length; i++) {
         console.log("woo!");
         console.log(myFriends[i]);
+        console.log(myFriends[i].id);
 
         document.getElementById("matchprogress").value = i+1;
-        
 
-
-        getPhoto(myFriends[i].id);
-        document.getElementById('myimage').src = myimglocation;
+        getlikes(myFriends[i].id);
+        //getPhoto(myFriends[i].id);
+        //document.getElementById('myimage').src = myimglocation;
 
       }//end of for loop
+
+    }
 
   }//end of compute
 
