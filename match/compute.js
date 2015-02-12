@@ -1,3 +1,5 @@
+var theMatch = [0,0];//name, score
+
 function compute(myid){
     console.log("We are computuing!!!" + myid);
     document.getElementById("matchprogress").style.display = "block";
@@ -10,7 +12,7 @@ function compute(myid){
     var totalResultsArray;//
 
     var likecount;//number that ME and friend have in common (incremented)
-    var theMatch = [0,0];//name, score
+    
 
     if (myFriends.length == 0) {
       //set the finalID equal to self
