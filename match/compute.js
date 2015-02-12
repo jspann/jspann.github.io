@@ -22,22 +22,32 @@ function compute(myid){
 //      mySexyInterests = getlikes("me");
       var myVar=setTimeout(function(){console.log("Ran pause")},2000);
 
+      FB.api("/me/likes",function (response) {
+            if (response && !response.error) {
+              /* handle the result */
+              mySexyInterests = response;
+              console.log("before sexiness: "+mySexyInterests)
+            }else{
+              console.log("error in getting your likes: " + response.error);
+            }
+          }
+      );
       console.log("feeling sexy: " + mySexyInterests);
       for (var i = 0; i < myFriends.length; i++) {
         console.log("woo!");
         console.log(myFriends[i]);
         
         document.getElementById("matchprogress").value = i+1;
-            
+        
         if (getlikeCount(myFriends[i].id) == 0) {
 			//Set theMatch id (1) equal to my id
       theMatch[1] = myidentifier;//SELF
+      console.log("my friend has no likes:" + theMatch);
         }else{
           var tempLikeArray = [];
 //          tempLikeArray = getlikes(myFriends[i].id);
           tempLikeArray[1]=4;
           tempLikeArray[2]=6;
-          var myVar=setTimeout(function(){console.log("Ran pause")},2000);
           
       console.log("feeling super sexy: " + mySexyInterests);
           for (var d = 0; d < mySexyInterests.length; d++){
