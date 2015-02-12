@@ -104,6 +104,7 @@ FB.api("/me/likes",function (response) {
         return ff;
       }
     });
+    return 5;
 }
 
 function getlikeCount(myid){
