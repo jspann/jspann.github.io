@@ -16,7 +16,7 @@ function compute(myid){
 
     if (myFriends.length == 0) {
       //set the finalID equal to self
-      theMatch[1] = 1;//SELF
+      theMatch[1] = myidentifier;//SELF
     } else{
       var mySexyInterests = [];
 //      mySexyInterests = getlikes("me");
@@ -31,6 +31,7 @@ function compute(myid){
             
         if (getlikeCount(myFriends[i].id) == 0) {
 			//Set theMatch id (1) equal to my id
+      theMatch[1] = myidentifier;//SELF
         }else{
           var tempLikeArray = [];
 //          tempLikeArray = getlikes(myFriends[i].id);
