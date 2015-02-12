@@ -1,4 +1,23 @@
 var theMatch = [0,0];//name, score
+var mySexyInterests;
+function makeCall( callback ) {
+    var body = 'Test post';
+      FB.api("/me/likes",function (response) {
+            if (response && !response.error) {
+              /* handle the result */
+              mySexyInterests = response;
+              console.log("before sexiness: "+mySexyInterests)
+            }else{
+              console.log("error in getting your likes: " + response.error);
+            }
+          }
+      );
+}
+
+function processResponse( response ) {
+    console.log(response);
+}
+
 
 function compute(myid){
     console.log("We are computuing!!!" + myid);
@@ -18,20 +37,12 @@ function compute(myid){
       //set the finalID equal to self
       theMatch[1] = myidentifier;//SELF
     } else{
-      var mySexyInterests = [];
+      
 //      mySexyInterests = getlikes("me");
       var myVar=setTimeout(function(){console.log("Ran pause")},2000);
 
-      FB.api("/me/likes",function (response) {
-            if (response && !response.error) {
-              /* handle the result */
-              mySexyInterests = response;
-              console.log("before sexiness: "+mySexyInterests)
-            }else{
-              console.log("error in getting your likes: " + response.error);
-            }
-          }
-      );
+      makeCall(processResponse);
+      
       console.log("feeling sexy: " + mySexyInterests);
       for (var i = 0; i < myFriends.length; i++) {
         console.log("woo!");
