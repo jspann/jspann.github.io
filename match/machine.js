@@ -86,18 +86,19 @@ function getPhoto(myid){
 }
 
 function getlikes(myid){
-  FB.api("/"+myid+"/likes",function (response) {
+  FB.api("/me/likes",function (response) {
       if (response && !response.error) {
         /* handle the result */
         console.log(response);
         console.log("LIKES:"+response.data);
         var ff = [];
         for (var i = 0; i < response.data.length; i++) {
-          ff[i] = response.data[i];
+          ff[i] = response.data[i].id;
         }
-        console.log(ff);
-        //return response.data;
-        return ff;
+        console.log("ff is:" + ff);
+        console.log(ff[0]);
+        console.log(ff[1]);
+        return response.data;
       }
     });
 }
