@@ -89,8 +89,15 @@ function getlikes(myid){
   FB.api("/"+myid+"/likes",function (response) {
       if (response && !response.error) {
         /* handle the result */
-        console.log("LIKES: " +myid+ ":"+response.data);
-        return response.data;
+        console.log(response);
+        console.log("LIKES:"+response.data);
+        var ff = [];
+        for (var i = 0; i < response.data.length; i++) {
+          ff[i] = response.data[i];
+        }
+        console.log(ff);
+        //return response.data;
+        return ff;
       }
     });
 }
