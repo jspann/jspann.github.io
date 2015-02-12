@@ -90,7 +90,7 @@ function getlikes(myid){
       if (response && !response.error) {
         /* handle the result */
         console.log(response);
-        return response;
+        return response.data;
       }
     });
 }
