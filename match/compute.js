@@ -16,7 +16,7 @@ function compute(myid){
       //set the finalID equal to self
       theMatch[1] = 1;//SELF
     } else{
-      var mySexyInterests ;//= [];
+      var mySexyInterests //= [];
       mySexyInterests[1] = 5;
 //      mySexyInterests = getlikes("me");
       var myVar=setTimeout(function(){console.log("Ran pause")},2000);
@@ -31,7 +31,7 @@ function compute(myid){
         if (getlikeCount(myFriends[i].id) == 0) {
 			//Set theMatch id (1) equal to my id
         }else{
-          var tempLikeArray = [5];
+          var tempLikeArray = [];
 //          tempLikeArray = getlikes(myFriends[i].id);
           tempLikeArray[1]=4;
           tempLikeArray[2]=6;
