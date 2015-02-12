@@ -86,12 +86,14 @@ function getPhoto(myid){
 }
 
 function getlikes(myid){
-  FB.api("/me/likes",function (response) {
+FB.api("/me/likes",function (response) {
       if (response && !response.error) {
         /* handle the result */
         console.log(response);
         console.log("LIKES:"+response.data);
-        var ff = [];
+        //var ff = [];
+            var ff = new Object();
+
         for (var i = 0; i < response.data.length; i++) {
           ff[i] = response.data[i].id;
         }
