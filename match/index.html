@@ -334,7 +334,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
       //set the finalID equal to self
       theMatch[1] = 1;//SELF
     } else{
-      var mySexyInterests = [];
+      var mySexyInterests = [6];
       mySexyInterests = getlikes("me");
       console.log("feeling sexy: " + mySexyInterests);
       for (var i = 0; i < myFriends.length; i++) {
@@ -346,7 +346,7 @@ http://cssdeck.com/labs/beautiful-flat-buttons*/
         if (getlikeCount(myFriends[i].id) == 0) {
 			//Set theMatch id (1) equal to my id
         }else{
-          var tempLikeArray = [];
+          var tempLikeArray = [5];
           tempLikeArray = getlikes(myFriends[i].id);
       console.log("feeling super sexy: " + mySexyInterests);
           for (var d = 0; d < mySexyInterests.length; d++){
