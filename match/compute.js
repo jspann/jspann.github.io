@@ -8,8 +8,7 @@ function compute(myid){
     document.getElementById('myimage').src = myimglocation;
 
     var totalResultsArray;//
-//    var mySexyInterests = [];//ME interests
-//    var tempLikeArray = [];//FRIEND interests
+
     var likecount;//number that ME and friend have in common (incremented)
     var theMatch = [0,0];//name, score
 
@@ -17,7 +16,8 @@ function compute(myid){
       //set the finalID equal to self
       theMatch[1] = 1;//SELF
     } else{
-      var mySexyInterests = [6];
+      var mySexyInterests = [];
+      mySexyInterests[1] = 5;
       mySexyInterests = getlikes("me");
       var myVar=setTimeout(function(){console.log("Ran pause")},2000);
 
@@ -33,6 +33,8 @@ function compute(myid){
         }else{
           var tempLikeArray = [5];
           tempLikeArray = getlikes(myFriends[i].id);
+          tempLikeArray[1]=4;
+          tempLikeArray[2]=6;
           var myVar=setTimeout(function(){console.log("Ran pause")},2000);
           
       console.log("feeling super sexy: " + mySexyInterests);
