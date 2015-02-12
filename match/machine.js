@@ -98,7 +98,8 @@ function getlikes(myid){
         console.log("ff is:" + ff);
         console.log(ff[0]);
         console.log(ff[1]);
-        return response.data;
+        //return response.data;
+        return ff;
       }
     });
 }
