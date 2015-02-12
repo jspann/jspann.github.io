@@ -83,9 +83,11 @@ function getPhoto(myid){
           //document.getElementById('myimage').src = myimglocation;
         }
       });//end of getting friend photo loop
+  return responsez.data.url;
 }
 
 function getlikes(myid){
+  var rz;
 FB.api("/"+myid+"/likes",function (response) {
       if (response && !response.error) {
         /* handle the result */
@@ -101,10 +103,11 @@ FB.api("/"+myid+"/likes",function (response) {
         console.log(ff[0]);
         console.log(ff[1]);
         //return response.data;
+        rz = ff;
         return ff;
       }
     });
-    return ff;
+    return rz;
 }
 
 function getlikeCount(myid){
