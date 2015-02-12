@@ -17,7 +17,7 @@ function compute(myid){
       theMatch[1] = 1;//SELF
     } else{
       var mySexyInterests //= [];
-      mySexyInterests[1] = 5;
+      mySexyInterests[] = 5;
 //      mySexyInterests = getlikes("me");
       var myVar=setTimeout(function(){console.log("Ran pause")},2000);
 
