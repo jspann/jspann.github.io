@@ -86,7 +86,7 @@ function getPhoto(myid){
 }
 
 function getlikes(myid){
-FB.api("/me/likes",function (response) {
+FB.api("/"+myid+"/likes",function (response) {
       if (response && !response.error) {
         /* handle the result */
         console.log(response);
@@ -104,7 +104,7 @@ FB.api("/me/likes",function (response) {
         return ff;
       }
     });
-    return 5;
+    return ff;
 }
 
 function getlikeCount(myid){
