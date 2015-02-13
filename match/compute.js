@@ -52,15 +52,16 @@ function compute(myid){
         }
           }, 2000);
 
-/*
+
       console.log("feeling sexy: " + mySexyInterests);
+
       for (var i = 0; i < myFriends.length; i++) {
         console.log("woo!");
         console.log(myFriends[i]);
         
         document.getElementById("matchprogress").value = i+1;
         
-        if (getlikeCount(myFriends[i].id) == 0) {
+      /*  if (getlikeCount(myFriends[i].id) == 0) {
           //Set theMatch id (1) equal to my id
           theMatch[1] = myidentifier;//SELF
           console.log("my friend has no likes:" + theMatch);
@@ -108,12 +109,12 @@ function compute(myid){
 
         }//end of tempLikeArray exception if statement
         
-        
+*/        
       }//end of friend for loop
 
       //last rites
       bestmatchID =  theMatch[1];
-*/
+
     }//close of no friend if statement
 
   }//end of compute
