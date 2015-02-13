@@ -39,10 +39,20 @@ function compute(myid){
     } else{
       
 //      mySexyInterests = getlikes("me");
-      var myVar=setTimeout(function(){console.log("Ran pause")},2000);
 
       makeCall(processResponse);
       
+      var tme = setInterval(function(){
+
+        if (mySexyInterests == undefined) {
+          console.log("undef");
+        } else{
+          tme = null;
+
+        }
+          }, 2000);
+
+/*
       console.log("feeling sexy: " + mySexyInterests);
       for (var i = 0; i < myFriends.length; i++) {
         console.log("woo!");
@@ -51,16 +61,25 @@ function compute(myid){
         document.getElementById("matchprogress").value = i+1;
         
         if (getlikeCount(myFriends[i].id) == 0) {
-			//Set theMatch id (1) equal to my id
-      theMatch[1] = myidentifier;//SELF
-      console.log("my friend has no likes:" + theMatch);
+          //Set theMatch id (1) equal to my id
+          theMatch[1] = myidentifier;//SELF
+          console.log("my friend has no likes:" + theMatch);
         }else{
+
+
+
+
+
+
+
           var tempLikeArray = [];
-//          tempLikeArray = getlikes(myFriends[i].id);
           tempLikeArray[1]=4;
           tempLikeArray[2]=6;
-          
-      console.log("feeling super sexy: " + mySexyInterests);
+          //make fb api call
+          //constantly check if sexy is undefined. If yes, do nothing. If no, continue
+          //make fb api call
+          //constantly check if temp is undefined. If yes, do nothing. If no, continue
+          console.log("feeling super sexy: " + mySexyInterests);
           for (var d = 0; d < mySexyInterests.length; d++){
             console.log("next me");
             for (var t = 0; t < tempLikeArray.length; t++) {
@@ -73,6 +92,7 @@ function compute(myid){
               } else{
                 //no match
               }
+              
               console.log("after");
             }//end t for loop
           }//end d for loop
@@ -93,7 +113,11 @@ function compute(myid){
 
       //last rites
       bestmatchID =  theMatch[1];
-
+*/
     }//close of no friend if statement
 
   }//end of compute
+
+function finishCompute(){
+
+}  
