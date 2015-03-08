@@ -40,6 +40,9 @@ function compute(myid){
       
 //      mySexyInterests = getlikes("me");
 
+
+
+
       makeCall(processResponse);
       
       var tme = setInterval(function(){
@@ -47,6 +50,7 @@ function compute(myid){
         if (mySexyInterests == undefined) {
           console.log("undef");
         } else{
+          console.log("KILL THE CLOCK");
           tme = null;
 
         }
@@ -61,7 +65,7 @@ function compute(myid){
         
         document.getElementById("matchprogress").value = i+1;
         
-      /*  if (getlikeCount(myFriends[i].id) == 0) {
+        if (getlikeCount(myFriends[i].id) == 0) {
           //Set theMatch id (1) equal to my id
           theMatch[1] = myidentifier;//SELF
           console.log("my friend has no likes:" + theMatch);
@@ -109,7 +113,7 @@ function compute(myid){
 
         }//end of tempLikeArray exception if statement
         
-*/        
+       
       }//end of friend for loop
 
       //last rites

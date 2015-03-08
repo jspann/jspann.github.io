@@ -1,0 +1,13 @@
+plan
+	
+create a results array which holds
+call  "getInterests" and store that in an array
+For loop that goes through all friends
+	gets friend id
+	calls  "getPhoto" with id which returns the users photo
+	calls  "getInterests" with id which returns the friends interests
+	store that in a temporary array
+	Create counter variable (intCounter)
+	For loop that gets each value in the friend array
+		compare it to each value of the temporary array
+		if it is in there, increment intCounter
