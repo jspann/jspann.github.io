@@ -1,0 +1,319 @@
+<html>
+<head>
+  <title>stupidfaceaversary</title>
+<link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript" src="Chart.js"></script>
+
+<script type="text/javascript">
+var pieData = [
+				{
+					value: 8389,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Day"
+				},
+				{
+					value: 33108,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Night"
+				}
+
+			];
+
+function showampmgraph(){
+	console.log("got here");
+var ctx = document.getElementById("ampmgraph").getContext("2d");
+	window.myPie = new Chart(ctx).Pie(pieData);
+}
+</script>
+
+<script type="text/javascript">
+		var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+		var lineChartData = {
+			labels : ["October 2013","November","December","January","February","March","April","May","June","July","August","September","October 2014"],
+			datasets : [
+				{
+					label: "Months",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : [2264,5353,1716,2586,2735,2347,7357,6897,3712,3269,1433,1657,171 ]
+				}			]
+		}
+	function setupgraph(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true
+		});
+	}
+
+</script>
+<script type="text/javascript">
+		
+		var lineChartDataz = {
+			labels : ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+			datasets : [
+				{
+					label: "Days",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : [0,0,0,0,0,0,0]
+				}			]
+		}
+	function weeklygraph(){
+		var ctx = document.getElementById("weeklygraph").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartDataz, {
+			responsive: true
+		});
+	}
+
+</script>
+<script type="text/javascript">
+        var radarChartData = {
+		labels: ["Doctor Who", "Music", "Art", "Bo Burnham", "TFIOS"],
+		datasets: [
+			{
+				label: "Interests",
+				fillColor: "rgba(220,220,220,0.2)",
+				strokeColor: "rgba(220,220,220,1)",
+				pointColor: "rgba(220,220,220,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(220,220,220,1)",
+				data: [421,51,65,121,80]
+			}
+		]
+	};
+	
+	function loadRadar(){
+	    window.myRadar = new Chart(document.getElementById("interestcanvas").getContext("2d")).Radar(radarChartData, {
+			responsive: true
+        });}
+
+        window.onload = function(){
+                document.getElementById("hayleyaudio").volume = 0.0;
+console.log("ok james")	}
+</script>
+
+<script>
+$(document).ready(function() {
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+	/* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+		$(this).animate({'opacity':'1'},600);
+if($(this).attr("id") == "canvas" && ($(this).css("opacity") == 0)){setupgraph();}
+if($(this).attr("id") == "ampmgraph" && ($(this).css("opacity") == 0)){
+showampmgraph();
+}
+if($(this).attr("id") == "interestcanvas" && ($(this).css("opacity") == 0)){loadRadar();}        
+if($(this).attr("id") == "weeklygraph" && ($(this).css("opacity") == 0)){weeklygraph();}}
+	});
+    });
+
+
+
+});
+</script>
+
+<script>
+
+	$(document).ready(function() {
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+	/* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+		if($(this).attr("id") == "paramoreimage"){
+                    
+                    console.log("audio detected");
+                    $("#hayleyaudio").animate({volume: 1}, 1000);
+                console.log("yeah boi");
+                }else{
+
+                $("#hayleyaudio").animate({volume: 0}, 1000);
+                console.log("no no no");
+                }
+            }
+	});
+    });
+
+});
+
+</script>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+    console.log("jquery is on");
+});
+</script>
+
+<script type="text/javascript">
+function goToTop(){
+	$('html, body').animate({ scrollTop: 0 }, 'fast');
+}
+</script>
+
+<style>
+body{
+    background-color:#F5F5DC;
+        overflow-y:hidden;
+}
+
+.hideme{
+    opacity:0;
+}
+
+#welcometext{
+   text-align:center;
+    font-size: 100%;
+    font-family: 'Dosis', sans-serif;
+ 
+}
+
+#upbutton{
+    position:fixed;    top: 5px;    right: 5px;   opacity:0.3;
+}
+textarea:focus, input:focus{
+    outline: 0;
+}
+*:focus {
+    outline: 0;
+}
+.graphdiv{
+        width: 50%;
+    margin: 0 auto;
+}
+p{
+    font-family: 'Dosis', sans-serif;
+        font-weight: bold;
+} .quotes{
+    opacity:0;
+    padding 5px;
+}
+#cloud a.tag1 { font-size: 0.7em; font-weight: 100; }
+#cloud a.tag2 { font-size: 0.8em; font-weight: 200; }
+#cloud a.tag3 { font-size: 0.9em; font-weight: 300; }
+#cloud a.tag4 { font-size: 1.0em; font-weight: 400; }
+#cloud a.tag5 { font-size: 1.2em; font-weight: 500; }
+#cloud a.tag6 { font-size: 1.4em; font-weight: 600; }
+#cloud a.tag7 { font-size: 1.6em; font-weight: 700; }
+#cloud a.tag8 { font-size: 1.8em; font-weight: 800; }
+#cloud a.tag9 { font-size: 2.2em; font-weight: 900; }
+#cloud a.tag10 {
+     font-size: 2.5em; font-weight: 900;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+#cloud { padding: 2px; line-height: 3em; text-align: center; } #cloud a { padding: 0px; }
+
+#cloud { margin: 0; } #cloud li { display: inline; }
+
+#roundness {
+    border-radius: 50%;
+    border: 3px solid red;
+
+}
+
+</style><body>
+    <input type="image" src="up.png" alt="up" width="48" height="48" id="upbutton" onclick="goToTop()">
+</br>
+<p id="welcometext">What does friendship mean?</p>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<p class="hideme">It means communication </p>
+<div class="graphdiv">
+    <canvas id="canvas" height="450" width="700" class="hideme"></canvas>
+</div>	</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<p class= "hideme">Day or night</p>
+<div class="graphdiv">
+    <canvas id="ampmgraph" width="300" height="300" class="hideme"/>
+</div>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<p class="hideme" style="text-align:right;">"YAY BC WERE ULTIMATE BEST WHO FRIENDS OKAY"</p><br><p class="hideme" style="text-align:right;">Oct 12, 2013, 7:53:17 PM</p><div class="graphdiv">
+ <p>Through the good times</p>
+ <img src="img/zachstone.jpg" alt="good times" width="500" height="285.5" class="hideme">
+</div></br><div class="graphdiv">
+ <p>and the bad</p>
+ <img src="img/gwen-fall.jpg" alt="bad times" width="630" height="420" class="hideme">
+</div><p class="hideme" style="text-align:left;">"Here is a rock,<br>
+A horse,<br>
+And and arctic duck"</p><br><p class="hideme" style="text-align:left;">Nov 2, 2013, 7:43:00 PM</p><div class="graphdiv" id="roundness"><p class= "hideme" style="text-align:center;">Creating our own little worlds...</p><ul id="cloud">
+    <li><a class="tag4">Whovian</a></li>
+    <li><a class="tag3">Basic Tags for a Web Site</a></li></br>
+    <li><a class="tag7">Zach stone</a></li>
+    <li><a class="tag4">Crazy Whovians </a></li>
+<li><a class="tag5">Andrew Garfied</a></li></br>
+    <li><a class="tag7">Sutter and Aimee</a></li>
+    <li><a class="tag2">Love</a></li>
+    <li><a class="tag10">Hulia</a></li>
+    
+    <li><a class="tag4">Hayley</a></li>
+    <li><a class="tag6">little infinities</a></li>
+<li><a class="tag7">Best Web Design Software</a></li></br>
+    <li><a class="tag2">Building a Web Page for the Totally Lost</a></li>
+<li><a class="tag7">Building a Web Page for the Totally Lost</a></li>
+    <li><a class="tag10">OKAT</a></li>
+</ul></div>
+</br></br><p class= "hideme" style="text-align:center;">or infinities in this case.</p>
+<div class="graphdiv">
+ <img src="img/infinities.jpg" alt="tfios photo" width="521" height="521" class="hideme">
+</div></br><p class="hideme" style="text-align:right;">"NO I KEEP ALL THE JAMES HUGS"</p><p class="hideme" style="text-align:right;">Nov 15, 2013, 6:15:16 PM</p><br><div class="graphdiv"><p class= "hideme">Defining our own style</p>
+
+ <p style="font-size: 50px">164</p> <p style="font-size: 30px">okats</p><p>55 <img src="img/blueheart.png" width="20px" height="20px">s </p></div></br></br></br>
+<div class="graphdiv"><p class= "hideme"><p class= "hideme">even if people look at us funny.</p>
+<img src="img/ugh.jpg" alt="ugh" width="300" height="300" class="hideme" id="ugh">
+</div>
+<br></br></br><div class="graphdiv">
+ <p class= "hideme">Laughing at the things we love</p>
+ <img src="img/what.png" alt="bo burnham" width="568" height="320" class="hideme">
+</div></br><div class="graphdiv"> <p class= "hideme">without asking if it made sense.</p></br> <video width="550" class="hideme" id="howtovideo" autoplay muted loop>
+  <source src="img/How To Make a Rainbow Cake.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+</br></br></br><p class="hideme" style="text-align:left;">"Landon or max?"</p><p class="hideme" style="text-align:left;">May 18, 2014, 5:26:35 PM</p><br><div class="graphdiv">
+<p class= "hideme">Just Jammin' out</p>
+<img src="img/Paramore.png" alt="paramorecover" width="300" height="300" class="hideme" id="paramoreimage">
+<audio id="hayleyaudio" autoplay>
+ <source src="img/Paramore - Ain't It Fun.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio></div>
+</br></br></br><div class="graphdiv">
+<p class= "hideme">and letting the good times roll</p>
+<img src="img/rollingRizzuti.jpg" alt="rollingRizzuti" width="568" height="320" class="hideme">
+</div><p class= "hideme">Giggling at our failures</p>
+<p class= "hideme">and glorifying our successes.</p>
+</br></br><div class"graphdiv">
+<p class= "hideme">Expressing our connection</p>
+ <img src="img/juliasAmazingArt.jpg" alt="superamazingdrawing" width="306" height="408" class="hideme" id="artimage">
+</div>
+<div class="graphdiv"><p class= "hideme"><p class= "hideme">and telling the world.</p>
+<img src="img/johngreen.jpg" alt="john green response" width="300" height="300" class="hideme" id="responseimage">
+</div>
+<p class="hideme" style="text-align:right;">"Oh my god you psycho"</p><p class="hideme" style="text-align:right;">May 16, 2014, 9:15:01 PM</p><br><div class="graphdiv"><p class= "hideme">It means that there is someone else out there who is just as weird as you are.</p>
+    <canvas id="interestcanvas" height="450" width="700" class="hideme"></canvas></div></div></body>
+</html>
