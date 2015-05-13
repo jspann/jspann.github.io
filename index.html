@@ -21,6 +21,9 @@ A James Spann production
 -->
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name=viewport content="width=device-width, initial-scale=1">
+
 <meta name="apple-itunes-app" content="app-id=418682206">
 <link rel="shortcut icon" href="favicon.ico"/>
 
@@ -142,6 +145,53 @@ a {
 </style>
 
 <script>
+function mobileinit() {
+	console.log("small!");
+	var element = document.getElementById("myheader");
+	element.parentNode.removeChild(element);
+	
+	var elementm = document.getElementById("masttext");
+	elementm.parentNode.removeChild(elementm);
+
+	var canvaselement = document.getElementById("sineCanvas");
+	canvaselement.parentNode.removeChild(canvaselement);
+
+	var circleheadelement = document.getElementById("circlehead");
+	circleheadelement.parentNode.removeChild(circleheadelement);
+
+	var totaloptimuselement = document.getElementById("totaloptimus");
+	totaloptimuselement.parentNode.removeChild(totaloptimuselement);
+
+	var mastheadelement = document.getElementById("masthead");
+	//mastheadelement.parentNode.removeChild(mastheadelement);
+
+	//document.getElementById("masthead").style.paddingTop = "20px";
+
+	var ielement = document.getElementById("masthead");
+	var para = document.createElement("img");
+	var sw = screen.width;
+
+	para.setAttribute('width', (sw/2) );
+	para.setAttribute('height', (sw/2) );
+	para.setAttribute('src', 'jspann.png');
+	para.setAttribute('id','mobilehead')
+	para.setAttribute('id','mobilehead')
+	para.style.borderRadius= '150px 150px 150px 150px';
+	//para.style.left = ((sw/2) + "px");
+	para.style.position = "relative";
+
+	ielement.appendChild(para);
+	//document.getElementsByTagName("p").style.fontSize = "30px";
+
+	var mypElements = document.querySelectorAll("p");
+ 
+	document.getElementById("underlinetitle").style.fontSize = "300%";
+	for (var i = 0; i < mypElements.length; i++) {
+		mypElements[i].style.fontSize = "150%";
+	}
+
+	};
+
 	function bio(){//bluritout
 		console.log("bio");
 	    document.getElementById("totaloptimus").setAttribute("style","-webkit-filter:blur(4px)");
@@ -161,16 +211,21 @@ a {
 	}
 	
 	function onstartup(){
-		document.getElementById("masttext").style.display = 'none';
-		drawmasthead();
-		init();
+		if (screen.width > 340) {
+			document.getElementById("masttext").style.display = 'none';
+			drawmasthead();
+			init();
+    	}else{
+			mobileinit();    	
+    	}
+
 	}
 	
 //http://jsfiddle.net/fWSUk/484/	
 var unit = 100, canvas, context, canvas2, context2, height, width, xAxis, yAxis, draw;
 
 function init() {
-    
+
     canvas = document.getElementById("sineCanvas");
     
     //canvas.width = 1000;
@@ -309,8 +364,8 @@ function drawCosine(t) {
 	
 	<div id="projectslist"  style="text-indent: 50px;">
 		</br></br>
-		<u><b>My Projects</b></u>
-		<p><a href="">iEssay</a> - An <a href="http://www.nymc.edu/OfficesAndServices/PublicRelations/Assets/InTouch_JUNE_2011.pdf"> award winning (page 6)</a> advanced text editor for iOS</p></br>
+		<u id="underlinetitle"><b>My Projects</b></u>
+		<p><a href="">iEssay</a> - An <a href="http://www.nymc.edu/OfficesAndServices/PublicRelations/Assets/InTouch_JUNE_2011.pdf"> award winning (page 6)</a> text editor for iOS</p></br>
 		<p><a href="https://itunes.apple.com/us/app/fish-flyer/id542901827?mt=8">Fish Flyer</a> - A fun game for iOS</p></b></br>
 		<p><a href="https://github.com/jspann/Hydrogen">Hydrogen Virtual Machine</a> - A virtual machine for running programs</p></br>
 		<p><a href="https://github.com/jspann/MouseLib">Mouselib</a> - A C standard library from scratch</p></br>
