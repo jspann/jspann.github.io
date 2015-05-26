@@ -14,7 +14,6 @@
 
 
 		obj = JSON.parse(text);
-		console.log(obj[0])
 
 		var mapOptions = {
 		  center: { lat: 39.50, lng: -98.35},
@@ -44,6 +43,7 @@
 		for (var i = 0; i < obj.length; i++) {
 
 			var address = obj[i].Address;
+
 			geocoder.geocode( { 'address': address}, function(results, status) {
 			if (status == google.maps.GeocoderStatus.OK) {
 				var latitude = results[0].geometry.location.latitude;
