@@ -43,6 +43,7 @@
 		for (var i = 0; i < obj.length; i++) {
 
 			var address = obj[i].Address;
+			console.log(address);
 
 			geocoder.geocode( { 'address': address}, function(results, status) {
 			if (status == google.maps.GeocoderStatus.OK) {
