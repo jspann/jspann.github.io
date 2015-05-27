@@ -24,6 +24,14 @@
 		  map.data.loadGeoJson('https://storage.googleapis.com/maps-devrel/google.json');
 		var infowindow = new google.maps.InfoWindow();
 
+		var goldStar = {
+			path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+			fillColor: 'yellow',
+			fillOpacity: 0.8,
+			scale: 1,
+			strokeColor: 'gold',
+			strokeWeight: 14
+		  };
 		  var marker = new google.maps.Marker({
 			map: map,
 			// Define the place with a location, and a query string.
@@ -52,10 +60,14 @@
 				var longitude = results[0].geometry.location.lng();
 				//console.log(address)
 				//console.log(latitude);
+				var infowindowq = new google.maps.InfoWindow({
+					content: 'Google Sydney'
+				});
 
 				var marquer = new google.maps.Marker({
 							map: map,
 							// Define the place with a location, and a query string.
+							icon: circleStar,
 							place: {
 							  location: {lat: latitude, lng: longitude},
 							  query: 'Address'
@@ -67,6 +79,10 @@
 							  webUrl: 'https://developers.google.com/maps/'
 							}
 						  });
+				marquer.addListener('click', function() {
+					infowindowq.open(map, marquer);
+				});
+
 
 				}else if(status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT){
 					console.log("over limit");
