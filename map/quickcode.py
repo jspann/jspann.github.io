@@ -20,8 +20,8 @@ for x in xrange(0,len(data)):
 	else:
 		#print d["results"][0]["geometry"]["location"]["lat"]
 		f.write("{")
-		f.write("\" lat\": " + str(d["results"][0]["geometry"]["location"]["lat"])+",")
-		f.write("\" lng\": " + str(d["results"][0]["geometry"]["location"]["lng"]))
+		f.write(" \"lat\": " + str(d["results"][0]["geometry"]["location"]["lat"])+",")
+		f.write(" \"lng\": " + str(d["results"][0]["geometry"]["location"]["lng"]))
 		if (x == len(data)-1):
 			f.write("}")
 		else:
