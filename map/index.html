@@ -51,6 +51,22 @@
 				var longitude = results[0].geometry.location.lng();
 				console.log(address)
 				console.log(latitude);
+
+				var marquer = new google.maps.Marker({
+							map: map,
+							// Define the place with a location, and a query string.
+							place: {
+							  location: {lat: latitude, lng: longitude},
+							  query: obj[i].Name
+
+							},
+							// Attributions help users find your site again.
+							attribution: {
+							  source: 'Google Maps JavaScript API',
+							  webUrl: 'https://developers.google.com/maps/'
+							}
+						  });
+
 				} 
 			}); 
 		  };
