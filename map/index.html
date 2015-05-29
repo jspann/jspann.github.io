@@ -91,7 +91,8 @@
 							  webUrl: 'https://developers.google.com/maps/'
 							}
 						  });
-				colmarquer.set("name", obj[i].college);
+				colmarquer.metadata = {type: "point", id: 1};
+				//colmarquer.set("name", obj[i].college);
 
 
 				if (obj[i].tag == 'b') {
