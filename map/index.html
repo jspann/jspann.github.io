@@ -122,6 +122,7 @@
 			infowindow.open(map, marker);
 		  });*/
 		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+				console.log("WOOOAAAAHHH")
 		         return function() {
 		         	console.log("AHHH:"+i)
 		             infowindow.setContent(locations[i][0]);
