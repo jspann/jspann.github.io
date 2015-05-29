@@ -48,11 +48,9 @@
 		  });
 
 		var geocoder = new google.maps.Geocoder();
-		//for (y = 0; y<obj.length; y++){ console.log(obj[y].Address) }
 		for (var i = 0; i < obj.length; i++) {
 
 			var address = obj[i];
-			//console.log(address);
 
 			var infowindowq = new google.maps.InfoWindow({
 					content: 'Hello friend!'
@@ -104,16 +102,13 @@
 				});
 
 				colmarquer.addListener('click', function() {
-					alert("College: "+ colmarquer)
+					alert("College: "+ colmarquer.title)
 				}); 
 		  };
 
 
-
-		  
-		  // Construct a new InfoWindow.
 		  var infowindow = new google.maps.InfoWindow({
-			content: 'Google Sydney'
+			content: //'Google Sydney'
 		  });
 
 		  // Opens the InfoWindow when marker is clicked.
