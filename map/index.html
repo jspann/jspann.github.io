@@ -96,11 +96,12 @@
 				/*google.maps.event.addListener(locations[i],'click', function() {
 					alert("College: " + locations[i].title)
 				});*/
-				marker.addListener(locations[i],'click', function(locations[i]) {
-					alert("College: " + String(locations[i].title))
+				var newtitle = new locations[i].title
+				google.maps.event.addListener(locations[i],'click', function() {
+					alert("College: " + newtitle)
 				});
-				marker.addListener(,'click', function() {
-					alert("I have fish")
+				marker.addListener(locations[i],'click', function() {
+					alert("locations[i].title")
 				});
 
 		  };
