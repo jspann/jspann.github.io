@@ -96,7 +96,7 @@
 				/*google.maps.event.addListener(locations[i],'click', function() {
 					alert("College: " + locations[i].title)
 				});*/
-				var newtitle = new locations[i].title
+				var newtitle = new String(locations[i].title)
 				google.maps.event.addListener(locations[i],'click', function() {
 					alert("College: " + newtitle)
 				});
