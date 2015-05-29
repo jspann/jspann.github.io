@@ -50,14 +50,13 @@
 		  });
 
 		var geocoder = new google.maps.Geocoder();
-		//var colmarquerarray = [];
+		var infowindowq = new google.maps.InfoWindow({content: 'Hello friend!'});
+
 		for (var i = 0; i < obj.length; i++) {
 
 			var address = obj[i];
 
-			var infowindowq = new google.maps.InfoWindow({
-					content: 'Hello friend!'
-				});
+			
 
 				var marquer = new google.maps.Marker({
 							map: map,
