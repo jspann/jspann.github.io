@@ -99,8 +99,7 @@
 				}); */
 
 				locations.push(colmarquer)//[obj[i].college])
-				  locations[i].addListener('click', function() {
-    				//alert("I AM SO CLOSE JULES")
+				  google.maps.event.addListener(locations[i],'click', function() {
     				alert(colmarquer.title)
   					});
 
