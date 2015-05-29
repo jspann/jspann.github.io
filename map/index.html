@@ -99,9 +99,10 @@
 				});*/
 				
 				google.maps.event.addListener(colmarquer,'click', function(colmarquer,i) {
-					return function(){
+					console.log("colmarquer pressed")
+					
 						alert("College: " + colmarquer.title)
-					}
+					
 				});
 
 				/*marker.addListener(locations[i],'click', function() {
