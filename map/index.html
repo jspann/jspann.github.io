@@ -46,7 +46,8 @@
 		var geocoder = new google.maps.Geocoder();
 		var infowindowq = new google.maps.InfoWindow({content: 'Hello friend!'});
 		var colmarquer;
-		for (var i = 0; i < obj.length; i++) {
+		var i;
+		for (i = 0; i < obj.length; i++) {
 
 			var address = obj[i];
 				var marquer = new google.maps.Marker({
@@ -96,11 +97,12 @@
 				/*google.maps.event.addListener(locations[i],'click', function() {
 					alert("College: " + locations[i].title)
 				});*/
-				var newtitle = new String(locations[i].title)
 				
-				google.maps.event.addListener(colmarquer,'click', function() {
-					alert("College: " + colmarquer.title)
-				});
+				google.maps.event.addListener(colmarquer,'click', function(colmarquer,i) {
+					return function(){
+						alert("College: " + colmarquer.title)
+					}
+				})(marquer,i);
 
 				/*marker.addListener(locations[i],'click', function() {
 					alert("locations[i].title")
