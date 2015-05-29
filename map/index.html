@@ -103,8 +103,8 @@
 				/*google.maps.event.addListener(locations[i],'click', function() {
 					alert(colmarquer.title)
 				});*/
-				locations[i].on('click', function() {
-					alert(colmarquer.title)
+				colmarquer.addListener('click', function() {
+					alert(locations[i])
 				});
 
 		  };
