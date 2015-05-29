@@ -76,7 +76,7 @@
 						  });
 				var colmarquer = new google.maps.Marker({
 							map: map,
-							// Define the place with a location, and a query string.
+							title:obj[i].college,
 							icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
 							draggable:false,
 							animation: google.maps.Animation.DROP,
@@ -91,7 +91,7 @@
 							  webUrl: 'https://developers.google.com/maps/'
 							}
 						  });
-				colmarquer.metadata = {type: "point", id: 1};
+				//colmarquer.metadata = {type: "point", id: 1};
 				//colmarquer.set("name", obj[i].college);
 
 
@@ -104,7 +104,7 @@
 				});
 
 				colmarquer.addListener('click', function() {
-					alert("College: "+ colmarquer.name)
+					alert("College: "+ colmarquer.title)
 				}); 
 		  };
 
