@@ -121,11 +121,11 @@
 		  /*marker.addListener('click', function() {
 			infowindow.open(map, marker);
 		  });*/
-		google.maps.event.addListener(marquer, 'click', (function(marquer, i) {
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
 		         return function() {
 		         	console.log("AHHH:"+i)
 		             infowindow.setContent(locations[i][0]);
-		             infowindow.open(map, marquer);
+		             infowindow.open(map, marker);
 		         }
 		    })(marker, i));
 
