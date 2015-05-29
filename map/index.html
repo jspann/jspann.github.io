@@ -101,13 +101,13 @@
 				};
 
 				
-				marquer.addListener('click', function() {
+				/*marquer.addListener('click', function() {
 					infowindowq.open(map, marquer);
-				});
+				});*/
 
-				colmarquer.addListener('click', function() {
+				/*colmarquer.addListener('click', function() {
 					alert("College: "+ colmarquer.title)
-				}); 
+				}); */
 
 				locations.push([obj[i].college])
 		  };
@@ -123,6 +123,7 @@
 		  });*/
 		google.maps.event.addListener(marquer, 'click', (function(marquer, i) {
 		         return function() {
+		         	console.log("AHHH:"+i)
 		             infowindow.setContent(locations[i][0]);
 		             infowindow.open(map, marquer);
 		         }
