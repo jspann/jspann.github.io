@@ -16,9 +16,10 @@ function moop(){
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a0,'click', function(a0,i) {
-	a0.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a0,'click', function(a0,i) {
+		a0.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a0.title);
+	});
 
 	a1 = new google.maps.Marker({
 		map: map,
@@ -37,9 +38,10 @@ google.maps.event.addListener(a0,'click', function(a0,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a1,'click', function(a1,i) {
-	a1.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a1,'click', function(a1,i) {
+		a1.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a1.title);
+	});
 
 	a2 = new google.maps.Marker({
 		map: map,
@@ -58,9 +60,10 @@ google.maps.event.addListener(a1,'click', function(a1,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a2,'click', function(a2,i) {
-	a2.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a2,'click', function(a2,i) {
+		a2.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a2.title);
+	});
 
 	a3 = new google.maps.Marker({
 		map: map,
@@ -79,9 +82,10 @@ google.maps.event.addListener(a2,'click', function(a2,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a3,'click', function(a3,i) {
-	a3.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a3,'click', function(a3,i) {
+		a3.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a3.title);
+	});
 
 	a4 = new google.maps.Marker({
 		map: map,
@@ -100,9 +104,10 @@ google.maps.event.addListener(a3,'click', function(a3,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a4,'click', function(a4,i) {
-	a4.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a4,'click', function(a4,i) {
+		a4.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a4.title);
+	});
 
 	a5 = new google.maps.Marker({
 		map: map,
@@ -121,9 +126,10 @@ google.maps.event.addListener(a4,'click', function(a4,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a5,'click', function(a5,i) {
-	a5.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a5,'click', function(a5,i) {
+		a5.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a5.title);
+	});
 
 	a6 = new google.maps.Marker({
 		map: map,
@@ -142,9 +148,10 @@ google.maps.event.addListener(a5,'click', function(a5,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a6,'click', function(a6,i) {
-	a6.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a6,'click', function(a6,i) {
+		a6.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a6.title);
+	});
 
 	a7 = new google.maps.Marker({
 		map: map,
@@ -163,9 +170,10 @@ google.maps.event.addListener(a6,'click', function(a6,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a7,'click', function(a7,i) {
-	a7.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a7,'click', function(a7,i) {
+		a7.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a7.title);
+	});
 
 	a8 = new google.maps.Marker({
 		map: map,
@@ -184,9 +192,10 @@ google.maps.event.addListener(a7,'click', function(a7,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a8,'click', function(a8,i) {
-	a8.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a8,'click', function(a8,i) {
+		a8.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a8.title);
+	});
 
 	a9 = new google.maps.Marker({
 		map: map,
@@ -205,9 +214,10 @@ google.maps.event.addListener(a8,'click', function(a8,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a9,'click', function(a9,i) {
-	a9.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a9,'click', function(a9,i) {
+		a9.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a9.title);
+	});
 
 	a10 = new google.maps.Marker({
 		map: map,
@@ -226,9 +236,10 @@ google.maps.event.addListener(a9,'click', function(a9,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a10,'click', function(a10,i) {
-	a10.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a10,'click', function(a10,i) {
+		a10.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a10.title);
+	});
 
 	a11 = new google.maps.Marker({
 		map: map,
@@ -247,9 +258,10 @@ google.maps.event.addListener(a10,'click', function(a10,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a11,'click', function(a11,i) {
-	a11.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a11,'click', function(a11,i) {
+		a11.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a11.title);
+	});
 
 	a12 = new google.maps.Marker({
 		map: map,
@@ -268,9 +280,10 @@ google.maps.event.addListener(a11,'click', function(a11,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a12,'click', function(a12,i) {
-	a12.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a12,'click', function(a12,i) {
+		a12.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a12.title);
+	});
 
 	a13 = new google.maps.Marker({
 		map: map,
@@ -289,9 +302,10 @@ google.maps.event.addListener(a12,'click', function(a12,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a13,'click', function(a13,i) {
-	a13.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a13,'click', function(a13,i) {
+		a13.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a13.title);
+	});
 
 	a14 = new google.maps.Marker({
 		map: map,
@@ -310,9 +324,10 @@ google.maps.event.addListener(a13,'click', function(a13,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a14,'click', function(a14,i) {
-	a14.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a14,'click', function(a14,i) {
+		a14.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a14.title);
+	});
 
 	a15 = new google.maps.Marker({
 		map: map,
@@ -331,9 +346,10 @@ google.maps.event.addListener(a14,'click', function(a14,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a15,'click', function(a15,i) {
-	a15.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a15,'click', function(a15,i) {
+		a15.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a15.title);
+	});
 
 	a16 = new google.maps.Marker({
 		map: map,
@@ -352,9 +368,10 @@ google.maps.event.addListener(a15,'click', function(a15,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a16,'click', function(a16,i) {
-	a16.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a16,'click', function(a16,i) {
+		a16.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a16.title);
+	});
 
 	a17 = new google.maps.Marker({
 		map: map,
@@ -373,9 +390,10 @@ google.maps.event.addListener(a16,'click', function(a16,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a17,'click', function(a17,i) {
-	a17.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a17,'click', function(a17,i) {
+		a17.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a17.title);
+	});
 
 	a18 = new google.maps.Marker({
 		map: map,
@@ -394,9 +412,10 @@ google.maps.event.addListener(a17,'click', function(a17,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a18,'click', function(a18,i) {
-	a18.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a18,'click', function(a18,i) {
+		a18.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a18.title);
+	});
 
 	a19 = new google.maps.Marker({
 		map: map,
@@ -415,9 +434,10 @@ google.maps.event.addListener(a18,'click', function(a18,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a19,'click', function(a19,i) {
-	a19.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a19,'click', function(a19,i) {
+		a19.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a19.title);
+	});
 
 	a20 = new google.maps.Marker({
 		map: map,
@@ -436,9 +456,10 @@ google.maps.event.addListener(a19,'click', function(a19,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a20,'click', function(a20,i) {
-	a20.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a20,'click', function(a20,i) {
+		a20.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a20.title);
+	});
 
 	a21 = new google.maps.Marker({
 		map: map,
@@ -457,9 +478,10 @@ google.maps.event.addListener(a20,'click', function(a20,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a21,'click', function(a21,i) {
-	a21.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a21,'click', function(a21,i) {
+		a21.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a21.title);
+	});
 
 	a22 = new google.maps.Marker({
 		map: map,
@@ -478,9 +500,10 @@ google.maps.event.addListener(a21,'click', function(a21,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a22,'click', function(a22,i) {
-	a22.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a22,'click', function(a22,i) {
+		a22.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a22.title);
+	});
 
 	a23 = new google.maps.Marker({
 		map: map,
@@ -499,9 +522,10 @@ google.maps.event.addListener(a22,'click', function(a22,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a23,'click', function(a23,i) {
-	a23.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a23,'click', function(a23,i) {
+		a23.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a23.title);
+	});
 
 	a24 = new google.maps.Marker({
 		map: map,
@@ -520,9 +544,10 @@ google.maps.event.addListener(a23,'click', function(a23,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a24,'click', function(a24,i) {
-	a24.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a24,'click', function(a24,i) {
+		a24.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a24.title);
+	});
 
 	a25 = new google.maps.Marker({
 		map: map,
@@ -541,9 +566,10 @@ google.maps.event.addListener(a24,'click', function(a24,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a25,'click', function(a25,i) {
-	a25.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a25,'click', function(a25,i) {
+		a25.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a25.title);
+	});
 
 	a26 = new google.maps.Marker({
 		map: map,
@@ -562,9 +588,10 @@ google.maps.event.addListener(a25,'click', function(a25,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a26,'click', function(a26,i) {
-	a26.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a26,'click', function(a26,i) {
+		a26.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a26.title);
+	});
 
 	a27 = new google.maps.Marker({
 		map: map,
@@ -583,9 +610,10 @@ google.maps.event.addListener(a26,'click', function(a26,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a27,'click', function(a27,i) {
-	a27.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a27,'click', function(a27,i) {
+		a27.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a27.title);
+	});
 
 	a28 = new google.maps.Marker({
 		map: map,
@@ -604,9 +632,10 @@ google.maps.event.addListener(a27,'click', function(a27,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a28,'click', function(a28,i) {
-	a28.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a28,'click', function(a28,i) {
+		a28.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a28.title);
+	});
 
 	a29 = new google.maps.Marker({
 		map: map,
@@ -625,9 +654,10 @@ google.maps.event.addListener(a28,'click', function(a28,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a29,'click', function(a29,i) {
-	a29.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a29,'click', function(a29,i) {
+		a29.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a29.title);
+	});
 
 	a30 = new google.maps.Marker({
 		map: map,
@@ -646,9 +676,10 @@ google.maps.event.addListener(a29,'click', function(a29,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a30,'click', function(a30,i) {
-	a30.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a30,'click', function(a30,i) {
+		a30.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a30.title);
+	});
 
 	a31 = new google.maps.Marker({
 		map: map,
@@ -667,9 +698,10 @@ google.maps.event.addListener(a30,'click', function(a30,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a31,'click', function(a31,i) {
-	a31.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a31,'click', function(a31,i) {
+		a31.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a31.title);
+	});
 
 	a32 = new google.maps.Marker({
 		map: map,
@@ -688,9 +720,10 @@ google.maps.event.addListener(a31,'click', function(a31,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a32,'click', function(a32,i) {
-	a32.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a32,'click', function(a32,i) {
+		a32.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a32.title);
+	});
 
 	a33 = new google.maps.Marker({
 		map: map,
@@ -709,9 +742,10 @@ google.maps.event.addListener(a32,'click', function(a32,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a33,'click', function(a33,i) {
-	a33.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a33,'click', function(a33,i) {
+		a33.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a33.title);
+	});
 
 	a34 = new google.maps.Marker({
 		map: map,
@@ -730,9 +764,10 @@ google.maps.event.addListener(a33,'click', function(a33,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a34,'click', function(a34,i) {
-	a34.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a34,'click', function(a34,i) {
+		a34.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a34.title);
+	});
 
 	a35 = new google.maps.Marker({
 		map: map,
@@ -751,9 +786,10 @@ google.maps.event.addListener(a34,'click', function(a34,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a35,'click', function(a35,i) {
-	a35.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a35,'click', function(a35,i) {
+		a35.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a35.title);
+	});
 
 	a36 = new google.maps.Marker({
 		map: map,
@@ -772,9 +808,10 @@ google.maps.event.addListener(a35,'click', function(a35,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a36,'click', function(a36,i) {
-	a36.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a36,'click', function(a36,i) {
+		a36.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a36.title);
+	});
 
 	a37 = new google.maps.Marker({
 		map: map,
@@ -793,9 +830,10 @@ google.maps.event.addListener(a36,'click', function(a36,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a37,'click', function(a37,i) {
-	a37.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a37,'click', function(a37,i) {
+		a37.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a37.title);
+	});
 
 	a38 = new google.maps.Marker({
 		map: map,
@@ -814,9 +852,10 @@ google.maps.event.addListener(a37,'click', function(a37,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a38,'click', function(a38,i) {
-	a38.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a38,'click', function(a38,i) {
+		a38.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a38.title);
+	});
 
 	a39 = new google.maps.Marker({
 		map: map,
@@ -835,9 +874,10 @@ google.maps.event.addListener(a38,'click', function(a38,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a39,'click', function(a39,i) {
-	a39.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a39,'click', function(a39,i) {
+		a39.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a39.title);
+	});
 
 	a40 = new google.maps.Marker({
 		map: map,
@@ -856,9 +896,10 @@ google.maps.event.addListener(a39,'click', function(a39,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a40,'click', function(a40,i) {
-	a40.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a40,'click', function(a40,i) {
+		a40.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a40.title);
+	});
 
 	a41 = new google.maps.Marker({
 		map: map,
@@ -877,9 +918,10 @@ google.maps.event.addListener(a40,'click', function(a40,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a41,'click', function(a41,i) {
-	a41.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a41,'click', function(a41,i) {
+		a41.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a41.title);
+	});
 
 	a42 = new google.maps.Marker({
 		map: map,
@@ -898,9 +940,10 @@ google.maps.event.addListener(a41,'click', function(a41,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a42,'click', function(a42,i) {
-	a42.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a42,'click', function(a42,i) {
+		a42.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a42.title);
+	});
 
 	a43 = new google.maps.Marker({
 		map: map,
@@ -919,9 +962,10 @@ google.maps.event.addListener(a42,'click', function(a42,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a43,'click', function(a43,i) {
-	a43.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a43,'click', function(a43,i) {
+		a43.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a43.title);
+	});
 
 	a44 = new google.maps.Marker({
 		map: map,
@@ -940,9 +984,10 @@ google.maps.event.addListener(a43,'click', function(a43,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a44,'click', function(a44,i) {
-	a44.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a44,'click', function(a44,i) {
+		a44.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a44.title);
+	});
 
 	a45 = new google.maps.Marker({
 		map: map,
@@ -961,9 +1006,10 @@ google.maps.event.addListener(a44,'click', function(a44,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a45,'click', function(a45,i) {
-	a45.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a45,'click', function(a45,i) {
+		a45.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a45.title);
+	});
 
 	a46 = new google.maps.Marker({
 		map: map,
@@ -982,9 +1028,10 @@ google.maps.event.addListener(a45,'click', function(a45,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a46,'click', function(a46,i) {
-	a46.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a46,'click', function(a46,i) {
+		a46.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a46.title);
+	});
 
 	a47 = new google.maps.Marker({
 		map: map,
@@ -1003,9 +1050,10 @@ google.maps.event.addListener(a46,'click', function(a46,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a47,'click', function(a47,i) {
-	a47.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a47,'click', function(a47,i) {
+		a47.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a47.title);
+	});
 
 	a48 = new google.maps.Marker({
 		map: map,
@@ -1024,9 +1072,10 @@ google.maps.event.addListener(a47,'click', function(a47,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a48,'click', function(a48,i) {
-	a48.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a48,'click', function(a48,i) {
+		a48.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a48.title);
+	});
 
 	a49 = new google.maps.Marker({
 		map: map,
@@ -1045,9 +1094,10 @@ google.maps.event.addListener(a48,'click', function(a48,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a49,'click', function(a49,i) {
-	a49.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a49,'click', function(a49,i) {
+		a49.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a49.title);
+	});
 
 	a50 = new google.maps.Marker({
 		map: map,
@@ -1066,9 +1116,10 @@ google.maps.event.addListener(a49,'click', function(a49,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a50,'click', function(a50,i) {
-	a50.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a50,'click', function(a50,i) {
+		a50.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a50.title);
+	});
 
 	a51 = new google.maps.Marker({
 		map: map,
@@ -1087,9 +1138,10 @@ google.maps.event.addListener(a50,'click', function(a50,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a51,'click', function(a51,i) {
-	a51.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a51,'click', function(a51,i) {
+		a51.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a51.title);
+	});
 
 	a52 = new google.maps.Marker({
 		map: map,
@@ -1108,9 +1160,10 @@ google.maps.event.addListener(a51,'click', function(a51,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a52,'click', function(a52,i) {
-	a52.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a52,'click', function(a52,i) {
+		a52.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a52.title);
+	});
 
 	a53 = new google.maps.Marker({
 		map: map,
@@ -1129,9 +1182,10 @@ google.maps.event.addListener(a52,'click', function(a52,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a53,'click', function(a53,i) {
-	a53.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a53,'click', function(a53,i) {
+		a53.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a53.title);
+	});
 
 	a54 = new google.maps.Marker({
 		map: map,
@@ -1150,9 +1204,10 @@ google.maps.event.addListener(a53,'click', function(a53,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a54,'click', function(a54,i) {
-	a54.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a54,'click', function(a54,i) {
+		a54.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a54.title);
+	});
 
 	a55 = new google.maps.Marker({
 		map: map,
@@ -1171,9 +1226,10 @@ google.maps.event.addListener(a54,'click', function(a54,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a55,'click', function(a55,i) {
-	a55.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a55,'click', function(a55,i) {
+		a55.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a55.title);
+	});
 
 	a56 = new google.maps.Marker({
 		map: map,
@@ -1192,9 +1248,10 @@ google.maps.event.addListener(a55,'click', function(a55,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a56,'click', function(a56,i) {
-	a56.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a56,'click', function(a56,i) {
+		a56.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a56.title);
+	});
 
 	a57 = new google.maps.Marker({
 		map: map,
@@ -1213,9 +1270,10 @@ google.maps.event.addListener(a56,'click', function(a56,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a57,'click', function(a57,i) {
-	a57.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a57,'click', function(a57,i) {
+		a57.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a57.title);
+	});
 
 	a58 = new google.maps.Marker({
 		map: map,
@@ -1234,9 +1292,10 @@ google.maps.event.addListener(a57,'click', function(a57,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a58,'click', function(a58,i) {
-	a58.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a58,'click', function(a58,i) {
+		a58.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a58.title);
+	});
 
 	a59 = new google.maps.Marker({
 		map: map,
@@ -1255,9 +1314,10 @@ google.maps.event.addListener(a58,'click', function(a58,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a59,'click', function(a59,i) {
-	a59.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a59,'click', function(a59,i) {
+		a59.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a59.title);
+	});
 
 	a60 = new google.maps.Marker({
 		map: map,
@@ -1276,9 +1336,10 @@ google.maps.event.addListener(a59,'click', function(a59,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a60,'click', function(a60,i) {
-	a60.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a60,'click', function(a60,i) {
+		a60.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a60.title);
+	});
 
 	a61 = new google.maps.Marker({
 		map: map,
@@ -1297,9 +1358,10 @@ google.maps.event.addListener(a60,'click', function(a60,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a61,'click', function(a61,i) {
-	a61.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a61,'click', function(a61,i) {
+		a61.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a61.title);
+	});
 
 	a62 = new google.maps.Marker({
 		map: map,
@@ -1318,9 +1380,10 @@ google.maps.event.addListener(a61,'click', function(a61,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a62,'click', function(a62,i) {
-	a62.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a62,'click', function(a62,i) {
+		a62.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a62.title);
+	});
 
 	a63 = new google.maps.Marker({
 		map: map,
@@ -1339,9 +1402,10 @@ google.maps.event.addListener(a62,'click', function(a62,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a63,'click', function(a63,i) {
-	a63.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a63,'click', function(a63,i) {
+		a63.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a63.title);
+	});
 
 	a64 = new google.maps.Marker({
 		map: map,
@@ -1360,9 +1424,10 @@ google.maps.event.addListener(a63,'click', function(a63,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a64,'click', function(a64,i) {
-	a64.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a64,'click', function(a64,i) {
+		a64.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a64.title);
+	});
 
 	a65 = new google.maps.Marker({
 		map: map,
@@ -1381,9 +1446,10 @@ google.maps.event.addListener(a64,'click', function(a64,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a65,'click', function(a65,i) {
-	a65.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a65,'click', function(a65,i) {
+		a65.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a65.title);
+	});
 
 	a66 = new google.maps.Marker({
 		map: map,
@@ -1402,9 +1468,10 @@ google.maps.event.addListener(a65,'click', function(a65,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a66,'click', function(a66,i) {
-	a66.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a66,'click', function(a66,i) {
+		a66.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a66.title);
+	});
 
 	a67 = new google.maps.Marker({
 		map: map,
@@ -1423,9 +1490,10 @@ google.maps.event.addListener(a66,'click', function(a66,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a67,'click', function(a67,i) {
-	a67.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a67,'click', function(a67,i) {
+		a67.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a67.title);
+	});
 
 	a68 = new google.maps.Marker({
 		map: map,
@@ -1444,9 +1512,10 @@ google.maps.event.addListener(a67,'click', function(a67,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a68,'click', function(a68,i) {
-	a68.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a68,'click', function(a68,i) {
+		a68.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a68.title);
+	});
 
 	a69 = new google.maps.Marker({
 		map: map,
@@ -1465,9 +1534,10 @@ google.maps.event.addListener(a68,'click', function(a68,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a69,'click', function(a69,i) {
-	a69.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a69,'click', function(a69,i) {
+		a69.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a69.title);
+	});
 
 	a70 = new google.maps.Marker({
 		map: map,
@@ -1486,9 +1556,10 @@ google.maps.event.addListener(a69,'click', function(a69,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a70,'click', function(a70,i) {
-	a70.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a70,'click', function(a70,i) {
+		a70.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a70.title);
+	});
 
 	a71 = new google.maps.Marker({
 		map: map,
@@ -1507,9 +1578,10 @@ google.maps.event.addListener(a70,'click', function(a70,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a71,'click', function(a71,i) {
-	a71.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a71,'click', function(a71,i) {
+		a71.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a71.title);
+	});
 
 	a72 = new google.maps.Marker({
 		map: map,
@@ -1528,9 +1600,10 @@ google.maps.event.addListener(a71,'click', function(a71,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a72,'click', function(a72,i) {
-	a72.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a72,'click', function(a72,i) {
+		a72.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a72.title);
+	});
 
 	a73 = new google.maps.Marker({
 		map: map,
@@ -1549,9 +1622,10 @@ google.maps.event.addListener(a72,'click', function(a72,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a73,'click', function(a73,i) {
-	a73.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a73,'click', function(a73,i) {
+		a73.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a73.title);
+	});
 
 	a74 = new google.maps.Marker({
 		map: map,
@@ -1570,9 +1644,10 @@ google.maps.event.addListener(a73,'click', function(a73,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a74,'click', function(a74,i) {
-	a74.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a74,'click', function(a74,i) {
+		a74.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a74.title);
+	});
 
 	a75 = new google.maps.Marker({
 		map: map,
@@ -1591,9 +1666,10 @@ google.maps.event.addListener(a74,'click', function(a74,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a75,'click', function(a75,i) {
-	a75.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a75,'click', function(a75,i) {
+		a75.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a75.title);
+	});
 
 	a76 = new google.maps.Marker({
 		map: map,
@@ -1612,9 +1688,10 @@ google.maps.event.addListener(a75,'click', function(a75,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a76,'click', function(a76,i) {
-	a76.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a76,'click', function(a76,i) {
+		a76.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a76.title);
+	});
 
 	a77 = new google.maps.Marker({
 		map: map,
@@ -1633,9 +1710,10 @@ google.maps.event.addListener(a76,'click', function(a76,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a77,'click', function(a77,i) {
-	a77.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a77,'click', function(a77,i) {
+		a77.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a77.title);
+	});
 
 	a78 = new google.maps.Marker({
 		map: map,
@@ -1654,9 +1732,10 @@ google.maps.event.addListener(a77,'click', function(a77,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a78,'click', function(a78,i) {
-	a78.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a78,'click', function(a78,i) {
+		a78.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a78.title);
+	});
 
 	a79 = new google.maps.Marker({
 		map: map,
@@ -1675,9 +1754,10 @@ google.maps.event.addListener(a78,'click', function(a78,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a79,'click', function(a79,i) {
-	a79.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a79,'click', function(a79,i) {
+		a79.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a79.title);
+	});
 
 	a80 = new google.maps.Marker({
 		map: map,
@@ -1696,9 +1776,10 @@ google.maps.event.addListener(a79,'click', function(a79,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a80,'click', function(a80,i) {
-	a80.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a80,'click', function(a80,i) {
+		a80.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a80.title);
+	});
 
 	a81 = new google.maps.Marker({
 		map: map,
@@ -1717,9 +1798,10 @@ google.maps.event.addListener(a80,'click', function(a80,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a81,'click', function(a81,i) {
-	a81.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a81,'click', function(a81,i) {
+		a81.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a81.title);
+	});
 
 	a82 = new google.maps.Marker({
 		map: map,
@@ -1738,9 +1820,10 @@ google.maps.event.addListener(a81,'click', function(a81,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a82,'click', function(a82,i) {
-	a82.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a82,'click', function(a82,i) {
+		a82.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a82.title);
+	});
 
 	a83 = new google.maps.Marker({
 		map: map,
@@ -1759,9 +1842,10 @@ google.maps.event.addListener(a82,'click', function(a82,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a83,'click', function(a83,i) {
-	a83.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a83,'click', function(a83,i) {
+		a83.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a83.title);
+	});
 
 	a84 = new google.maps.Marker({
 		map: map,
@@ -1780,9 +1864,10 @@ google.maps.event.addListener(a83,'click', function(a83,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a84,'click', function(a84,i) {
-	a84.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a84,'click', function(a84,i) {
+		a84.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a84.title);
+	});
 
 	a85 = new google.maps.Marker({
 		map: map,
@@ -1801,9 +1886,10 @@ google.maps.event.addListener(a84,'click', function(a84,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a85,'click', function(a85,i) {
-	a85.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a85,'click', function(a85,i) {
+		a85.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a85.title);
+	});
 
 	a86 = new google.maps.Marker({
 		map: map,
@@ -1822,9 +1908,10 @@ google.maps.event.addListener(a85,'click', function(a85,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a86,'click', function(a86,i) {
-	a86.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a86,'click', function(a86,i) {
+		a86.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a86.title);
+	});
 
 	a87 = new google.maps.Marker({
 		map: map,
@@ -1843,9 +1930,10 @@ google.maps.event.addListener(a86,'click', function(a86,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a87,'click', function(a87,i) {
-	a87.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a87,'click', function(a87,i) {
+		a87.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a87.title);
+	});
 
 	a88 = new google.maps.Marker({
 		map: map,
@@ -1864,9 +1952,10 @@ google.maps.event.addListener(a87,'click', function(a87,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a88,'click', function(a88,i) {
-	a88.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a88,'click', function(a88,i) {
+		a88.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a88.title);
+	});
 
 	a89 = new google.maps.Marker({
 		map: map,
@@ -1885,9 +1974,10 @@ google.maps.event.addListener(a88,'click', function(a88,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a89,'click', function(a89,i) {
-	a89.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a89,'click', function(a89,i) {
+		a89.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a89.title);
+	});
 
 	a90 = new google.maps.Marker({
 		map: map,
@@ -1906,9 +1996,10 @@ google.maps.event.addListener(a89,'click', function(a89,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a90,'click', function(a90,i) {
-	a90.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a90,'click', function(a90,i) {
+		a90.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a90.title);
+	});
 
 	a91 = new google.maps.Marker({
 		map: map,
@@ -1927,9 +2018,10 @@ google.maps.event.addListener(a90,'click', function(a90,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a91,'click', function(a91,i) {
-	a91.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a91,'click', function(a91,i) {
+		a91.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a91.title);
+	});
 
 	a92 = new google.maps.Marker({
 		map: map,
@@ -1948,9 +2040,10 @@ google.maps.event.addListener(a91,'click', function(a91,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a92,'click', function(a92,i) {
-	a92.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a92,'click', function(a92,i) {
+		a92.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a92.title);
+	});
 
 	a93 = new google.maps.Marker({
 		map: map,
@@ -1969,7 +2062,8 @@ google.maps.event.addListener(a92,'click', function(a92,i) {
 				  webUrl: 'https://developers.google.com/maps/'
 				}
 			  });
-google.maps.event.addListener(a93,'click', function(a93,i) {
-	a93.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-});
+	google.maps.event.addListener(a93,'click', function(a93,i) {
+		a93.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+		alert('College: ' + a93.title);
+	});
 }
