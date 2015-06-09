@@ -1,4 +1,4 @@
-function moop(){}
+function moop(){
 a0 = new google.maps.Marker({
 							map: map,
 							title:"Durham, NC 27708",
