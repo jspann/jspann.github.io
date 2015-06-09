@@ -1060,7 +1060,10 @@ a58 = new google.maps.Marker({
 							  webUrl: 'https://developers.google.com/maps/'
 							}
 						  });
-google.maps.event.addListener(a58,'click', function(a58,i) {a58.icon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');});
+google.maps.event.addListener(a58,'click', function(a58,i) {
+	a58.icon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
+	alert("WOAH");
+});
 a59 = new google.maps.Marker({
 							map: map,
 							title:"Durham, NC 27708",
