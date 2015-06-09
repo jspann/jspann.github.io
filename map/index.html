@@ -20,17 +20,18 @@
 	//obj = JSON.parse(text);
 	  	
 	var infowindow = new google.maps.InfoWindow;
-	
-function initb () {
-	var mapOptions = {
-		center: { lat: 41.068582, lng: -73.846048},
-		zoom: 9
-	};
-	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-	moop();
+	var map;
 
-}
-	  google.maps.event.addDomListener(window, 'load', initb);
+	function initb () {
+		var mapOptions = {
+			center: { lat: 41.068582, lng: -73.846048},
+			zoom: 9
+		};
+		map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		moop();
+
+	}
+	google.maps.event.addDomListener(window, 'load', initb);
 
 	</script>
 
