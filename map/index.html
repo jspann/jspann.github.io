@@ -8,9 +8,9 @@
 	#heybox {
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 		font-weight: 300;
-		width: 80%;
 		height: 70%;
 		background-color: purple;
+		color: white;
 	}
 	</style>
 
@@ -50,32 +50,25 @@
 
 	<script type="text/javascript">
 	function getinfo() {
-		alert("© 2015 James Spann and Jules Oppenheim")
+		//alert("© 2015 James Spann and Jules Oppenheim")
+		$("#heybox").show();
 	}
-	$('#heybox').click(function() {
-    $('#heybox').each(function() {
-        if ($(this).offset().left < 0) {
-            $(this).css("left", "150%");
-        } else if ($(this).offset().left > $('#container').width()) {
-            $(this).animate({
-                left: '50%',
-            }, 500 );
-        } else {
-            $(this).animate({
-                left: '-150%',
-            }, 500 );
-        }
+
+	$(document).ready(function(){
+    $("#heybox").click(function(){
+        $(this).hide();
     });
 });
+
 	</script>
   </head>
   <body>
 <div id="map-canvas"></div>
 <img src="info.png" alt="Info about this" onclick="getinfo()" style="position: fixed; top: 5px; left: 5px;">
 
-<div id="heybox" style="position: fixed; width:50%; left: 25%;">
-	<b>This is a cool map</b>
-	<i>Click the box to dismiss it</i>
+<div id="heybox" class="heybox" style="position: fixed; width:80%; top:10px; left: 10%;">
+	<b style="height:20%;">Copyright 2015 James Spann and Jules Oppenheim</b><br>
+	<i style="bottom:10px; position:absolute;">Click the box to dismiss it</i>
 </div>
   </body>
 </html>
