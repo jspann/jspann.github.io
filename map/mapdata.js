@@ -2069,8 +2069,6 @@ function moop(){
 }
 
 function meep (argument) {
-	/Users/jspann/.bash_profile: line 3: /Users/jspann/google-cloud-sdk/path.bash.inc: No such file or directory
-/Users/jspann/.bash_profile: line 6: /Users/jspann/google-cloud-sdk/completion.bash.inc: No such file or directory
 	b0 = new google.maps.Marker({
 		map: map,
 		title:"Home",
