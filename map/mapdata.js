@@ -1,5 +1,5 @@
 function moop(){
-	a0 = new google.maps.Marker({
+		a0 = new google.maps.Marker({
 		map: map,
 		title:"Durham, NC 27708",
 		icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
@@ -798,7 +798,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 34.2582671, lng: -118.7066671},
+			location: {lat: 42.3657, lng: 71.2597},
 			  query: 'Address'
 
 					},
@@ -1062,7 +1062,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 32.8843614, lng: -117.2251386},
+			location: {lat: 34.1042, lng: 117.7106},
 			  query: 'Address'
 
 					},
@@ -1480,7 +1480,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 0, lng: 0},
+			location: {lat: 34.1386, lng: 118.1255},
 			  query: 'Address'
 
 					},
