@@ -600,7 +600,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: -30.7819844, lng: 121.4883572},
+			location: {lat: 40.0067, lng: 105.2672},
 			  query: 'Address'
 
 					},

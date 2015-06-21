@@ -5,6 +5,12 @@
 	  html, body, #map-canvas {
 		height: 100%; margin: 0; padding: 0;
 	  }
+	#heybox {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight: 300;
+		width: 80%;
+		height: 70%;
+	}
 	</style>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&key=AIzaSyBhbw_tF7i0EWhPzJN4dRoO__fU2KBZp74">
 	</script>
@@ -38,15 +44,36 @@
 	google.maps.event.addDomListener(window, 'load', initb);
 
 	</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<script type="text/javascript">
 	function getinfo() {
 		alert("© 2015 James Spann and Jules Oppenheim")
 	}
+	$('#heybox').click(function() {
+    $('#heybox').each(function() {
+        if ($(this).offset().left < 0) {
+            $(this).css("left", "150%");
+        } else if ($(this).offset().left > $('#container').width()) {
+            $(this).animate({
+                left: '50%',
+            }, 500 );
+        } else {
+            $(this).animate({
+                left: '-150%',
+            }, 500 );
+        }
+    });
+});
 	</script>
   </head>
   <body>
 <div id="map-canvas"></div>
 <img src="info.png" alt="Info about this" onclick="getinfo()" style="position: fixed; top: 5px; left: 5px;">
+
+<div id="heybox">
+	<b>This is a cool map</b>
+	<i>Click the box to dismiss it</i>
+</div>
   </body>
 </html>
