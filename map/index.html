@@ -55,6 +55,7 @@
 			//meep();
 			directionsDisplay = new google.maps.DirectionsRenderer();
 			directionsDisplay.setMap(map);
+			directionsDisplay.setOptions( { suppressMarkers: true } );
 		}
 		
 		google.maps.event.addDomListener(window, 'load', initb);
@@ -150,7 +151,11 @@
 				};
 
 				if (!getDirections && isshowingDirections) {
-					toggleDirections();
+					toggleDirections();//close directions
+					if(directionsDisplay != null) { 
+						directionsDisplay.setMap(null);
+						directionsDisplay = null;
+					}
 				};
 				
 			}
@@ -169,6 +174,10 @@
 			function getDirections(){
 				//$("#sidebar").show("slide", { direction: "left" }, 1000);
 				//$("#sidebar").animate({'left':'30%'})
+				directionsDisplay = new google.maps.DirectionsRenderer();
+				directionsDisplay.setMap(map);
+				directionsDisplay.setOptions( { suppressMarkers: true } );
+
 				var one = new google.maps.LatLng(dirValues[1], dirValues[2]);
 				var two = new google.maps.LatLng(dirValues[4], dirValues[5]);
 
@@ -188,11 +197,6 @@
 				});
 			}
 
-			function calcRoute() {
-  var selectedMode = document.getElementById('mode').value;
-  
-
-}
 		</script>
 	</head>
 	<body>
