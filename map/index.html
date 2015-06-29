@@ -72,7 +72,7 @@
 		<script type="text/javascript">
 			var gettingDirections = false;
 			var hasFirstValues = false;
-			var showingDirections = false;
+			var isshowingDirections = false;
 			var dirValues = [6];
 			var directionsicon;
 
@@ -158,11 +158,14 @@
 				
 			}
 			function toggleDirections () {
-				if (showingDirections) {
+				console.log("toggling");
+				if (isshowingDirections) {
 					alert("Sorry dont have a method for that");
 					$("#sidebar").animate({'left':'-30%'})
+					isshowingDirections = false;
 				}else{
 					getDirections();
+					isshowingDirections = true
 				}
 			}
 			function getDirections(){
