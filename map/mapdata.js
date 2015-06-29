@@ -627,7 +627,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: -30.7819844, lng: 121.4883572},
+			location: {lat: 49.008, lng: -105.266},
 			  query: 'Address'
 
 					},
@@ -640,7 +640,7 @@ function moop(){
 	google.maps.event.addListener(a27,'click', function(a27,i) {
 
 		console.log('College: UC Boulder');
-		setDirValues(-30.7819844,121.4883572)
+		setDirValues(49.008,-105.266)
 	});
 
 	a28 = new google.maps.Marker({
@@ -1110,7 +1110,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 34.1042, lng: 117.7106},
+			location: {lat: 34.1042, lng: -117.7106},
 			  query: 'Address'
 
 					},
@@ -1123,7 +1123,7 @@ function moop(){
 	google.maps.event.addListener(a48,'click', function(a48,i) {
 
 		console.log('College: Scripps');
-		setDirValues(34.1042,117.7106)
+		setDirValues(34.1042,-117.7106)
 	});
 
 	a49 = new google.maps.Marker({
@@ -1547,7 +1547,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 34.1386, lng: 118.1255},
+			location: {lat: 34.1386, lng: -118.1255},
 			  query: 'Address'
 
 					},
@@ -1560,7 +1560,7 @@ function moop(){
 	google.maps.event.addListener(a67,'click', function(a67,i) {
 
 		console.log('College: CalTech');
-		setDirValues(34.1386,118.1255)
+		setDirValues(34.1386,-118.1255)
 	});
 
 	a68 = new google.maps.Marker({
