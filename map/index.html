@@ -89,8 +89,27 @@
 			function setDirValues (currentmarker,lato,lngo) {
 				if (currentmarker == dirValues[3]) {
 					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
+				//delete the values in this part of the array because there will always be a value in 0-2 if the there are values in 3-5
+					dirValues[3] = undefined;
+					dirValues[4] = undefined;
+					dirValues[5] = undefined;
+					gettingDirections = false;
+
 				}else if (currentmarker == dirValues[0]) {
 					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
+					//Moves values down
+					if (dirValues[3] != undefined) {
+						dirValues[0] = dirValues[3];
+						dirValues[1] = dirValues[4];
+						dirValues[2] = dirValues[5];
+						gettingDirections = true;
+
+					}else{
+						dirValues[0] = undefined;
+						dirValues[1] = undefined;
+						dirValues[2] = undefined;
+						hasFirstValues = false;
+					};
 				}else{
 					console.log("First: " + dirValues[0] + "||" + dirValues[1] + "||" + dirValues[2]);
 					console.log("Second: " + dirValues[3] + "||" + dirValues[4] + "||" + dirValues[5]);
@@ -102,6 +121,7 @@
 						dirValues[3] = currentmarker;
 						dirValues[4] = lato;
 						dirValues[5] = lngo;
+						getDirections();
 					} else {
 						hasFirstValues = true;
 						dirValues[0] = currentmarker;
@@ -112,7 +132,7 @@
 				};
 			}
 
-			function getDirections(first,second){
+			function getDirections(){
 				directionsicon.style.opacity = 1;
 			}
 		</script>
