@@ -96,6 +96,7 @@
 					dirValues[4] = undefined;
 					dirValues[5] = undefined;
 					gettingDirections = false;
+					directionsicon.style.opacity = 0;
 
 				}else if (currentmarker == dirValues[0]) {
 					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
@@ -105,6 +106,7 @@
 						dirValues[1] = dirValues[4];
 						dirValues[2] = dirValues[5];
 						gettingDirections = false;
+						directionsicon.style.opacity = 0;
 
 					}else{
 						dirValues[0] = undefined;
