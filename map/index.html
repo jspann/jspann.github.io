@@ -87,6 +87,8 @@
 			}
 
 			function setDirValues (currentmarker,lato,lngo) {
+				
+
 				if (currentmarker == dirValues[3]) {
 					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
 				//delete the values in this part of the array because there will always be a value in 0-2 if the there are values in 3-5
@@ -111,24 +113,28 @@
 						hasFirstValues = false;
 					};
 				}else{
-					console.log("First: " + dirValues[0] + "||" + dirValues[1] + "||" + dirValues[2]);
-					console.log("Second: " + dirValues[3] + "||" + dirValues[4] + "||" + dirValues[5]);
-					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');");
+					if (getDirections) {
+						alert("You already have 2 dots selected. Deselect one to select more.");
+					}else{
+						console.log("First: " + dirValues[0] + "||" + dirValues[1] + "||" + dirValues[2]);
+						console.log("Second: " + dirValues[3] + "||" + dirValues[4] + "||" + dirValues[5]);
+						eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');");
 
-					if (hasFirstValues) {
-						gettingDirections = true;
-						//
-						dirValues[3] = currentmarker;
-						dirValues[4] = lato;
-						dirValues[5] = lngo;
-						getDirections();
-					} else {
-						hasFirstValues = true;
-						dirValues[0] = currentmarker;
-						dirValues[1] = lato;
-						dirValues[2] = lngo;
-						//we need the other latitudes and longitudes to get directions
-					};
+						if (hasFirstValues) {
+							gettingDirections = true;
+							//
+							dirValues[3] = currentmarker;
+							dirValues[4] = lato;
+							dirValues[5] = lngo;
+							getDirections();
+						} else {
+							hasFirstValues = true;
+							dirValues[0] = currentmarker;
+							dirValues[1] = lato;
+							dirValues[2] = lngo;
+							//we need the other latitudes and longitudes to get directions
+						};
+					}
 				};
 			}
 
