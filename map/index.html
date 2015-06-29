@@ -20,9 +20,10 @@
 
 		#sidebar{
 			width: 30%;
+			height: 100%;
 			background-color: rgb(0,102,255);
 			color: white;
-			left: -30%;
+			/*left: -30%;*/
 		}
 
 		</style>
@@ -55,20 +56,7 @@
 			directionsDisplay = new google.maps.DirectionsRenderer();
 			directionsDisplay.setMap(map);
 		}
-		function calcRoute() {
-			var start = document.getElementById('start').value;
-			var end = document.getElementById('end').value;
-				var request = {
-					origin:start,
-					destination:end,
-					travelMode: google.maps.TravelMode.DRIVING
-				};
-				directionsService.route(request, function(response, status) {
-					if (status == google.maps.DirectionsStatus.OK) {
-						directionsDisplay.setDirections(response);
-					}
-				});
-		}
+		
 		google.maps.event.addDomListener(window, 'load', initb);
 		</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -79,6 +67,7 @@
 			var dirValues = [6];
 			var directionsicon;
 
+
 			function getinfo() {
 				$("#heybox").show();
 			}
@@ -88,6 +77,7 @@
 			directionsicon = document.getElementById("diricon");
 
 			directionsicon.style.opacity = 0;
+			document.getElementById('sidebar').style.opacity = 0;
 			});
 			});
 			
@@ -158,30 +148,60 @@
 					directionsicon.style.opacity = 1;
 					document.getElementById('sidetitletext').value = "Directions between " + eval("a" + dirValues[0] + ".title") + "and" + eval("a" + dirValues[3] + ".title")
 				};
+
+				if (!getDirections && isshowingDirections) {
+					toggleDirections();
+				};
 				
 			}
 			function toggleDirections () {
 				console.log("toggling");
 				if (isshowingDirections) {
 					alert("Sorry dont have a method for that");
-					$("#sidebar").animate({'left':'-30%'})
+					document.getElementById('sidebar').style.opacity = 0;
 					isshowingDirections = false;
 				}else{
+					document.getElementById('sidebar').style.opacity = 1;
 					getDirections();
 					isshowingDirections = true
 				}
 			}
 			function getDirections(){
 				//$("#sidebar").show("slide", { direction: "left" }, 1000);
-				$("#sidebar").animate({'left':'30%'})
+				//$("#sidebar").animate({'left':'30%'})
+				var one = new google.maps.LatLng(dirValues[1], dirValues[2]);
+				var two = new google.maps.LatLng(dirValues[4], dirValues[5]);
+
+				var request = {
+					origin: one,
+					destination: two,
+					// Note that Javascript allows us to access the constant
+					// using square brackets and a string value as its
+					// "property."
+					travelMode: google.maps.TravelMode['DRIVING']
+				};
+				directionsService.route(request, function(response, status) {
+					if (status == google.maps.DirectionsStatus.OK) {
+						console.log(response);
+						directionsDisplay.setDirections(response);
+					}
+				});
 			}
+
+			function calcRoute() {
+  var selectedMode = document.getElementById('mode').value;
+  
+
+}
 		</script>
 	</head>
 	<body>
 		<div id="map-canvas"></div>
+		
 		<div id="sidebar">
-			<p id="sidetitletext" style="width:100%;">Directions between locations</p>
+			<p id="sidetitletext" style="width:100%;">Directions</p>
 		</div>
+
 		<img src="info.png" alt="Info about this" onclick="getinfo()" style="position: fixed; top: 5px; left: 5px;">
 		<img id="diricon" src="directions.png" alt="Click for directions" onclick="toggleDirections()" style="position: fixed; top: 5px; left: 65px;">
 		<div id="heybox" class="heybox" style="position: fixed; width:80%; top:10px; left: 10%;">
