@@ -17,6 +17,14 @@
 		p,b,i{
 			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		}
+
+		#sidebar{
+			width: 30%;
+			background-color: rgb(0,102,255);
+			color: white;
+			left: -30%;
+		}
+
 		</style>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&key=AIzaSyBhbw_tF7i0EWhPzJN4dRoO__fU2KBZp74">
 		</script>
@@ -128,7 +136,8 @@
 							dirValues[3] = currentmarker;
 							dirValues[4] = lato;
 							dirValues[5] = lngo;
-							getDirections();
+							//getDirections();
+							updateDirinfo()
 						} else {
 							hasFirstValues = true;
 							dirValues[0] = currentmarker;
@@ -140,15 +149,34 @@
 				};
 			}
 
+			function updateDirinfo () {
+				if (gettingDirections) {
+					directionsicon.style.opacity = 1;
+					document.getElementById('sidetitletext').value = "Directions between " + eval("a" + dirValues[0] + ".title") + "and" + eval("a" + dirValues[3] + ".title")
+				};
+				
+			}
+			function toggleDirections () {
+				if (showingDirections) {
+					alert("Sorry dont have a method for that");
+					$("#sidebar").animate({'left':'-30%'})
+				}else{
+					getDirections();
+				}
+			}
 			function getDirections(){
-				directionsicon.style.opacity = 1;
+				//$("#sidebar").show("slide", { direction: "left" }, 1000);
+				$("#sidebar").animate({'left':'30%'})
 			}
 		</script>
 	</head>
 	<body>
 		<div id="map-canvas"></div>
+		<div id="sidebar">
+			<p id="sidetitletext" style="width:100%;">Directions between locations</p>
+		</div>
 		<img src="info.png" alt="Info about this" onclick="getinfo()" style="position: fixed; top: 5px; left: 5px;">
-		<img id="diricon" src="directions.png" alt="Click for directions" onclick="getinfo()" style="position: fixed; top: 5px; left: 65px;">
+		<img id="diricon" src="directions.png" alt="Click for directions" onclick="toggleDirections()" style="position: fixed; top: 5px; left: 65px;">
 		<div id="heybox" class="heybox" style="position: fixed; width:80%; top:10px; left: 10%;">
 			<p> </p>
 			<u align="center">Map...idk what to call it</u>
