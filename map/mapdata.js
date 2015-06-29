@@ -18,7 +18,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a0,'click', function(a0,i) {
 
-		alert('College: Durham, NC 27708');
+		console.log('College: Durham, NC 27708');
 	});
 
 	a1 = new google.maps.Marker({
@@ -40,7 +40,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a1,'click', function(a1,i) {
 
-		alert('College: Dartmouth');
+		console.log('College: Dartmouth');
 	});
 
 	a2 = new google.maps.Marker({
@@ -62,7 +62,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a2,'click', function(a2,i) {
 
-		alert('College: Annapolis');
+		console.log('College: Annapolis');
 	});
 
 	a3 = new google.maps.Marker({
@@ -84,7 +84,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a3,'click', function(a3,i) {
 
-		alert('College: Claremont McKenna College');
+		console.log('College: Claremont McKenna College');
 	});
 
 	a4 = new google.maps.Marker({
@@ -106,7 +106,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a4,'click', function(a4,i) {
 
-		alert('College: Gettysburg');
+		console.log('College: Gettysburg');
 	});
 
 	a5 = new google.maps.Marker({
@@ -116,7 +116,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 42.4534492, lng: -76.4735027},
+			location: {lat: 42.4534492, lng: 76.4735027},
 			  query: 'Address'
 
 					},
@@ -128,7 +128,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a5,'click', function(a5,i) {
 
-		alert('College: Cornell');
+		console.log('College: Cornell');
 	});
 
 	a6 = new google.maps.Marker({
@@ -150,7 +150,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a6,'click', function(a6,i) {
 
-		alert('College: Barnard');
+		console.log('College: Barnard');
 	});
 
 	a7 = new google.maps.Marker({
@@ -172,7 +172,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a7,'click', function(a7,i) {
 
-		alert('College: Franklin and Marshall');
+		console.log('College: Franklin and Marshall');
 	});
 
 	a8 = new google.maps.Marker({
@@ -194,7 +194,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a8,'click', function(a8,i) {
 
-		alert('College: Syracuse University');
+		console.log('College: Syracuse University');
 	});
 
 	a9 = new google.maps.Marker({
@@ -216,7 +216,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a9,'click', function(a9,i) {
 
-		alert('College: Bowdoin');
+		console.log('College: Bowdoin');
 	});
 
 	a10 = new google.maps.Marker({
@@ -238,7 +238,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a10,'click', function(a10,i) {
 
-		alert('College: Johns Hopkins University');
+		console.log('College: Johns Hopkins University');
 	});
 
 	a11 = new google.maps.Marker({
@@ -260,7 +260,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a11,'click', function(a11,i) {
 
-		alert('College: Davidson');
+		console.log('College: Davidson');
 	});
 
 	a12 = new google.maps.Marker({
@@ -282,7 +282,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a12,'click', function(a12,i) {
 
-		alert('College: Lehigh University');
+		console.log('College: Lehigh University');
 	});
 
 	a13 = new google.maps.Marker({
@@ -304,7 +304,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a13,'click', function(a13,i) {
 
-		alert('College: Boston University');
+		console.log('College: Boston University');
 	});
 
 	a14 = new google.maps.Marker({
@@ -326,7 +326,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a14,'click', function(a14,i) {
 
-		alert('College: Amherst');
+		console.log('College: Amherst');
 	});
 
 	a15 = new google.maps.Marker({
@@ -348,7 +348,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a15,'click', function(a15,i) {
 
-		alert('College: Northeastern');
+		console.log('College: Northeastern');
 	});
 
 	a16 = new google.maps.Marker({
@@ -370,7 +370,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a16,'click', function(a16,i) {
 
-		alert('College: Yale');
+		console.log('College: Yale');
 	});
 
 	a17 = new google.maps.Marker({
@@ -392,7 +392,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a17,'click', function(a17,i) {
 
-		alert('College: Cornell');
+		console.log('College: Cornell');
 	});
 
 	a18 = new google.maps.Marker({
@@ -414,7 +414,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a18,'click', function(a18,i) {
 
-		alert('College: Emory University');
+		console.log('College: Emory University');
 	});
 
 	a19 = new google.maps.Marker({
@@ -436,7 +436,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a19,'click', function(a19,i) {
 
-		alert('College: Saint lawrence university');
+		console.log('College: Saint lawrence university');
 	});
 
 	a20 = new google.maps.Marker({
@@ -458,7 +458,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a20,'click', function(a20,i) {
 
-		alert('College: New York University');
+		console.log('College: New York University');
 	});
 
 	a21 = new google.maps.Marker({
@@ -480,7 +480,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a21,'click', function(a21,i) {
 
-		alert('College: Denison University');
+		console.log('College: Denison University');
 	});
 
 	a22 = new google.maps.Marker({
@@ -502,7 +502,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a22,'click', function(a22,i) {
 
-		alert('College: Trinity University');
+		console.log('College: Trinity University');
 	});
 
 	a23 = new google.maps.Marker({
@@ -524,7 +524,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a23,'click', function(a23,i) {
 
-		alert('College: Cornell');
+		console.log('College: Cornell');
 	});
 
 	a24 = new google.maps.Marker({
@@ -546,7 +546,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a24,'click', function(a24,i) {
 
-		alert('College: Cornell');
+		console.log('College: Cornell');
 	});
 
 	a25 = new google.maps.Marker({
@@ -568,7 +568,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a25,'click', function(a25,i) {
 
-		alert('College: St. Andrews');
+		console.log('College: St. Andrews');
 	});
 
 	a26 = new google.maps.Marker({
@@ -590,7 +590,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a26,'click', function(a26,i) {
 
-		alert('College: Tufts');
+		console.log('College: Tufts');
 	});
 
 	a27 = new google.maps.Marker({
@@ -612,7 +612,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a27,'click', function(a27,i) {
 
-		alert('College: UC Boulder');
+		console.log('College: UC Boulder');
 	});
 
 	a28 = new google.maps.Marker({
@@ -634,7 +634,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a28,'click', function(a28,i) {
 
-		alert('College: Saint lawrence university');
+		console.log('College: Saint lawrence university');
 	});
 
 	a29 = new google.maps.Marker({
@@ -656,7 +656,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a29,'click', function(a29,i) {
 
-		alert('College: RPI');
+		console.log('College: RPI');
 	});
 
 	a30 = new google.maps.Marker({
@@ -678,7 +678,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a30,'click', function(a30,i) {
 
-		alert('College: Vanderbilt');
+		console.log('College: Vanderbilt');
 	});
 
 	a31 = new google.maps.Marker({
@@ -700,7 +700,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a31,'click', function(a31,i) {
 
-		alert('College: Cornell-LR');
+		console.log('College: Cornell-LR');
 	});
 
 	a32 = new google.maps.Marker({
@@ -710,7 +710,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 0, lng: 0},
+			location: {lat: 44.0019, lng: 73.1456},
 			  query: 'Address'
 
 					},
@@ -722,7 +722,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a32,'click', function(a32,i) {
 
-		alert('College: Middlebury');
+		console.log('College: Middlebury');
 	});
 
 	a33 = new google.maps.Marker({
@@ -744,7 +744,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a33,'click', function(a33,i) {
 
-		alert('College: Tulane');
+		console.log('College: Tulane');
 	});
 
 	a34 = new google.maps.Marker({
@@ -766,7 +766,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a34,'click', function(a34,i) {
 
-		alert('College: Vanderbilt');
+		console.log('College: Vanderbilt');
 	});
 
 	a35 = new google.maps.Marker({
@@ -788,7 +788,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a35,'click', function(a35,i) {
 
-		alert('College: American University');
+		console.log('College: American University');
 	});
 
 	a36 = new google.maps.Marker({
@@ -810,7 +810,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a36,'click', function(a36,i) {
 
-		alert('College: Brandeis');
+		console.log('College: Brandeis');
 	});
 
 	a37 = new google.maps.Marker({
@@ -820,7 +820,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 0, lng: 0},
+			location: {lat: 38.9007, lng: 77.0508},
 			  query: 'Address'
 
 					},
@@ -832,7 +832,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a37,'click', function(a37,i) {
 
-		alert('College: George Washington University');
+		console.log('College: George Washington University');
 	});
 
 	a38 = new google.maps.Marker({
@@ -854,7 +854,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a38,'click', function(a38,i) {
 
-		alert('College: Yale ');
+		console.log('College: Yale ');
 	});
 
 	a39 = new google.maps.Marker({
@@ -876,7 +876,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a39,'click', function(a39,i) {
 
-		alert('College: U Rochester ');
+		console.log('College: U Rochester ');
 	});
 
 	a40 = new google.maps.Marker({
@@ -898,7 +898,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a40,'click', function(a40,i) {
 
-		alert('College: Bentley University');
+		console.log('College: Bentley University');
 	});
 
 	a41 = new google.maps.Marker({
@@ -920,7 +920,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a41,'click', function(a41,i) {
 
-		alert('College: Cornell');
+		console.log('College: Cornell');
 	});
 
 	a42 = new google.maps.Marker({
@@ -942,7 +942,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a42,'click', function(a42,i) {
 
-		alert('College: Williams College');
+		console.log('College: Williams College');
 	});
 
 	a43 = new google.maps.Marker({
@@ -964,7 +964,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a43,'click', function(a43,i) {
 
-		alert('College: Bucknell ');
+		console.log('College: Bucknell ');
 	});
 
 	a44 = new google.maps.Marker({
@@ -986,7 +986,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a44,'click', function(a44,i) {
 
-		alert('College: Northwestern University');
+		console.log('College: Northwestern University');
 	});
 
 	a45 = new google.maps.Marker({
@@ -1008,7 +1008,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a45,'click', function(a45,i) {
 
-		alert('College: Northeastern');
+		console.log('College: Northeastern');
 	});
 
 	a46 = new google.maps.Marker({
@@ -1030,7 +1030,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a46,'click', function(a46,i) {
 
-		alert('College: Elon');
+		console.log('College: Elon');
 	});
 
 	a47 = new google.maps.Marker({
@@ -1052,7 +1052,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a47,'click', function(a47,i) {
 
-		alert('College: Finland');
+		console.log('College: Finland');
 	});
 
 	a48 = new google.maps.Marker({
@@ -1074,7 +1074,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a48,'click', function(a48,i) {
 
-		alert('College: Scripps');
+		console.log('College: Scripps');
 	});
 
 	a49 = new google.maps.Marker({
@@ -1096,7 +1096,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a49,'click', function(a49,i) {
 
-		alert('College: Carnegie Mellon');
+		console.log('College: Carnegie Mellon');
 	});
 
 	a50 = new google.maps.Marker({
@@ -1118,7 +1118,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a50,'click', function(a50,i) {
 
-		alert('College: Durham, NC 27708');
+		console.log('College: Durham, NC 27708');
 	});
 
 	a51 = new google.maps.Marker({
@@ -1140,7 +1140,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a51,'click', function(a51,i) {
 
-		alert('College: Wake Forest');
+		console.log('College: Wake Forest');
 	});
 
 	a52 = new google.maps.Marker({
@@ -1162,7 +1162,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a52,'click', function(a52,i) {
 
-		alert('College: Vanderbilt');
+		console.log('College: Vanderbilt');
 	});
 
 	a53 = new google.maps.Marker({
@@ -1184,7 +1184,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a53,'click', function(a53,i) {
 
-		alert('College: Emory University');
+		console.log('College: Emory University');
 	});
 
 	a54 = new google.maps.Marker({
@@ -1206,7 +1206,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a54,'click', function(a54,i) {
 
-		alert('College: Quinnipiac');
+		console.log('College: Quinnipiac');
 	});
 
 	a55 = new google.maps.Marker({
@@ -1228,7 +1228,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a55,'click', function(a55,i) {
 
-		alert('College: University of Virginia');
+		console.log('College: University of Virginia');
 	});
 
 	a56 = new google.maps.Marker({
@@ -1250,7 +1250,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a56,'click', function(a56,i) {
 
-		alert('College: Columbia University');
+		console.log('College: Columbia University');
 	});
 
 	a57 = new google.maps.Marker({
@@ -1272,7 +1272,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a57,'click', function(a57,i) {
 
-		alert('College: Cornell-agriculture');
+		console.log('College: Cornell-agriculture');
 	});
 
 	a58 = new google.maps.Marker({
@@ -1294,7 +1294,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a58,'click', function(a58,i) {
 
-		alert('College: West Point');
+		console.log('College: West Point');
 	});
 
 	a59 = new google.maps.Marker({
@@ -1316,7 +1316,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a59,'click', function(a59,i) {
 
-		alert('College: Durham, NC 27708');
+		console.log('College: Durham, NC 27708');
 	});
 
 	a60 = new google.maps.Marker({
@@ -1338,7 +1338,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a60,'click', function(a60,i) {
 
-		alert('College: American University');
+		console.log('College: American University');
 	});
 
 	a61 = new google.maps.Marker({
@@ -1348,7 +1348,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 43.9067324, lng: -69.9637933},
+			location: {lat: 43.9067324, lng: 69.9637933},
 			  query: 'Address'
 
 					},
@@ -1360,7 +1360,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a61,'click', function(a61,i) {
 
-		alert('College: Bowdoin');
+		console.log('College: Bowdoin');
 	});
 
 	a62 = new google.maps.Marker({
@@ -1382,7 +1382,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a62,'click', function(a62,i) {
 
-		alert('College: Franklin and Marshall');
+		console.log('College: Franklin and Marshall');
 	});
 
 	a63 = new google.maps.Marker({
@@ -1404,7 +1404,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a63,'click', function(a63,i) {
 
-		alert('College: Wake Forest');
+		console.log('College: Wake Forest');
 	});
 
 	a64 = new google.maps.Marker({
@@ -1426,7 +1426,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a64,'click', function(a64,i) {
 
-		alert('College: New York University');
+		console.log('College: New York University');
 	});
 
 	a65 = new google.maps.Marker({
@@ -1448,7 +1448,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a65,'click', function(a65,i) {
 
-		alert('College: UMiami');
+		console.log('College: UMiami');
 	});
 
 	a66 = new google.maps.Marker({
@@ -1470,7 +1470,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a66,'click', function(a66,i) {
 
-		alert('College: Missing');
+		console.log('College: Missing');
 	});
 
 	a67 = new google.maps.Marker({
@@ -1492,7 +1492,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a67,'click', function(a67,i) {
 
-		alert('College: CalTech');
+		console.log('College: CalTech');
 	});
 
 	a68 = new google.maps.Marker({
@@ -1514,7 +1514,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a68,'click', function(a68,i) {
 
-		alert('College: Bowdoin');
+		console.log('College: Bowdoin');
 	});
 
 	a69 = new google.maps.Marker({
@@ -1536,7 +1536,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a69,'click', function(a69,i) {
 
-		alert('College: U Pitt');
+		console.log('College: U Pitt');
 	});
 
 	a70 = new google.maps.Marker({
@@ -1558,7 +1558,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a70,'click', function(a70,i) {
 
-		alert('College: U Miami');
+		console.log('College: U Miami');
 	});
 
 	a71 = new google.maps.Marker({
@@ -1580,7 +1580,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a71,'click', function(a71,i) {
 
-		alert('College: U Penn');
+		console.log('College: U Penn');
 	});
 
 	a72 = new google.maps.Marker({
@@ -1602,7 +1602,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a72,'click', function(a72,i) {
 
-		alert('College: Cornell');
+		console.log('College: Cornell');
 	});
 
 	a73 = new google.maps.Marker({
@@ -1624,7 +1624,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a73,'click', function(a73,i) {
 
-		alert('College: Stanford');
+		console.log('College: Stanford');
 	});
 
 	a74 = new google.maps.Marker({
@@ -1646,7 +1646,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a74,'click', function(a74,i) {
 
-		alert('College: U Mich');
+		console.log('College: U Mich');
 	});
 
 	a75 = new google.maps.Marker({
@@ -1668,7 +1668,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a75,'click', function(a75,i) {
 
-		alert('College: Wash U');
+		console.log('College: Wash U');
 	});
 
 	a76 = new google.maps.Marker({
@@ -1690,7 +1690,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a76,'click', function(a76,i) {
 
-		alert('College: Emory University');
+		console.log('College: Emory University');
 	});
 
 	a77 = new google.maps.Marker({
@@ -1712,7 +1712,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a77,'click', function(a77,i) {
 
-		alert('College: Middlebury');
+		console.log('College: Middlebury');
 	});
 
 	a78 = new google.maps.Marker({
@@ -1734,7 +1734,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a78,'click', function(a78,i) {
 
-		alert('College: Yale-NUS (Singapore)');
+		console.log('College: Yale-NUS (Singapore)');
 	});
 
 	a79 = new google.maps.Marker({
@@ -1756,7 +1756,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a79,'click', function(a79,i) {
 
-		alert('College: RIT');
+		console.log('College: RIT');
 	});
 
 	a80 = new google.maps.Marker({
@@ -1778,7 +1778,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a80,'click', function(a80,i) {
 
-		alert('College: Stevens institute of technology');
+		console.log('College: Stevens institute of technology');
 	});
 
 	a81 = new google.maps.Marker({
@@ -1800,7 +1800,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a81,'click', function(a81,i) {
 
-		alert('College: Northwestern University');
+		console.log('College: Northwestern University');
 	});
 
 	a82 = new google.maps.Marker({
@@ -1822,7 +1822,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a82,'click', function(a82,i) {
 
-		alert('College: Cornell');
+		console.log('College: Cornell');
 	});
 
 	a83 = new google.maps.Marker({
@@ -1844,7 +1844,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a83,'click', function(a83,i) {
 
-		alert('College: Goucher');
+		console.log('College: Goucher');
 	});
 
 	a84 = new google.maps.Marker({
@@ -1866,7 +1866,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a84,'click', function(a84,i) {
 
-		alert('College: Wake Forest');
+		console.log('College: Wake Forest');
 	});
 
 	a85 = new google.maps.Marker({
@@ -1888,7 +1888,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a85,'click', function(a85,i) {
 
-		alert('College: University of Iowa');
+		console.log('College: University of Iowa');
 	});
 
 	a86 = new google.maps.Marker({
@@ -1910,7 +1910,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a86,'click', function(a86,i) {
 
-		alert('College: Lehigh University');
+		console.log('College: Lehigh University');
 	});
 
 	a87 = new google.maps.Marker({
@@ -1932,7 +1932,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a87,'click', function(a87,i) {
 
-		alert('College: Bowdoin');
+		console.log('College: Bowdoin');
 	});
 
 	a88 = new google.maps.Marker({
@@ -1954,7 +1954,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a88,'click', function(a88,i) {
 
-		alert('College: Cornell');
+		console.log('College: Cornell');
 	});
 
 	a89 = new google.maps.Marker({
@@ -1976,7 +1976,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a89,'click', function(a89,i) {
 
-		alert('College: U Penn');
+		console.log('College: U Penn');
 	});
 
 	a90 = new google.maps.Marker({
@@ -1998,7 +1998,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a90,'click', function(a90,i) {
 
-		alert('College: Columbia University');
+		console.log('College: Columbia University');
 	});
 
 	a91 = new google.maps.Marker({
@@ -2020,7 +2020,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a91,'click', function(a91,i) {
 
-		alert('College: Cornell');
+		console.log('College: Cornell');
 	});
 
 	a92 = new google.maps.Marker({
@@ -2030,7 +2030,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 0, lng: 0},
+			location: {lat: 38.9072, lng: 77.0728},
 			  query: 'Address'
 
 					},
@@ -2042,7 +2042,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a92,'click', function(a92,i) {
 
-		alert('College: Georgetown University');
+		console.log('College: Georgetown University');
 	});
 
 	a93 = new google.maps.Marker({
@@ -2064,7 +2064,7 @@ function moop(){
 			  });
 	google.maps.event.addListener(a93,'click', function(a93,i) {
 
-		alert('College: New York University');
+		console.log('College: New York University');
 	});
 
 
@@ -2090,7 +2090,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b0,'click', function(b0,i) {
 
-		alert('Home: ' + b0.title);
+		console.log('Home: ' + b0.title);
 	});
 
 	b1 = new google.maps.Marker({
@@ -2112,7 +2112,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b1,'click', function(b1,i) {
 
-		alert('Home: ' + b1.title);
+		console.log('Home: ' + b1.title);
 	});
 
 	b2 = new google.maps.Marker({
@@ -2134,7 +2134,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b2,'click', function(b2,i) {
 
-		alert('Home: ' + b2.title);
+		console.log('Home: ' + b2.title);
 	});
 
 	b3 = new google.maps.Marker({
@@ -2156,7 +2156,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b3,'click', function(b3,i) {
 
-		alert('Home: ' + b3.title);
+		console.log('Home: ' + b3.title);
 	});
 
 	b4 = new google.maps.Marker({
@@ -2178,7 +2178,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b4,'click', function(b4,i) {
 
-		alert('Home: ' + b4.title);
+		console.log('Home: ' + b4.title);
 	});
 
 	b5 = new google.maps.Marker({
@@ -2200,7 +2200,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b5,'click', function(b5,i) {
 
-		alert('Home: ' + b5.title);
+		console.log('Home: ' + b5.title);
 	});
 
 	b6 = new google.maps.Marker({
@@ -2222,7 +2222,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b6,'click', function(b6,i) {
 
-		alert('Home: ' + b6.title);
+		console.log('Home: ' + b6.title);
 	});
 
 	b7 = new google.maps.Marker({
@@ -2244,7 +2244,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b7,'click', function(b7,i) {
 
-		alert('Home: ' + b7.title);
+		console.log('Home: ' + b7.title);
 	});
 
 	b8 = new google.maps.Marker({
@@ -2266,7 +2266,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b8,'click', function(b8,i) {
 
-		alert('Home: ' + b8.title);
+		console.log('Home: ' + b8.title);
 	});
 
 	b9 = new google.maps.Marker({
@@ -2288,7 +2288,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b9,'click', function(b9,i) {
 
-		alert('Home: ' + b9.title);
+		console.log('Home: ' + b9.title);
 	});
 
 	b10 = new google.maps.Marker({
@@ -2310,7 +2310,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b10,'click', function(b10,i) {
 
-		alert('Home: ' + b10.title);
+		console.log('Home: ' + b10.title);
 	});
 
 	b11 = new google.maps.Marker({
@@ -2332,7 +2332,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b11,'click', function(b11,i) {
 
-		alert('Home: ' + b11.title);
+		console.log('Home: ' + b11.title);
 	});
 
 	b12 = new google.maps.Marker({
@@ -2354,7 +2354,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b12,'click', function(b12,i) {
 
-		alert('Home: ' + b12.title);
+		console.log('Home: ' + b12.title);
 	});
 
 	b13 = new google.maps.Marker({
@@ -2376,7 +2376,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b13,'click', function(b13,i) {
 
-		alert('Home: ' + b13.title);
+		console.log('Home: ' + b13.title);
 	});
 
 	b14 = new google.maps.Marker({
@@ -2398,7 +2398,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b14,'click', function(b14,i) {
 
-		alert('Home: ' + b14.title);
+		console.log('Home: ' + b14.title);
 	});
 
 	b15 = new google.maps.Marker({
@@ -2420,7 +2420,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b15,'click', function(b15,i) {
 
-		alert('Home: ' + b15.title);
+		console.log('Home: ' + b15.title);
 	});
 
 	b16 = new google.maps.Marker({
@@ -2442,7 +2442,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b16,'click', function(b16,i) {
 
-		alert('Home: ' + b16.title);
+		console.log('Home: ' + b16.title);
 	});
 
 	b17 = new google.maps.Marker({
@@ -2464,7 +2464,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b17,'click', function(b17,i) {
 
-		alert('Home: ' + b17.title);
+		console.log('Home: ' + b17.title);
 	});
 
 	b18 = new google.maps.Marker({
@@ -2486,7 +2486,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b18,'click', function(b18,i) {
 
-		alert('Home: ' + b18.title);
+		console.log('Home: ' + b18.title);
 	});
 
 	b19 = new google.maps.Marker({
@@ -2508,7 +2508,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b19,'click', function(b19,i) {
 
-		alert('Home: ' + b19.title);
+		console.log('Home: ' + b19.title);
 	});
 
 	b20 = new google.maps.Marker({
@@ -2530,7 +2530,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b20,'click', function(b20,i) {
 
-		alert('Home: ' + b20.title);
+		console.log('Home: ' + b20.title);
 	});
 
 	b21 = new google.maps.Marker({
@@ -2552,7 +2552,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b21,'click', function(b21,i) {
 
-		alert('Home: ' + b21.title);
+		console.log('Home: ' + b21.title);
 	});
 
 	b22 = new google.maps.Marker({
@@ -2574,7 +2574,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b22,'click', function(b22,i) {
 
-		alert('Home: ' + b22.title);
+		console.log('Home: ' + b22.title);
 	});
 
 	b23 = new google.maps.Marker({
@@ -2596,7 +2596,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b23,'click', function(b23,i) {
 
-		alert('Home: ' + b23.title);
+		console.log('Home: ' + b23.title);
 	});
 
 	b24 = new google.maps.Marker({
@@ -2618,7 +2618,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b24,'click', function(b24,i) {
 
-		alert('Home: ' + b24.title);
+		console.log('Home: ' + b24.title);
 	});
 
 	b25 = new google.maps.Marker({
@@ -2640,7 +2640,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b25,'click', function(b25,i) {
 
-		alert('Home: ' + b25.title);
+		console.log('Home: ' + b25.title);
 	});
 
 	b26 = new google.maps.Marker({
@@ -2662,7 +2662,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b26,'click', function(b26,i) {
 
-		alert('Home: ' + b26.title);
+		console.log('Home: ' + b26.title);
 	});
 
 	b27 = new google.maps.Marker({
@@ -2684,7 +2684,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b27,'click', function(b27,i) {
 
-		alert('Home: ' + b27.title);
+		console.log('Home: ' + b27.title);
 	});
 
 	b28 = new google.maps.Marker({
@@ -2706,7 +2706,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b28,'click', function(b28,i) {
 
-		alert('Home: ' + b28.title);
+		console.log('Home: ' + b28.title);
 	});
 
 	b29 = new google.maps.Marker({
@@ -2728,7 +2728,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b29,'click', function(b29,i) {
 
-		alert('Home: ' + b29.title);
+		console.log('Home: ' + b29.title);
 	});
 
 	b30 = new google.maps.Marker({
@@ -2750,7 +2750,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b30,'click', function(b30,i) {
 
-		alert('Home: ' + b30.title);
+		console.log('Home: ' + b30.title);
 	});
 
 	b31 = new google.maps.Marker({
@@ -2772,7 +2772,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b31,'click', function(b31,i) {
 
-		alert('Home: ' + b31.title);
+		console.log('Home: ' + b31.title);
 	});
 
 	b32 = new google.maps.Marker({
@@ -2794,7 +2794,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b32,'click', function(b32,i) {
 
-		alert('Home: ' + b32.title);
+		console.log('Home: ' + b32.title);
 	});
 
 	b33 = new google.maps.Marker({
@@ -2816,7 +2816,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b33,'click', function(b33,i) {
 
-		alert('Home: ' + b33.title);
+		console.log('Home: ' + b33.title);
 	});
 
 	b34 = new google.maps.Marker({
@@ -2838,7 +2838,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b34,'click', function(b34,i) {
 
-		alert('Home: ' + b34.title);
+		console.log('Home: ' + b34.title);
 	});
 
 	b35 = new google.maps.Marker({
@@ -2860,7 +2860,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b35,'click', function(b35,i) {
 
-		alert('Home: ' + b35.title);
+		console.log('Home: ' + b35.title);
 	});
 
 	b36 = new google.maps.Marker({
@@ -2882,7 +2882,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b36,'click', function(b36,i) {
 
-		alert('Home: ' + b36.title);
+		console.log('Home: ' + b36.title);
 	});
 
 	b37 = new google.maps.Marker({
@@ -2904,7 +2904,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b37,'click', function(b37,i) {
 
-		alert('Home: ' + b37.title);
+		console.log('Home: ' + b37.title);
 	});
 
 	b38 = new google.maps.Marker({
@@ -2926,7 +2926,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b38,'click', function(b38,i) {
 
-		alert('Home: ' + b38.title);
+		console.log('Home: ' + b38.title);
 	});
 
 	b39 = new google.maps.Marker({
@@ -2948,7 +2948,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b39,'click', function(b39,i) {
 
-		alert('Home: ' + b39.title);
+		console.log('Home: ' + b39.title);
 	});
 
 	b40 = new google.maps.Marker({
@@ -2970,7 +2970,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b40,'click', function(b40,i) {
 
-		alert('Home: ' + b40.title);
+		console.log('Home: ' + b40.title);
 	});
 
 	b41 = new google.maps.Marker({
@@ -2992,7 +2992,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b41,'click', function(b41,i) {
 
-		alert('Home: ' + b41.title);
+		console.log('Home: ' + b41.title);
 	});
 
 	b42 = new google.maps.Marker({
@@ -3014,7 +3014,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b42,'click', function(b42,i) {
 
-		alert('Home: ' + b42.title);
+		console.log('Home: ' + b42.title);
 	});
 
 	b43 = new google.maps.Marker({
@@ -3036,7 +3036,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b43,'click', function(b43,i) {
 
-		alert('Home: ' + b43.title);
+		console.log('Home: ' + b43.title);
 	});
 
 	b44 = new google.maps.Marker({
@@ -3058,7 +3058,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b44,'click', function(b44,i) {
 
-		alert('Home: ' + b44.title);
+		console.log('Home: ' + b44.title);
 	});
 
 	b45 = new google.maps.Marker({
@@ -3080,7 +3080,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b45,'click', function(b45,i) {
 
-		alert('Home: ' + b45.title);
+		console.log('Home: ' + b45.title);
 	});
 
 	b46 = new google.maps.Marker({
@@ -3102,7 +3102,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b46,'click', function(b46,i) {
 
-		alert('Home: ' + b46.title);
+		console.log('Home: ' + b46.title);
 	});
 
 	b47 = new google.maps.Marker({
@@ -3124,7 +3124,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b47,'click', function(b47,i) {
 
-		alert('Home: ' + b47.title);
+		console.log('Home: ' + b47.title);
 	});
 
 	b48 = new google.maps.Marker({
@@ -3146,7 +3146,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b48,'click', function(b48,i) {
 
-		alert('Home: ' + b48.title);
+		console.log('Home: ' + b48.title);
 	});
 
 	b49 = new google.maps.Marker({
@@ -3168,7 +3168,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b49,'click', function(b49,i) {
 
-		alert('Home: ' + b49.title);
+		console.log('Home: ' + b49.title);
 	});
 
 	b50 = new google.maps.Marker({
@@ -3190,7 +3190,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b50,'click', function(b50,i) {
 
-		alert('Home: ' + b50.title);
+		console.log('Home: ' + b50.title);
 	});
 
 	b51 = new google.maps.Marker({
@@ -3212,7 +3212,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b51,'click', function(b51,i) {
 
-		alert('Home: ' + b51.title);
+		console.log('Home: ' + b51.title);
 	});
 
 	b52 = new google.maps.Marker({
@@ -3234,7 +3234,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b52,'click', function(b52,i) {
 
-		alert('Home: ' + b52.title);
+		console.log('Home: ' + b52.title);
 	});
 
 	b53 = new google.maps.Marker({
@@ -3256,7 +3256,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b53,'click', function(b53,i) {
 
-		alert('Home: ' + b53.title);
+		console.log('Home: ' + b53.title);
 	});
 
 	b54 = new google.maps.Marker({
@@ -3278,7 +3278,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b54,'click', function(b54,i) {
 
-		alert('Home: ' + b54.title);
+		console.log('Home: ' + b54.title);
 	});
 
 	b55 = new google.maps.Marker({
@@ -3300,7 +3300,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b55,'click', function(b55,i) {
 
-		alert('Home: ' + b55.title);
+		console.log('Home: ' + b55.title);
 	});
 
 	b56 = new google.maps.Marker({
@@ -3322,7 +3322,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b56,'click', function(b56,i) {
 
-		alert('Home: ' + b56.title);
+		console.log('Home: ' + b56.title);
 	});
 
 	b57 = new google.maps.Marker({
@@ -3344,7 +3344,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b57,'click', function(b57,i) {
 
-		alert('Home: ' + b57.title);
+		console.log('Home: ' + b57.title);
 	});
 
 	b58 = new google.maps.Marker({
@@ -3366,7 +3366,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b58,'click', function(b58,i) {
 
-		alert('Home: ' + b58.title);
+		console.log('Home: ' + b58.title);
 	});
 
 	b59 = new google.maps.Marker({
@@ -3388,7 +3388,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b59,'click', function(b59,i) {
 
-		alert('Home: ' + b59.title);
+		console.log('Home: ' + b59.title);
 	});
 
 	b60 = new google.maps.Marker({
@@ -3410,7 +3410,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b60,'click', function(b60,i) {
 
-		alert('Home: ' + b60.title);
+		console.log('Home: ' + b60.title);
 	});
 
 	b61 = new google.maps.Marker({
@@ -3432,7 +3432,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b61,'click', function(b61,i) {
 
-		alert('Home: ' + b61.title);
+		console.log('Home: ' + b61.title);
 	});
 
 	b62 = new google.maps.Marker({
@@ -3454,7 +3454,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b62,'click', function(b62,i) {
 
-		alert('Home: ' + b62.title);
+		console.log('Home: ' + b62.title);
 	});
 
 	b63 = new google.maps.Marker({
@@ -3476,7 +3476,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b63,'click', function(b63,i) {
 
-		alert('Home: ' + b63.title);
+		console.log('Home: ' + b63.title);
 	});
 
 	b64 = new google.maps.Marker({
@@ -3498,7 +3498,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b64,'click', function(b64,i) {
 
-		alert('Home: ' + b64.title);
+		console.log('Home: ' + b64.title);
 	});
 
 	b65 = new google.maps.Marker({
@@ -3520,7 +3520,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b65,'click', function(b65,i) {
 
-		alert('Home: ' + b65.title);
+		console.log('Home: ' + b65.title);
 	});
 
 	b66 = new google.maps.Marker({
@@ -3542,7 +3542,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b66,'click', function(b66,i) {
 
-		alert('Home: ' + b66.title);
+		console.log('Home: ' + b66.title);
 	});
 
 	b67 = new google.maps.Marker({
@@ -3564,7 +3564,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b67,'click', function(b67,i) {
 
-		alert('Home: ' + b67.title);
+		console.log('Home: ' + b67.title);
 	});
 
 	b68 = new google.maps.Marker({
@@ -3586,7 +3586,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b68,'click', function(b68,i) {
 
-		alert('Home: ' + b68.title);
+		console.log('Home: ' + b68.title);
 	});
 
 	b69 = new google.maps.Marker({
@@ -3608,7 +3608,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b69,'click', function(b69,i) {
 
-		alert('Home: ' + b69.title);
+		console.log('Home: ' + b69.title);
 	});
 
 	b70 = new google.maps.Marker({
@@ -3630,7 +3630,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b70,'click', function(b70,i) {
 
-		alert('Home: ' + b70.title);
+		console.log('Home: ' + b70.title);
 	});
 
 	b71 = new google.maps.Marker({
@@ -3652,7 +3652,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b71,'click', function(b71,i) {
 
-		alert('Home: ' + b71.title);
+		console.log('Home: ' + b71.title);
 	});
 
 	b72 = new google.maps.Marker({
@@ -3674,7 +3674,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b72,'click', function(b72,i) {
 
-		alert('Home: ' + b72.title);
+		console.log('Home: ' + b72.title);
 	});
 
 	b73 = new google.maps.Marker({
@@ -3696,7 +3696,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b73,'click', function(b73,i) {
 
-		alert('Home: ' + b73.title);
+		console.log('Home: ' + b73.title);
 	});
 
 	b74 = new google.maps.Marker({
@@ -3718,7 +3718,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b74,'click', function(b74,i) {
 
-		alert('Home: ' + b74.title);
+		console.log('Home: ' + b74.title);
 	});
 
 	b75 = new google.maps.Marker({
@@ -3740,7 +3740,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b75,'click', function(b75,i) {
 
-		alert('Home: ' + b75.title);
+		console.log('Home: ' + b75.title);
 	});
 
 	b76 = new google.maps.Marker({
@@ -3762,7 +3762,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b76,'click', function(b76,i) {
 
-		alert('Home: ' + b76.title);
+		console.log('Home: ' + b76.title);
 	});
 
 	b77 = new google.maps.Marker({
@@ -3784,7 +3784,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b77,'click', function(b77,i) {
 
-		alert('Home: ' + b77.title);
+		console.log('Home: ' + b77.title);
 	});
 
 	b78 = new google.maps.Marker({
@@ -3806,7 +3806,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b78,'click', function(b78,i) {
 
-		alert('Home: ' + b78.title);
+		console.log('Home: ' + b78.title);
 	});
 
 	b79 = new google.maps.Marker({
@@ -3828,7 +3828,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b79,'click', function(b79,i) {
 
-		alert('Home: ' + b79.title);
+		console.log('Home: ' + b79.title);
 	});
 
 	b80 = new google.maps.Marker({
@@ -3850,7 +3850,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b80,'click', function(b80,i) {
 
-		alert('Home: ' + b80.title);
+		console.log('Home: ' + b80.title);
 	});
 
 	b81 = new google.maps.Marker({
@@ -3872,7 +3872,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b81,'click', function(b81,i) {
 
-		alert('Home: ' + b81.title);
+		console.log('Home: ' + b81.title);
 	});
 
 	b82 = new google.maps.Marker({
@@ -3894,7 +3894,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b82,'click', function(b82,i) {
 
-		alert('Home: ' + b82.title);
+		console.log('Home: ' + b82.title);
 	});
 
 	b83 = new google.maps.Marker({
@@ -3916,7 +3916,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b83,'click', function(b83,i) {
 
-		alert('Home: ' + b83.title);
+		console.log('Home: ' + b83.title);
 	});
 
 	b84 = new google.maps.Marker({
@@ -3938,7 +3938,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b84,'click', function(b84,i) {
 
-		alert('Home: ' + b84.title);
+		console.log('Home: ' + b84.title);
 	});
 
 	b85 = new google.maps.Marker({
@@ -3960,7 +3960,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b85,'click', function(b85,i) {
 
-		alert('Home: ' + b85.title);
+		console.log('Home: ' + b85.title);
 	});
 
 	b86 = new google.maps.Marker({
@@ -3982,7 +3982,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b86,'click', function(b86,i) {
 
-		alert('Home: ' + b86.title);
+		console.log('Home: ' + b86.title);
 	});
 
 	b87 = new google.maps.Marker({
@@ -4004,7 +4004,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b87,'click', function(b87,i) {
 
-		alert('Home: ' + b87.title);
+		console.log('Home: ' + b87.title);
 	});
 
 	b88 = new google.maps.Marker({
@@ -4026,7 +4026,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b88,'click', function(b88,i) {
 
-		alert('Home: ' + b88.title);
+		console.log('Home: ' + b88.title);
 	});
 
 	b89 = new google.maps.Marker({
@@ -4048,7 +4048,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b89,'click', function(b89,i) {
 
-		alert('Home: ' + b89.title);
+		console.log('Home: ' + b89.title);
 	});
 
 	b90 = new google.maps.Marker({
@@ -4070,7 +4070,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b90,'click', function(b90,i) {
 
-		alert('Home: ' + b90.title);
+		console.log('Home: ' + b90.title);
 	});
 
 	b91 = new google.maps.Marker({
@@ -4092,7 +4092,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b91,'click', function(b91,i) {
 
-		alert('Home: ' + b91.title);
+		console.log('Home: ' + b91.title);
 	});
 
 	b92 = new google.maps.Marker({
@@ -4114,7 +4114,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b92,'click', function(b92,i) {
 
-		alert('Home: ' + b92.title);
+		console.log('Home: ' + b92.title);
 	});
 
 	b93 = new google.maps.Marker({
@@ -4136,7 +4136,7 @@ function meep (argument) {
 			  });
 	google.maps.event.addListener(b93,'click', function(b93,i) {
 
-		alert('Home: ' + b93.title);
+		console.log('Home: ' + b93.title);
 	});
 
 }
