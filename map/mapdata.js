@@ -199,7 +199,7 @@ function moop(){
 
 	a9 = new google.maps.Marker({
 		map: map,
-		title:"Bowdoin",
+		title:"Bowdoin College",
 		icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
 		draggable:false,
 		animation: google.maps.Animation.DROP,
@@ -820,7 +820,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 38.9007, lng: 77.0508},
+			location: {lat: 38.9007, lng: -77.0508},
 			  query: 'Address'
 
 					},
@@ -1480,7 +1480,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 34.1386, lng: 118.1255},
+			location: {lat: 34.1386, lng: -118.1255},
 			  query: 'Address'
 
 					},
