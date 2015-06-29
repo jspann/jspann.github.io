@@ -64,7 +64,7 @@
 		<script type="text/javascript">
 			var gettingDirections = false;
 			var hasFirstValues = false;
-			var dirValues = [4];
+			var dirValues = [6];
 
 			function getinfo() {
 				$("#heybox").show();
@@ -82,21 +82,23 @@
 				};
 			}
 
-			function setDirValues (lato,lngo) {
+			function setDirValues (currentmarker,lato,lngo) {
 				
 				if (hasFirstValues) {
 					gettingDirections = true;
 					//
-					dirValues[2] = lato;
-					dirValues[3] = lngo;
-					console.log("First: " + dirValues[0] + "||" + dirValues[1]);
-					console.log("Second: " + dirValues[2] + "||" + dirValues[3]);
+					dirValues[3] = currentmarker;
+					dirValues[4] = lato;
+					dirValues[5] = lngo;
+					console.log("First: " + dirValues[0] + "||" + dirValues[1] + "||" + dirValues[2]);
+					console.log("Second: " + dirValues[3] + "||" + dirValues[4] + "||" + dirValues[5]);
 					//.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
-					eval("a61.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');");
+					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');");
 				} else {
 					hasFirstValues = true;
-					dirValues[0] = lato;
-					dirValues[1] = lngo;
+					dirValues[0] = currentmarker;
+					dirValues[1] = lato;
+					dirValues[2] = lngo;
 					//we need the other latitudes and longitudes to get directions					
 				};
 			}
