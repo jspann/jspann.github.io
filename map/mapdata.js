@@ -719,7 +719,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 42.4472414, lng: -76.4810397},
+			location: {lat: 42.4534492, lng: -76.4735027},
 			  query: 'Address'
 
 					},
@@ -732,7 +732,7 @@ function moop(){
 	google.maps.event.addListener(a31,'click', function(a31,i) {
 
 		console.log('College: Cornell-LR');
-		setDirValues(31,42.4472414,-76.4810397)
+		setDirValues(31,42.4534492,-76.4735027)
 	});
 
 	a32 = new google.maps.Marker({
@@ -1317,7 +1317,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 37.5233298, lng: -76.7626298},
+			location: {lat: 42.4534492, lng: -76.4735027},
 			  query: 'Address'
 
 					},
@@ -1330,7 +1330,7 @@ function moop(){
 	google.maps.event.addListener(a57,'click', function(a57,i) {
 
 		console.log('College: Cornell-agriculture');
-		setDirValues(57,37.5233298,-76.7626298)
+		setDirValues(57,42.4534492,-76.4735027)
 	});
 
 	a58 = new google.maps.Marker({
@@ -1524,7 +1524,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 37.574, lng: -77.540},
+			location: {lat: 37.574, lng: -77.54},
 			  query: 'Address'
 
 					},
@@ -2160,6 +2160,8 @@ function moop(){
 		console.log('College: New York University');
 		setDirValues(93,40.7295134,-73.9964609)
 	});
+
+
 
 }
 
