@@ -65,6 +65,9 @@
 			var gettingDirections = false;
 			var hasFirstValues = false;
 			var dirValues = [6];
+			var directionsicon = document.getElementById("diricon");
+
+			directionsicon.style.opacity = 0;
 
 			function getinfo() {
 				$("#heybox").show();
@@ -83,34 +86,40 @@
 			}
 
 			function setDirValues (currentmarker,lato,lngo) {
-				
-				if (hasFirstValues) {
-					gettingDirections = true;
-					//
-					dirValues[3] = currentmarker;
-					dirValues[4] = lato;
-					dirValues[5] = lngo;
+				if (currentmarker == dirValues[3]) {
+					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
+				}else if (currentmarker == dirValues[0]) {
+					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
+				}else{
 					console.log("First: " + dirValues[0] + "||" + dirValues[1] + "||" + dirValues[2]);
 					console.log("Second: " + dirValues[3] + "||" + dirValues[4] + "||" + dirValues[5]);
-					//.setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');
 					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/purple-dot.png');");
-				} else {
-					hasFirstValues = true;
-					dirValues[0] = currentmarker;
-					dirValues[1] = lato;
-					dirValues[2] = lngo;
-					//we need the other latitudes and longitudes to get directions					
+
+					if (hasFirstValues) {
+						gettingDirections = true;
+						//
+						dirValues[3] = currentmarker;
+						dirValues[4] = lato;
+						dirValues[5] = lngo;
+					} else {
+						hasFirstValues = true;
+						dirValues[0] = currentmarker;
+						dirValues[1] = lato;
+						dirValues[2] = lngo;
+						//we need the other latitudes and longitudes to get directions
+					};
 				};
 			}
 
 			function getDirections(first,second){
-
+				directionsicon.style.opacity = 1;
 			}
 		</script>
 	</head>
 	<body>
 		<div id="map-canvas"></div>
 		<img src="info.png" alt="Info about this" onclick="getinfo()" style="position: fixed; top: 5px; left: 5px;">
+		<img id="diricon" src="directions.png" alt="Click for directions" onclick="getinfo()" style="position: fixed; top: 5px; left: 65px;">
 		<div id="heybox" class="heybox" style="position: fixed; width:80%; top:10px; left: 10%;">
 			<p> </p>
 			<u align="center">Map...idk what to call it</u>
