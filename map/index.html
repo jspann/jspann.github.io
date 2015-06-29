@@ -65,9 +65,7 @@
 			var gettingDirections = false;
 			var hasFirstValues = false;
 			var dirValues = [6];
-			var directionsicon = document.getElementById("diricon");
-
-			directionsicon.style.opacity = 0;
+			var directionsicon;
 
 			function getinfo() {
 				$("#heybox").show();
@@ -75,6 +73,9 @@
 			$(document).ready(function(){
 			$("#heybox").click(function(){
 			$(this).hide();
+			directionsicon = document.getElementById("diricon");
+
+			directionsicon.style.opacity = 0;
 			});
 			});
 			
