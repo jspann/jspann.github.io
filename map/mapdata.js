@@ -640,7 +640,7 @@ function moop(){
 	google.maps.event.addListener(a27,'click', function(a27,i) {
 
 		console.log('College: UC Boulder');
-		setDirValues(49.008,-105.266)
+		setDirValues(40.008,-105.266)
 	});
 
 	a28 = new google.maps.Marker({
