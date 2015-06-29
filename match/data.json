@@ -1,9 +1,0 @@
-{"Models":[
-    {"Interests":"0.5"}, 
-    {"MutualFriends":"0.7"},
-    {"firstName":"Peter", "lastName":"Jones"}
-],
-"TrainingModels":[
-    {"Interests":"0.5", "MutualFriends":"0.7", "Result":"1"},
-    {"Interests":"0.5", "MutualFriends":"0.7", "Result":"1"}
-]}
