@@ -1,0 +1,166 @@
+<html>
+<!--
+ATTRIBUTES:
+http://soundbible.com/333-Cash-Register-Cha-Ching.html
+http://ericaobrien.com/blog/wp-content/uploads/2012/04/prom-2.jpg
+-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<meta charset="UTF-8">
+<meta name="description" content="A game to get ready for prom!">
+<meta name="author" content="James Spann">
+
+<script type="text/javascript">
+	var a_canvas = document.getElementById("gamebox");
+	var myMoney = 1.00;    // A number with decimals
+
+	function startgame () {
+		alert('The goal is to get your cake ready for prom!')
+		//$(document).ready(function(){
+        //$("#div1").fadeIn();
+        $("#startbutton").fadeOut("slow");
+        $("#gamedataz").fadeIn("slow");
+        //$("#div3").fadeIn(3000);
+		//});
+		updateMoney(200);
+		//$("p").append(" <b>Appended text</b>.");
+		loadBedroom();
+	}
+	
+	function showhint(){
+		alert('Hints:')
+	}
+
+	function updateMoney(newamnt) {
+		myMoney = newamnt;
+		document.getElementById("totalmoney").innerHTML = myMoney.toString();
+		var ping = new Audio("register.mp3");
+
+	}
+
+	function moveCake(x,y){
+		d = document.getElementById("characterimage");
+		d.style.left = x;
+		d.style.top = y;
+
+	}
+
+	//loadrooms
+	function cleanRoom(){
+		$("#characterimage").fadeOut("slow");
+		$("#backgroundimage").fadeOut("slow");
+
+	}
+
+	function loadBedroom () {
+		moveCake(520,400);
+		document.getElementById("backgroundimage").src = "otherroom.jpg";
+		$("#characterimage").fadeIn("slow");
+		$("#backgroundimage").fadeIn("slow");
+		$("#computerbutton").fadeIn("slow");
+
+
+	}
+
+	function loadleftBedroom () {
+	document.getElementById("backgroundimage").src = "broom.png";
+	$("#characterimage").fadeIn("slow");
+	$("#backgroundimage").fadeIn("slow");	
+	}
+</script>
+<style type="text/css">
+	body{
+		margin: 2;
+		background-color: #f89821;
+	}
+
+	#title{
+		color: purple;
+	}
+
+	#gamebox{
+		border-style: solid;
+		border-width: 2px;
+		margin: 9;
+		background-color: blue;
+		width: 500px;
+		height: 500px;
+    	margin: 0 auto;
+	}
+
+	#startbox{
+		text-align: center;
+	}
+	#bottombar{
+	    background-color:transparent;
+	    position: absolute;
+	    bottom:0;
+	    width: 100%;
+	    margin: 0;
+	    float: bottom;
+	}
+
+	#gamedataz{
+		margin: 0px auto 10px auto;
+		float: top;
+		background-color: #778899;
+		display: none;
+		z-index:1000;
+		position: absolute;
+		width: 500px;
+		opacity: 0.4;
+	}
+
+
+	#gamedataz:hover {
+		opacity: 1.0;
+	}
+
+	#backgroundimage{
+		display: none;
+	}
+	#characterimage{
+		display: none;
+		position: absolute;
+		z-index: 1000;
+	}
+
+	#computerbutton{
+		background-color: rgb(31,31,31);
+		position: absolute;
+		left: 510px;
+		top: 185px;
+		height: 60px;
+		width: 60px;
+		display: none;
+	}
+
+	#computerbutton:hover{
+		background-color: purple;
+		color: 
+	}
+</style>
+<body>
+	<u id="title"><b>Cake me to Prom!</b></u>
+	<div id="gamebox">
+		
+		<div id="gamedataz">
+			<img src="money.jpg" alt="game money" style="display:inline-block"/>
+			<b id="totalmoney" style="margin:0; display:inline-block;">00</b>
+			<button id="hintbutton" type="button" onclick="showhint()" style="float:right;">Hint</button>
+		</div>
+		<div id="computerbutton" onclick="updateMoney(100)" style=""><b>Tickets</b></div>
+		<img id="backgroundimage" src="otherroom.jpg" alt="gamebackimage"/>
+		<img id="characterimage" src="promcake-small.png" alt="promcake"/>
+
+		<div id="startbox">
+			<button id="startbutton" type="button" onclick="startgame()">Click to Start!</button>
+		</div>
+	</div>
+
+	<div id="bottombar">
+		<a href="https://github.com/jspann/jspann.github.io/tree/master/cakegame">Source code</a>
+		<a href="http://www.jspann.me">My website</a>
+		<p id="jamescopyright">© James Spann 2015</p>
+	</div>
+</body>
+</html>
