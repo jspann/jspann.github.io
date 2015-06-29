@@ -62,14 +62,46 @@
 		</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript">
-		function getinfo() {
-			$("#heybox").show();
-		}
-		$(document).ready(function(){
-		$("#heybox").click(function(){
-		$(this).hide();
-		});
-		});
+			var gettingDirections = false;
+			var hasFirstValues = false;
+			var dirValues = [4];
+
+			function getinfo() {
+				$("#heybox").show();
+			}
+			$(document).ready(function(){
+			$("#heybox").click(function(){
+			$(this).hide();
+			});
+			});
+			
+			//Direction functions
+			function clearPlaces(){
+				for (var i = dirValues.length - 1; i >= 0; i--) { = 0;
+					dirValues[i] = 0;
+				};
+			}
+
+			function tsetDirValues (lato,lngo) {
+				
+				if (hasFirstValues) {
+					gettingDirections = true;
+					//
+					dirValues[2] = lato;
+					dirValues[3] = lngo;
+					console.log("First: " + dirValues[0] "||" + dirValues[1])
+					console.log("Second: " + dirValues[2] "||" + dirValues[3])
+				} else {
+					hasFirstValues = true;
+					dirValues[0] = lato;
+					dirValues[1] = lngo;
+					//we need the other latitudes and longitudes to get directions					
+				};
+			}
+
+			function getDirections(first,second){
+
+			}
 		</script>
 	</head>
 	<body>

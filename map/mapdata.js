@@ -1062,7 +1062,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 34.1042, lng: 117.7106},
+			location: {lat: 34.1042, lng: -117.7106},
 			  query: 'Address'
 
 					},
@@ -1260,7 +1260,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 0, lng: 0},
+			location: {lat: 37.5233298, lng: -76.4735027},
 			  query: 'Address'
 
 					},
