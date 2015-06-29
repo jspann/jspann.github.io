@@ -627,7 +627,7 @@ function moop(){
 		draggable:false,
 		animation: google.maps.Animation.DROP,
 		place: {
-			location: {lat: 49.008, lng: -105.266},
+			location: {lat: 40.008, lng: -105.266},
 			  query: 'Address'
 
 					},
@@ -1519,7 +1519,7 @@ function moop(){
 
 	a66 = new google.maps.Marker({
 		map: map,
-		title:"Missing",
+		title:"University of Richmond",
 		icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
 		draggable:false,
 		animation: google.maps.Animation.DROP,
