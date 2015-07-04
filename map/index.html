@@ -36,6 +36,14 @@
 			width: auto;
 		}
 
+		#directions-panel {
+        height: 100%;
+        float: right;
+        width: 390px;
+        overflow: auto;
+      }
+
+
 		</style>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&key=AIzaSyBhbw_tF7i0EWhPzJN4dRoO__fU2KBZp74">
 		</script>
@@ -129,6 +137,7 @@
 						dirValues[2] = undefined;
 						hasFirstValues = false;
 						directionsDisplay.setMap(null);
+						directionsicon.style.opacity = 0;
 					};
 				}else{
 					if (gettingDirections) {
