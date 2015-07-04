@@ -176,10 +176,14 @@
 					//document.getElementById('sidebar').style.opacity = 0;
 					isshowingDirections = false;
 					directionsDisplay.setMap(null);
+					document.getElementById('diricon').style.opacity = 1;
+					document.getElementById('infoicon').style.opacity = 1;
 				}else{
 					//document.getElementById('sidebar').style.opacity = 1;
 					getDirections();
 					isshowingDirections = true
+					document.getElementById('diricon').style.opacity = 0;
+					document.getElementById('infoicon').style.opacity = 0;
 				}
 			}
 			function getDirections(){
@@ -217,7 +221,7 @@
 		
 
 
-		<img src="info.png" alt="Info about this" onclick="getinfo()" style="position: fixed; top: 5px; left: 5px;">
+		<img id="infoicon" src="info.png" alt="Info about this" onclick="getinfo()" style="position: fixed; top: 5px; left: 5px;">
 		<img id="diricon" src="directions.png" alt="Click for directions" onclick="toggleDirections()" style="position: fixed; top: 5px; left: 65px;">
 		<div id="heybox" class="heybox" style="position: fixed; width:80%; top:10px; left: 10%;">
 			<p> </p>
@@ -240,7 +244,8 @@
 		</div>
 		
 		<div id="sidebar">
-			<p id="sidetitletext" style="width:100%;">Directions</p>
+			<img id="closeicon" src="closeicon.png" alt="Click to close" onclick="toggleDirections()" style="position: fixed; top: 5px; left: 5px;">
+			<u id="sidetitletext" style="width:100%;">Directions</u>
 			<p>From <b id="startloc"></b> to <b id="endloc"></b>
 		</div>
 	</body>
