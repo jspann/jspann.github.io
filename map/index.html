@@ -67,6 +67,7 @@
 			directionsDisplay = new google.maps.DirectionsRenderer();
 			directionsDisplay.setMap(map);
 			directionsDisplay.setOptions( { suppressMarkers: true } );
+			directionsDisplay.setPanel(document.getElementById('directions-panel'));
 		}
 		
 		google.maps.event.addDomListener(window, 'load', initb);
@@ -254,6 +255,7 @@
 			<img id="closeicon" src="closeicon.png" alt="Click to close" onclick="toggleDirections()">
 			<u id="sidetitletext" style="width:100%; font-size: 20px; margin-left:5px;">Directions</u>
 			<p>From <b id="startloc"></b> to <b id="endloc"></b>
+			<div id="directions-panel"></div>
 		</div>
 	</body>
 </html>
