@@ -42,11 +42,43 @@
         width: 390px;
         overflow: auto;
       }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+
+      /*
+      Provide the following styles for both ID and class,
+      where ID represents an actual existing "panel" with
+      JS bound to its name, and the class is just non-map
+      content that may already have a different ID with
+      JS bound to its name.
+      */
+
+      #panel, .panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #panel select, #panel input, .panel select, .panel input {
+        font-size: 15px;
+      }
+
+      #panel select, .panel select {
+        width: 100%;
+      }
+
+      #panel i, .panel i {
+        font-size: 12px;
+      }
 @media print {
-        #map-canvas {
-          height: 500px;
-          margin: 0;
-        }
 
         #directions-panel {
           float: none;
@@ -279,7 +311,7 @@
 			<img id="closeicon" src="closeicon.png" alt="Click to close" onclick="toggleDirections()">
 			<u id="sidetitletext" style="width:100%; font-size: 20px; margin-left:5px;">Directions</u>
 			<p>From <b id="startloc"></b> to <b id="endloc"></b>
-			<div id="directions-panel"></div>
+			<div id="directions-panel" class="panel"></div>
 		</div>
 	</body>
 </html>
