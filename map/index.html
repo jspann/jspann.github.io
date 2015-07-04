@@ -76,13 +76,13 @@
 				$("#heybox").show();
 			}
 			$(document).ready(function(){
-			$("#heybox").click(function(){
-			$(this).hide();
-			directionsicon = document.getElementById("diricon");
+				$("#heybox").click(function(){
+					$(this).hide();
+					directionsicon = document.getElementById("diricon");
 
-			directionsicon.style.opacity = 0;
-			document.getElementById('sidebar').style.opacity = 0;
-			});
+					directionsicon.style.opacity = 0;
+					document.getElementById('sidebar').style.opacity = 0;
+				});
 			});
 			
 			//Direction functions
@@ -163,9 +163,16 @@
 			function toggleDirections () {
 				console.log("toggling");
 				if (isshowingDirections) {
-					alert("Sorry dont have a method for that");
+					//alert("Sorry dont have a method for that");
+					eval("a"+ dirValues[0]+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
+					eval("a"+ dirValues[3]+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
+					for (var i = 0; i <6; i++)
+						dirValues[i]=undefined;
+					};
+
 					document.getElementById('sidebar').style.opacity = 0;
 					isshowingDirections = false;
+					directionsDisplay.setMap(null);
 				}else{
 					document.getElementById('sidebar').style.opacity = 1;
 					getDirections();
