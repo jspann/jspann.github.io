@@ -166,13 +166,14 @@
 					//alert("Sorry dont have a method for that");
 					eval("a"+ dirValues[0]+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
 					eval("a"+ dirValues[3]+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
-					for (var i = 0; i <6; i++)
+					for (var i = 0; i <6; i++){
 						dirValues[i]=undefined;
+					}
 					};
 
 					document.getElementById('sidebar').style.opacity = 0;
 					isshowingDirections = false;
-					//directionsDisplay.setMap(null);
+					directionsDisplay.setMap(null);
 				}else{
 					document.getElementById('sidebar').style.opacity = 1;
 					getDirections();
