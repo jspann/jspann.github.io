@@ -30,6 +30,12 @@
 			opacity: 0.8;
 		}
 
+		#closeicon{
+			height: 20px;
+			left: 5px;
+			width: auto;
+		}
+
 		</style>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&key=AIzaSyBhbw_tF7i0EWhPzJN4dRoO__fU2KBZp74">
 		</script>
@@ -178,6 +184,7 @@
 					directionsDisplay.setMap(null);
 					document.getElementById('diricon').style.opacity = 1;
 					document.getElementById('infoicon').style.opacity = 1;
+					$("#sidebar").animate({'left':'-30%'})
 				}else{
 					//document.getElementById('sidebar').style.opacity = 1;
 					getDirections();
@@ -245,7 +252,7 @@
 		
 		<div id="sidebar">
 			<img id="closeicon" src="closeicon.png" alt="Click to close" onclick="toggleDirections()">
-			<u id="sidetitletext" style="width:100%;">Directions</u>
+			<u id="sidetitletext" style="width:100%; font-size: 20px;">Directions</u>
 			<p>From <b id="startloc"></b> to <b id="endloc"></b>
 		</div>
 	</body>
