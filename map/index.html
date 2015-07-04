@@ -157,6 +157,12 @@
 				};
 			}
 
+			function resetMarkers () {
+				for (var i = 0; i <7; i++){
+						dirValues[i]=undefined;
+				}
+			}
+
 			function updateDirinfo () {
 				if (gettingDirections) {
 					directionsicon.style.opacity = 1;
@@ -176,11 +182,10 @@
 					//alert("Sorry dont have a method for that");
 					eval("a"+ dirValues[0]+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
 					eval("a"+ dirValues[3]+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
-					for (var i = 0; i <6; i++){
-						dirValues[i]=undefined;
-					}
+					resetMarkers();
 
 					//document.getElementById('sidebar').style.opacity = 0;
+					gettingDirections = false;
 					isshowingDirections = false;
 					directionsDisplay.setMap(null);
 					document.getElementById('diricon').style.opacity = 0;
@@ -235,13 +240,13 @@
 			<p> </p>
 			<u align="center">Map...idk what to call it</u>
 			<p><img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png"> - Colleges</p>
-			<div class="onoffswitch">
+<!--			<div class="onoffswitch">
     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
     <label class="onoffswitch-label" for="myonoffswitch">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
     </label>
-</div>
+</div>-->
 			<p><img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png"> - Residences</p>
 
 			<p><img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png"> - Boarder's Residences</p>
