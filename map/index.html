@@ -113,12 +113,13 @@
 						dirValues[2] = dirValues[5];
 						gettingDirections = false;
 						directionsicon.style.opacity = 0;
-
+						directionsDisplay.setMap(null);
 					}else{
 						dirValues[0] = undefined;
 						dirValues[1] = undefined;
 						dirValues[2] = undefined;
 						hasFirstValues = false;
+						directionsDisplay.setMap(null);
 					};
 				}else{
 					if (gettingDirections) {
