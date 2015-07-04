@@ -103,7 +103,7 @@
 					dirValues[4] = undefined;
 					dirValues[5] = undefined;
 					gettingDirections = false;
-					//directionsicon.style.opacity = 1;
+					directionsicon.style.opacity = 1;
 
 				}else if (currentmarker == dirValues[0]) {
 					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
@@ -113,7 +113,7 @@
 						dirValues[1] = dirValues[4];
 						dirValues[2] = dirValues[5];
 						gettingDirections = false;
-						//directionsicon.style.opacity = 0;
+						directionsicon.style.opacity = 0;
 						directionsDisplay.setMap(null);
 					}else{
 						dirValues[0] = undefined;
@@ -151,7 +151,7 @@
 
 			function updateDirinfo () {
 				if (gettingDirections) {
-					//directionsicon.style.opacity = 1;
+					directionsicon.style.opacity = 1;
 					document.getElementById('sidetitletext').value = "Directions between " + eval("a" + dirValues[0] + ".title") + "and" + eval("a" + dirValues[3] + ".title")
 				};
 
