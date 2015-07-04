@@ -23,8 +23,8 @@
 			width: 30%;
 			height: 100%;
 			background-color: rgb(0,102,255);
-			color: white;
-			opacity: 0;
+			color: black;
+			//opacity: 0;
 			/*left: -30%;*/
 		}
 
@@ -65,8 +65,8 @@
 		</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript">
-			var gettingDirections = false;
-			var hasFirstValues = false;
+			var gettingDirections = false;//True when we have 2 markers selected
+			var hasFirstValues = false;//True when we have one marker selected
 			var isshowingDirections = false;
 			var dirValues = [6];
 			var directionsicon;
@@ -81,7 +81,7 @@
 					directionsicon = document.getElementById("diricon");
 
 					directionsicon.style.opacity = 0;
-					document.getElementById('sidebar').style.opacity = 0;
+					//document.getElementById('sidebar').style.opacity = 0;
 				});
 			});
 			
@@ -171,11 +171,11 @@
 						dirValues[i]=undefined;
 					}
 
-					document.getElementById('sidebar').style.opacity = 0;
+					//document.getElementById('sidebar').style.opacity = 0;
 					isshowingDirections = false;
 					directionsDisplay.setMap(null);
 				}else{
-					document.getElementById('sidebar').style.opacity = 1;
+					//document.getElementById('sidebar').style.opacity = 1;
 					getDirections();
 					isshowingDirections = true
 				}
@@ -211,9 +211,7 @@
 	<body>
 		<div id="map-canvas"></div>
 		
-		<div id="sidebar">
-			<p id="sidetitletext" style="width:100%;">Directions</p>
-		</div>
+
 
 		<img src="info.png" alt="Info about this" onclick="getinfo()" style="position: fixed; top: 5px; left: 5px;">
 		<img id="diricon" src="directions.png" alt="Click for directions" onclick="toggleDirections()" style="position: fixed; top: 5px; left: 65px;">
@@ -235,6 +233,9 @@
 
 			<b style="height:20%;">Copyright 2015 James Spann and Jules Oppenheim</b><br>
 			<i style="bottom:10px; position:absolute;">Click the box to dismiss it</i>
+		</div>
+				<div id="sidebar">
+			<p id="sidetitletext" style="width:100%;">Directions</p>
 		</div>
 	</body>
 </html>
