@@ -182,7 +182,7 @@
 					//document.getElementById('sidebar').style.opacity = 0;
 					isshowingDirections = false;
 					directionsDisplay.setMap(null);
-					document.getElementById('diricon').style.opacity = 1;
+					document.getElementById('diricon').style.opacity = 0;
 					document.getElementById('infoicon').style.opacity = 1;
 					$("#sidebar").animate({'left':'-30%'})
 				}else{
@@ -252,7 +252,7 @@
 		
 		<div id="sidebar">
 			<img id="closeicon" src="closeicon.png" alt="Click to close" onclick="toggleDirections()">
-			<u id="sidetitletext" style="width:100%; font-size: 20px;">Directions</u>
+			<u id="sidetitletext" style="width:100%; font-size: 20px; margin-left:5px;">Directions</u>
 			<p>From <b id="startloc"></b> to <b id="endloc"></b>
 		</div>
 	</body>
