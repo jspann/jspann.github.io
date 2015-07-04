@@ -24,7 +24,9 @@
 			height: 100%;
 			background-color: rgb(0,102,255);
 			color: black;
-			//opacity: 0;
+			opacity: 0;
+			top: 0px;
+			position: fixed;
 			/*left: -30%;*/
 		}
 
@@ -204,6 +206,7 @@
 						directionsDisplay.setDirections(response);
 					}
 				});
+				//document.getElementById('startloc').value = eval()
 			}
 
 		</script>
@@ -236,8 +239,8 @@
 		</div>
 		
 		<div id="sidebar">
-		<img src="https://www.gravatar.com/avatar/7754c853ab2b10b2ba1416e7f46c8ada?s=32&d=identicon&r=PG">
 			<p id="sidetitletext" style="width:100%;">Directions</p>
+			<p>From <b id="startloc"></b> to <b id="endloc"></b><
 		</div>
 	</body>
 </html>
