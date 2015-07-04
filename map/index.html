@@ -27,6 +27,7 @@
 			top: 0px;
 			position: fixed;
 			left: -30%;
+			opacity: 0.8;
 		}
 
 		</style>
@@ -205,8 +206,8 @@
 						directionsDisplay.setDirections(response);
 					}
 				});
-				document.getElementById('startloc').value = "college A";
-				document.getElementById('endloc').value = "college B";
+				document.getElementById('startloc').innerHTML = eval("a" + dirValues[0] + ".title");
+				document.getElementById('endloc').innerHTML = eval("a" + dirValues[3] + ".title");
 			}
 
 		</script>
