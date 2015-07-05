@@ -115,13 +115,18 @@
 				zoom: 9
 			};
 			map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-			moop();
-			//var collCheck = document.getElementById("myCheck");
-			meep();
+			drawMarkers();
+			
 			directionsDisplay = new google.maps.DirectionsRenderer();
 			directionsDisplay.setMap(map);
 			directionsDisplay.setOptions( { suppressMarkers: true } );
 			directionsDisplay.setPanel(document.getElementById('directions-panel'));
+		}
+
+		function drawMarkers () {
+			//var collCheck = document.getElementById("myCheck");
+			moop();
+			meep();
 		}
 		
 		google.maps.event.addDomListener(window, 'load', initb);
