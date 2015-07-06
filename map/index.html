@@ -173,6 +173,11 @@
 					gettingDirections = false;
 					directionsicon.style.opacity = 0;
 					directionsDisplay.setMap(null);
+
+					if (isshowingDirections) {
+						isshowingDirections = false;
+						$("#sidebar").animate({'left':'-30%'})
+					};
 				//Called when the second marker is selected when highlighted
 				}else if (currentmarker == dirValues[0]) {
 
@@ -197,6 +202,11 @@
 						gettingDirections = false;
 						directionsDisplay.setMap(null);
 						directionsicon.style.opacity = 0;
+					};
+
+					if (isshowingDirections) {
+						isshowingDirections = false;
+						$("#sidebar").animate({'left':'-30%'})
 					};
 				}else{
 					if (gettingDirections) {
