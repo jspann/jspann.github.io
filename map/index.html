@@ -125,8 +125,22 @@
 
 		function drawMarkers () {
 			//var collCheck = document.getElementById("myCheck");
-			moop();
-			meep();
+			if(document.getElementById("residCheck").checked){
+				meep();
+			}
+			
+			if(document.getElementById("collCheck").checked){
+				moop();
+			}
+		}
+
+		function resetdrawnMarkers() {
+			for (var ai = 0; ai<94; ai++) {
+				eval("a"+ai+" = null;");
+				eval("b"+ai+" = null;");
+			};
+
+			drawMarkers();
 		}
 		
 		google.maps.event.addDomListener(window, 'load', initb);
@@ -317,7 +331,7 @@
 		<div id="heybox" class="heybox" style="position: fixed; width:80%; top:10px; left: 10%;">
 			<p> </p>
 			<u align="center">Map...idk what to call it</u>
-			<p><img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png"> - Colleges</p>
+			<p><img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png"> - Colleges <input type="checkbox" id="collCheck" checked></p>
 <!--			<div class="onoffswitch">
     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
     <label class="onoffswitch-label" for="myonoffswitch">
@@ -325,9 +339,9 @@
         <span class="onoffswitch-switch"></span>
     </label>
 </div>-->
-			<p><img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png"> - Residences</p>
+			<p><img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png"> - Residences <input type="checkbox" id="residCheck" checked></p>
 
-			<p><img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png"> - Boarder's Residences</p>
+			<p><img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png"> - Boarder's Residences <input type="checkbox" id="bresidCheck" checked></p>
 
 
 			<b style="height:20%;">Copyright 2015 James Spann and Jules Oppenheim</b><br>
