@@ -136,8 +136,10 @@
 
 		function resetdrawnMarkers() {
 			for (var ai = 0; ai<94; ai++) {
-				eval("a"+ai+" = null;");
-				eval("b"+ai+" = null;");
+				//eval("a"+ai+" = null;");
+				//eval("b"+ai+" = null;");
+				eval("a"+ai+".setMap(null);");
+				eval("b"+ai+".setMap(null);");
 			};
 
 			drawMarkers();
