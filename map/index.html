@@ -116,7 +116,7 @@
 			};
 			map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 			drawMarkers();
-			
+
 			directionsDisplay = new google.maps.DirectionsRenderer();
 			directionsDisplay.setMap(map);
 			directionsDisplay.setOptions( { suppressMarkers: true } );
@@ -179,6 +179,7 @@
 						dirValues[0] = dirValues[3];
 						dirValues[1] = dirValues[4];
 						dirValues[2] = dirValues[5];
+						console.log("slecting the First selected point");
 						gettingDirections = false;
 						directionsicon.style.opacity = 0;
 						directionsDisplay.setMap(null);
@@ -186,6 +187,8 @@
 						dirValues[0] = undefined;
 						dirValues[1] = undefined;
 						dirValues[2] = undefined;
+						console.log("slecting the 2nd selected point");
+
 						hasFirstValues = false;
 						directionsDisplay.setMap(null);
 						directionsicon.style.opacity = 0;
