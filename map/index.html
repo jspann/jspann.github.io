@@ -162,17 +162,20 @@
 
 			function setDirValues (currentmarker,lato,lngo) {
 				
-
+				//Called when the first marker is selected when highlighted
 				if (currentmarker == dirValues[3]) {
 					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
+
 				//delete the values in this part of the array because there will always be a value in 0-2 if the there are values in 3-5
 					dirValues[3] = undefined;
 					dirValues[4] = undefined;
 					dirValues[5] = undefined;
 					gettingDirections = false;
-					directionsicon.style.opacity = 1;
-
+					directionsicon.style.opacity = 0;
+					directionsDisplay.setMap(null);
+				//Called when the second marker is selected when highlighted
 				}else if (currentmarker == dirValues[0]) {
+
 					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
 					//Moves values down
 					if (dirValues[3] != undefined) {
@@ -183,6 +186,7 @@
 						gettingDirections = false;
 						directionsicon.style.opacity = 0;
 						directionsDisplay.setMap(null);
+					//values are down just clear the array
 					}else{
 						dirValues[0] = undefined;
 						dirValues[1] = undefined;
@@ -190,6 +194,7 @@
 						console.log("slecting the 2nd selected point");
 
 						hasFirstValues = false;
+						gettingDirections = false;
 						directionsDisplay.setMap(null);
 						directionsicon.style.opacity = 0;
 					};
