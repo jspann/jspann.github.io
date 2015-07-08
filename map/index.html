@@ -43,6 +43,37 @@
 		}
 
 		</style>
+
+		<style>
+      #directions-panel {
+        height: 100%;
+        float: right;
+        width: 390px;
+        overflow: auto;
+      }
+
+      #control {
+        background: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-family: Arial;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+      }
+
+      @media print {
+        #map-canvas {
+          height: 500px;
+          margin: 0;
+        }
+
+        #directions-panel {
+          float: none;
+          width: auto;
+        }
+      }
+    </style>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&key=AIzaSyBhbw_tF7i0EWhPzJN4dRoO__fU2KBZp74">
 		</script>
 		<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
@@ -305,7 +336,7 @@
 			<img id="closeicon" src="closeicon.png" alt="Click to close" onclick="toggleDirections()">
 			<u id="sidetitletext" style="width:100%; font-size: 20px; margin-left:5px;">Directions</u>
 			<p>From <b id="startloc"></b> to <b id="endloc"></b>
-			<div id="directions-panel"></div>
+			<div id="directions-panel" class="panel"></div>
 		</div>
 	</body>
 </html>
