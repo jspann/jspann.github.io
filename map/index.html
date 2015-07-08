@@ -1,3 +1,5 @@
+<!--https://developers.google.com/maps/documentation/javascript/directions#RenderingDirections-->
+
 <!DOCTYPE html>
 <html>
 	<title>College Map</title>
@@ -125,9 +127,9 @@
 
 		function drawMarkers () {
 			//var collCheck = document.getElementById("myCheck");
-			if(document.getElementById("residCheck").checked){
-				meep();
-			}
+			/*SENSITRACT if(document.getElementById("residCheck").checked){
+				//meep();
+			}*/
 
 			if(document.getElementById("collCheck").checked){
 				moop();
@@ -136,8 +138,6 @@
 
 		function resetdrawnMarkers() {
 			for (var ai = 0; ai<94; ai++) {
-				//eval("a"+ai+" = null;");
-				//eval("b"+ai+" = null;");
 				eval("a"+ai+".setMap(null);");
 				eval("b"+ai+".setMap(null);");
 			};
@@ -341,13 +341,14 @@
         <span class="onoffswitch-switch"></span>
     </label>
 </div>-->
-			<p style="margin-left:10px;"><img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png"> - Residences <input type="checkbox" id="residCheck" onclick="resetdrawnMarkers()" checked></p>
+			<!-- SENSITRACT<p style="margin-left:10px;"><img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png"> - Residences <input type="checkbox" id="residCheck" onclick="resetdrawnMarkers()" checked></p>-->
 
 			<p style="margin-left:10px;"><img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png"> - Boarder's Residences <input type="checkbox" id="bresidCheck" onclick="resetdrawnMarkers()" checked></p>
 
 
 			<b style="height:20%; margin-left:10px;">Copyright 2015 James Spann and Jules Oppenheim</b><br>
 			<i style="bottom:10px; position:absolute; margin-left:10px;">Click the box to dismiss it</i>
+			<!---<a href="mailto:thedeveloperj@gmail.com" style="bottom:10px; position:absolute; float:right; display:inline; word-wrap: break-word;">Suggestion?</a>-->
 		</div>
 		
 		<div id="sidebar">
