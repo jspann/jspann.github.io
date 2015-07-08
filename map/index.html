@@ -280,6 +280,7 @@
 				directionsDisplay = new google.maps.DirectionsRenderer();
 				directionsDisplay.setMap(map);
 				directionsDisplay.setOptions( { suppressMarkers: true } );
+				directionsDisplay.setPanel(document.getElementById('directions-panel'));
 
 				var one = new google.maps.LatLng(dirValues[1], dirValues[2]);
 				var two = new google.maps.LatLng(dirValues[4], dirValues[5]);
