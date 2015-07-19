@@ -50,6 +50,7 @@
         float: right;
         width: 390px;
         overflow: auto;
+        color: purple;
       }
 
       #control {
@@ -158,7 +159,9 @@
 			}
 
 			function setDirValues (currentmarker,lato,lngo) {
-				
+				//This function needs to be able to handle when the directions are out and one marker is selected
+				//this is necessary since all the dots call this and I dont want to change the python file. Because I am lazy and it creates too many problems
+
 				//Called when the first marker is selected when highlighted
 				if (currentmarker == dirValues[3]) {
 					eval("a"+ currentmarker+".setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');");
