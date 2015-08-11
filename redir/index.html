@@ -14,6 +14,14 @@
 	}
 </style>
 <script>
+if (typeof String.prototype.startsWith != 'function'){
+	String.prototype.startsWith = function(str) {
+		return this.substring(0, str.length) === str;
+	}
+};
+
+
+
 function getload() {
 	var t = getQueryVariable("url");
 	if (t == -1) {
@@ -30,7 +38,7 @@ function getload() {
 
 		var inputn = document.createElement("input");
 		inputn.id = "inputname";
-		inputn.placeholder = "url";
+		inputn.placeholder = "URL";
 		inputn.onkeydown = "getinput";
 
 		var finalsave = document.createElement("p");
@@ -53,7 +61,12 @@ function getload() {
 }
 
 function getinput(){
-	
+	var val = document.getElementById("inputname").value;
+	if(val.startsWith("http://")){
+		alert("NOOOOOO");
+	}else{
+		alert("YES! NO HTTP");
+	}
 }
 
 function convertText(inputText){
