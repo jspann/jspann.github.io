@@ -16,6 +16,7 @@
 <script>
 var t = getQueryVariable("url");
 if (t != -1) {
+	console.log("added elements");
 	var para = document.createElement("p");
 	var node = document.createTextNode("This is new.");
 	para.appendChild(node);
@@ -29,6 +30,7 @@ if (t != -1) {
 	input.appendChild(node);
 
 }else{
+	console.log("redirect");
 	window.location.assign("http://www.w3schools.com");
 }
 
