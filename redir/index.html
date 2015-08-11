@@ -4,7 +4,7 @@
 	<title>url obfuscator</title>
 </head>
 <style type="text/css">
-	p{
+	p,b{
 		text-align: center;
 
 	}
@@ -18,28 +18,44 @@ function getload() {
 	var t = getQueryVariable("url");
 	if (t == -1) {
 		console.log("added elements");
+		var element = document.getElementById("infodiv");
+		
+		var title = document.createElement("b");
+		var node = document.createTextNode("URL Obfuscator");
+		title.appendChild(node);
+
 		var para = document.createElement("p");
-		var node = document.createTextNode("This is new.");
+		var node = document.createTextNode("Ever needed to send a url without the other person knowing what the site is? Now you can!");
 		para.appendChild(node);
 
-		var element = document.getElementById("infodiv");
+		var inputn = document.createElement("input");
+		inputn.id = "inputname";
+		inputn.onkeydown = "milk";
+
+		var finalsave = document.createElement("p");
+		var finalsavenode = document.createTextNode("");
+		finalsave.id = "finalsave";
+		finalsave.appendChild(finalsavenode);
+
+
+
+		element.appendChild(title);
 		element.appendChild(para);
-
-
-		/*var input = document.createElement("input");
-		var node = document.createTextNode("This is new.");
-		input.appendChild(node);*/
+		element.appendChild(inputn);
+		element.appendChild(finalsave);
 
 	}else{
 		console.log("redirect");
-		window.location.assign("http://www.w3schools.com");
+		window.location.assign(t);
 	}
 }
 
 function convertText(inputText){
+	var finaltext = "";
 	for (var i = 0; i < inputText.length; i++) {
-		inputText.charAt(i)+1;
+		finaltext += inputText.charCodeAt(i)+1;
 	};
+	return finaltext;
 }
 
 function getQueryVariable(variable){
