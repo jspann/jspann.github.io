@@ -10,7 +10,7 @@
 	}
 
 	input{
-		text-align: center;
+		text-align: left;
 	}
 </style>
 <script>
@@ -30,7 +30,8 @@ function getload() {
 
 		var inputn = document.createElement("input");
 		inputn.id = "inputname";
-		inputn.onkeydown = "milk";
+		inputn.placeholder = "url";
+		inputn.onkeydown = "getinput";
 
 		var finalsave = document.createElement("p");
 		var finalsavenode = document.createTextNode("");
@@ -46,8 +47,13 @@ function getload() {
 
 	}else{
 		console.log("redirect");
-		window.location.assign(t);
+		var sending = "http://"+t;
+		window.location.assign(sending);
 	}
+}
+
+function getinput(){
+	
 }
 
 function convertText(inputText){
