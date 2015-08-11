@@ -14,24 +14,26 @@
 	}
 </style>
 <script>
-var t = getQueryVariable("url");
-if (t != -1) {
-	console.log("added elements");
-	var para = document.createElement("p");
-	var node = document.createTextNode("This is new.");
-	para.appendChild(node);
+function getload() {
+	var t = getQueryVariable("url");
+	if (t == -1) {
+		console.log("added elements");
+		var para = document.createElement("p");
+		var node = document.createTextNode("This is new.");
+		para.appendChild(node);
 
-	var element = document.getElementById("infodiv");
-	element.appendChild(para);
+		var element = document.getElementById("infodiv");
+		element.appendChild(para);
 
 
-	var input = document.createElement("input");
-	var node = document.createTextNode("This is new.");
-	input.appendChild(node);
+		/*var input = document.createElement("input");
+		var node = document.createTextNode("This is new.");
+		input.appendChild(node);*/
 
-}else{
-	console.log("redirect");
-	window.location.assign("http://www.w3schools.com");
+	}else{
+		console.log("redirect");
+		window.location.assign("http://www.w3schools.com");
+	}
 }
 
 function convertText(inputText){
@@ -55,7 +57,7 @@ function getQueryVariable(variable){
   return -1; //not found 
 }
 </script>
-<body>
+<body onload="getload()">
 	<div id="infodiv"></div>
 </body>
 </html>
