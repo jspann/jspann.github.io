@@ -13,6 +13,8 @@
 		text-align: left;
 	}
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 if (typeof String.prototype.startsWith != 'function'){
 	String.prototype.startsWith = function(str) {
@@ -39,7 +41,7 @@ function getload() {
 		var inputn = document.createElement("input");
 		inputn.id = "inputname";
 		inputn.placeholder = "URL";
-		inputn.onkeydown = "getinput";
+		//inputn.onkeydown = "getinput";
 
 		var finalsave = document.createElement("p");
 		var finalsavenode = document.createTextNode("");
@@ -92,6 +94,15 @@ function getQueryVariable(variable){
   return -1; //not found 
 }
 </script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("p").click(function(){
+		$(this).hide();
+	});
+});
+</script>
+
 <body onload="getload()">
 	<div id="infodiv"></div>
 </body>
