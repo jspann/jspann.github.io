@@ -21,7 +21,7 @@ if (t != -1) {
 	var node = document.createTextNode("This is new.");
 	para.appendChild(node);
 
-	var element = document.getElementsByTagName("body");
+	var element = document.getElementsById("infodiv");
 	element.appendChild(para);
 
 
@@ -56,6 +56,6 @@ function getQueryVariable(variable){
 }
 </script>
 <body>
-
+	<div id="infodiv"></div>
 </body>
 </html>
