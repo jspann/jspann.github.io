@@ -3,19 +3,50 @@
 <head>
 	<title>url obfuscator</title>
 </head>
+<style type="text/css">
+	p{
+		text-align: center;
+
+	}
+
+	input{
+		text-align: center;
+	}
+</style>
 <script>
-function getQueryVariable(variable)
-{ 
+var t = getQueryVariable("url");
+if (t != -1) {
+	var para = document.createElement("p");
+	var node = document.createTextNode("This is new.");
+	para.appendChild(node);
+
+	var element = document.getElementsByTagName("body");
+	element.appendChild(para);
+
+
+	var input = document.createElement("input");
+	var node = document.createTextNode("This is new.");
+	input.appendChild(node);
+
+}else{
+	window.location.assign("http://www.w3schools.com");
+}
+
+function convertText(inputText){
+	for (var i = 0; i < inputText.length; i++) {
+		inputText.charAt(i)+1;
+	};
+}
+
+function getQueryVariable(variable){
   var query = window.location.search.substring(1); 
   console.log(query)
   var vars = query.split("&"); 
   console.log(vars)
   //file:///Users/jspann/Github%20Projects/jspann.github.io/redir/index.html?milk=sarah&julia=mean
-  for (var i=0;i<vars.length;i++)
-  { 
+  for (var i=0;i<vars.length;i++){ 
     var pair = vars[i].split("="); 
-    if (pair[0] == variable)
-    { 
+    if (pair[0] == variable){ 
       return pair[1]; 
     } 
   }
