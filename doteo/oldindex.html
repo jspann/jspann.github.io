@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>Hello world!</title>
+
+<!--
+A James Spann production
+-->
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<meta name="apple-itunes-app" content="app-id=418682206">
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hello World! I am James and this is my site.">
+<meta property="og:image" content="http://www.jspann.me/doteo/ddots.png"/>
+<meta property="og:description" content="A site for the game 'Doteo'. Now available on the iOS App Store!">
+<meta property="og:url" content="http://www.jspann.me/doteo"/>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="glsl.js"></script>
+
+<style type="text/css">
+body{
+	background:rgb(67,182,231);
+	margin:0;
+	border:0;
+}
+
+button{
+	margin:0;
+	border:0;
+	padding:0;
+}
+
+canvas{
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 200%;
+	opacity: 1.0;
+}
+
+img{
+	/*height: auto;
+	width: 100%;*/
+
+}
+
+a {
+    color: rgb(244,117,153);
+	/*font-family: "Open Sans", Times, serif;*/
+	font-family: 'Cartwheel', 'Georgia', serif;
+
+}
+
+hr { 
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+	border-color: rgb(244,117,153);
+}
+
+p, b, u, h1, h2, h3 {
+	font-family: 'Cartwheel', 'Georgia', serif;
+	color: white;
+}
+
+@font-face {
+  font-family: 'Cartwheel';
+  src: url('Cartwheel.ttf');
+}
+
+.middleBox{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#dicon{
+	border-radius: 80px;
+	margin: 0 auto;
+	max-width: 20%;
+
+}
+
+#myCanvas{
+	z-index: 20;
+}
+
+#topbox{
+	width: 100%;
+}
+
+#appstoreicon{
+	width: 25%;
+	height: auto;
+}
+</style>
+
+<script id="fragment" type="x-shader/x-fragment">
+  precision mediump float;
+  uniform vec2 resolution;
+  uniform float time;
+
+  #define MAX_BALLS 5
+
+  struct Ball {
+    vec2 center;
+    float radius;
+  };
+
+  uniform Ball balls[MAX_BALLS];
+  uniform int ballsLength;
+
+  bool inCircle (vec2 p, vec2 center, float radius) {
+    vec2 ratio = resolution.xy / resolution.x;
+    return distance(p*ratio, center*ratio) < radius;
+  }
+
+  bool inBall(vec2 p, Ball b) {
+    return inCircle(p, b.center, b.radius);
+  }
+
+  void main () {
+    vec2 p = gl_FragCoord.xy / resolution.xy;
+    float z = 0.5+0.5*smoothstep(-1.0, 1.0, cos(time * 0.005));
+    gl_FragColor = vec4(0.26274509803922, 0.71372549019608, 0.90588235294118, 1.0);//gl.clearColor(0, 0, 0, 0);//vec4(1.0, 0.0, 0.0, 1.0);
+
+    for (int i=0; i<MAX_BALLS; ++i) { if (i>=ballsLength) break;
+      if (inBall(p, balls[i])) {
+      	/*c = Math.floor((Math.random() * 3) + 1);
+		if (c == 1) {
+			gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);//vec4(p.x, p.y, z, 1.0);
+		}else if(c == 2){
+			gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);//vec4(p.x, p.y, z, 1.0);
+		}else{
+			gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);//vec4(p.x, p.y, z, 1.0);
+		};*/
+        gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);//vec4(p.x, p.y, z, 1.0);
+      }
+    }
+  }
+</script>
+
+
+<body onload="">
+<canvas id="game"></canvas>
+
+<script type="text/javascript">
+  if (!Glsl.supported()) alert("WebGL is not supported.");
+
+  function Vec2 (x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  function Ball (center, radius, velocity) {
+    this.center = center;
+    this.radius = radius;
+    this.velocity = velocity;
+  }
+
+  Ball.prototype.update = function (time, delta) {
+    this.center.x = this.center.x + this.velocity.x * delta;
+    this.center.y = this.center.y + this.velocity.y * delta;
+    if (this.center.y < 0) {
+      this.center.y = 0;
+      this.velocity.y *= -1;
+    }
+    if (this.center.x < 0) {
+      this.center.x = 0;
+      this.velocity.x *= -1;
+    }
+    if (this.center.y > 1) {
+      this.center.y = 1;
+      this.velocity.y *= -1;
+    }
+    if (this.center.x > 1) {
+      this.center.x = 1;
+      this.velocity.x *= -1;
+    }
+  }
+
+  Glsl({
+    canvas: document.getElementById("game"),
+    fragment: document.getElementById("fragment").textContent,
+    variables: {
+      time: 0,
+      balls: [],
+      ballsLength: 0
+    },
+  init: function () {
+    for (var i = 0; i<this.defines.MAX_BALLS; ++i) {
+      this.variables.balls.push(new Ball(new Vec2(Math.random(), Math.random()), 0.01+0.01*Math.random(), new Vec2(0.001*Math.random(), 0.001*Math.random())));
+    }
+  },
+    update: function (time, delta) {
+      this.set("time", time);
+      this.variables.balls.forEach(function (ball) {
+        ball.update(time, delta);
+      });
+      this.set("ballsLength", this.variables.balls.length);
+      this.sync("balls");
+    }
+  }).start();
+</script>
+
+	<div id="topbox">
+		<img src="ddots.png" id="dicon">
+		<b>Doteo</b>
+		<p>Woah! Doteo is here to play!</p>
+	</div>
+	<hr>
+	
+	<div class="middleBox" style="background-color:rgb(97,225,180)">
+		<u>How to play</u>
+		<p>Drag lines from dot to dot and solve the puzzle!</p>
+		<p><img src="notiffull.png" style="max-width: 25%;">Get notifcations about new levels and helpful tips to make sure that you are the best player!</p>
+	</div>
+
+
+	<div class="middleBox" style="background-color:rgb(255,207,75)">
+		<img src="notiffull.png" style="max-width: 25%;">
+		<p>Get notifcations about new levels and helpful tips to make sure that you are the best player!</p>
+	</div>
+
+
+	<div class="middleBox" style="background-color:rgb(255,104,0)">
+		<img src="notiffull.png" style="max-width: 25%;">
+		<p>Get notifcations about new levels and helpful tips to make sure that you are the best player!</p>
+	</div>
+
+
+	<div class="middleBox" style="background-color:rgb(153,88,61)">
+		<img src="notiffull.png" style="max-width: 25%;">
+		<p>Get notifcations about new levels and helpful tips to make sure that you are the best player!</p>
+	</div>
+
+	<div style="">
+		<img src="download.svg" id="appstoreicon" onclick="location.href='https://itunes.apple.com/us/app/doteo/id1000199132?mt=8'">
+	</div>
+	
+	<p style="text-align:center;"><a href="http://www.jspann.me">Main site</a> | <a href="mailto:thedeveloper4@gmail.com">Contact Me</a> | Copyright James Spann 2015</p>
+</body>
+</html>

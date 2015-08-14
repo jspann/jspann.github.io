@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>Doteo</title>
+
+<!--
+A James Spann production
+-->
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<meta name="apple-itunes-app" content="app-id=418682206">
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hello World! I am James and this is my site.">
+<meta property="og:image" content="http://www.jspann.me/doteo/ddots.png"/>
+<meta property="og:description" content="A site for the game 'Doteo'. Now available on the iOS App Store!">
+<meta property="og:url" content="http://www.jspann.me/doteo"/>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+body{
+  background:rgb(67,182,231);
+  margin:0;
+  border:0;
+}
+
+button{
+  margin:0;
+  border:0;
+  padding:0;
+}
+
+img{
+  /*height: auto;
+  width: 100%;*/
+
+}
+
+a {
+    color: rgb(244,117,153);
+  /*font-family: "Open Sans", Times, serif;*/
+  font-family: 'Cartwheel', 'Georgia', serif;
+
+}
+
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  border-color: rgb(244,117,153);
+}
+
+p, b, u, h1, h2, h3 {
+  font-family: 'Cartwheel', 'Georgia', serif;
+  color: white;
+}
+
+@font-face {
+  font-family: 'Cartwheel';
+  src: url('Cartwheel.ttf');
+}
+
+.middleBox{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#dicon{
+  border-radius: 80px;
+  margin: 0 auto;
+  max-width: 20%;
+
+}
+
+#myCanvas{
+  z-index: 20;
+}
+
+#topbox{
+  width: 100%;
+  left:25%;
+}
+
+#appstoreicon{
+  width: 25%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#gamecentericon{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.imageInBox{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#greenbox{
+  width: 100%;
+  height: auto;
+  margin: 0px;
+}
+</style>
+
+<body onload="">
+
+  <div id="topbox">
+    
+      <img src="ddots.png" id="dicon">
+      <b style="font-size: 60px;">Doteo</b>
+    <p>A fun puzzle game that keeps getting better!</p>
+  </div>
+  <hr>
+  
+  <div class="middleBox" style="background-color:rgb(97,225,180)">
+    <p style="position:absolute; z-index: 1000;">Drag lines from dot to dot and solve the puzzle!</p>
+    <video width="320" height="240" id="greenbox" loop autoplay>
+      <source src="doteo final.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="middleBox" style="background-color:rgb(255,207,75)">
+    <img src="notiffull.png" style="max-width: 25%;" class="imageInBox">
+    <p>Get notifcations about new levels and helpful tips to make sure that you are the best player!</p>
+  </div>
+
+  <div class="middleBox" style="background-color:rgb(244,117,153)">
+    <img src="countdown.png" style="max-width: 25%; padding:5px;" class="imageInBox">
+    <p>Do your best to beat the clock!</p>
+  </div>
+
+
+  <div class="middleBox" style="background-color:rgb(255,104,0)">
+    <img src="Game-Center2.png" style="max-width: 25%;" class="imageInBox">
+    <p>Compete with your friends and try to get the highest score on Game center!</p>
+  </div>
+
+
+  <div class="middleBox" style="background-color:rgb(153,88,61)">
+    <p style="font-size: 40px; text-align:center;">Still not convinced?</p>
+
+        <img src="download.svg" id="appstoreicon" onclick="location.href='https://itunes.apple.com/us/app/doteo/id1000199132?mt=8'">
+  </div>
+
+
+  <div style="">
+
+  </div>
+  
+  <p style="text-align:center;"><a href="http://www.jspann.me">Main site</a> | <a href="mailto:thedeveloper4@gmail.com">Contact Me</a> | Copyright James Spann 2015</p>
+</body>
+</html>
