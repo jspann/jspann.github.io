@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MCU Countdown</title>
+</head>
+<style>
+body{
+	background: -webkit-linear-gradient(#E00016, #90000C); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#E00016, #90000C); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#E00016, #90000C); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#E00016,#90000C); /* Standard syntax */
+}
+
+.movietimer{
+	color: white;
+	display: inline-block;
+}
+
+#maintitle{
+	font-family: Avengeance Heroic Avenger;
+    src: url(./fonts/AVENGEANCE HEROIC AVENGER.ttf);
+    text-align:center;
+}
+</style>
+<script type="text/javascript" src="countdown.js"></script>
+<script type="text/javascript">
+	//224,0,22
+	//144,0,12
+	//title font from http://www.dafont.com/avengeance.font
+	function getnewtimes() {
+		var CivilWarTime = countdown(new Date("May 6, 2016 12:00:00")).toString();
+		document.getElementById("CivilWarTime").innerHTML = CivilWarTime;
+		
+		var StrangeTime = countdown(new Date("May 6, 2016 12:00:00")).toString();
+		document.getElementById("StrangeTime").innerHTML = StrangeTime;
+		
+		var Guardians2Time = countdown(new Date("May 5, 2017 12:00:00")).toString();
+		document.getElementById("Guardians2Time").innerHTML = Guardians2Time;
+
+		var SpiderManTime = countdown(new Date("July 28, 2017 12:00:00")).toString();
+		document.getElementById("SpiderManTime").innerHTML = SpiderManTime;
+		
+		var ThorRagnarokTime = countdown(new Date("November 3, 2017 12:00:00")).toString();
+		document.getElementById("ThorRagnarokTime").innerHTML = ThorRagnarokTime;
+		
+		var InfinityWar1Time = countdown(new Date("May 4, 2018 12:00:00")).toString();
+		document.getElementById("InfinityWar1Time").innerHTML = InfinityWar1Time;
+
+		var BlackPantherTime = countdown(new Date("July 6, 2018 12:00:00")).toString();
+		document.getElementById("BlackPantherTime").innerHTML = BlackPantherTime;
+		
+		var CaptainMarvelTime = countdown(new Date("November 2, 2018 12:00:00")).toString();
+		document.getElementById("CaptainMarvelTime").innerHTML = CaptainMarvelTime;
+
+		var InfinityWar2Time = countdown(new Date("May 3, 2019 12:00:00")).toString();
+		document.getElementById("InfinityWar2Time").innerHTML = InfinityWar2Time;
+		
+		var InhumanTime = countdown(new Date("July 12, 2019 12:00:00")).toString();
+		document.getElementById("InhumanTime").innerHTML = InhumanTime;
+	}
+
+	setInterval(function () {getnewtimes()}, 1000);
+</script>
+<body>
+<h1 id="maintitle">MCU Phase 3 Countdown</h1>
+<h1>Phase 1 - <p style="color:green; display: inline-block;">Complete</p></h1>
+<h1>Phase 2 - <p style="color:green; display: inline-block;">Complete</p></h1>
+<h1>Civil War - <p id="CivilWarTime" class="movietimer">~</p></h1>
+	<p>After the events of Avengers: Age of Ultron, Captain America and the Avengers continue to protect the world, but the team becomes divided after extensive collateral damage prompts politicians to pass an act regulating superhuman activity.</p>
+
+<h1>Doctor Strange - <p id="StrangeTime" class="movietimer">~</p></h1>
+	<p>After Stephen Strange, the world's top neurosurgeon, is involved in a car accident that ruins his career, he sets out on a journey of healing, where he encounters the Ancient One.</p>
+
+<h1>Guardians of the Galaxy Volume 2 - <p id="Guardians2Time" class="movietimer">~</p></h1>
+	<p>description</p>
+
+<h1>Spider Man - <p id="SpiderManTime" class="movietimer">~</p></h1>
+	<p>description</p>
+
+<h1>Thor: Ragnarok - <p id="ThorRagnarokTime" class="movietimer">~</p></h1>
+	<p>description</p>
+<h1>Avengers: Infinity War Part 1 - <p id="InfinityWar1Time" class="movietimer">~</p></h1>
+	<p>description</p>
+<h1>Black Panther - <p id="BlackPantherTime" class="movietimer">~</p></h1>
+	<p>description</p>
+<h1>Captain Marvel - <p id="CaptainMarvelTime" class="movietimer">~</p></h1>
+	<p>description</p>
+<h1>Avengers: Infinity War Part 2 - <p id="InfinityWar2Time" class="movietimer">~</p></h1>
+	<p>description</p>
+<h1>Inhumans - <p id="InhumanTime" class="movietimer">~</p></h1>
+	<p>description</p>
+
+
+ <p style="text-align:center;"><a href="http://www.jspann.me">Main site</a> | <a href="mailto:thedeveloper4@gmail.com">Contact Me</a> | Copyright James Spann 2015</p>
+
+</body>
+</html>
