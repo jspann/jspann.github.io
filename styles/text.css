@@ -1,3 +1,19 @@
 .code{
 	background-color: rgb(160,160,160);
 }
+
+.codestr{/*strings in code*/
+	color:yellow;
+	background-color: rgb(160,160,160);
+}
+
+.codenum{/*numbers in code*/
+	color:yellow;
+	background-color: rgb(160,160,160);
+}
+
+.codecomment{/*numbers in code*/
+	font-family: monospace;
+	color:rgb(25,28,35);
+	/*background-color: rgb(160,160,160);*/
+}
