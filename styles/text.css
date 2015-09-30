@@ -1,6 +1,9 @@
+/*This file is used to add syntax highlighting in my blog when I write code*/
+
 .code{
 	/*Gray background-color: rgb(160,160,160);*/
 	background-color: rgb(25,28,35);
+	color: rgb(230, 227, 220);
 	border-radius: 20px;
 }
 
@@ -18,4 +21,24 @@
 	color: white;
 	/*color:rgb(25,28,35);*/
 	/*background-color: rgb(160,160,160);*/
+}
+
+.codekeyword{/*keyword in code*/
+	font-family: monospace;
+	font-weight: bold;
+	color: white;
+	/*color:rgb(25,28,35);*/
+	/*background-color: rgb(160,160,160);*/
+}
+
+.codevar{/*variable in code*/
+	font-family: monospace;
+	font-weight: normal;
+	color: white;
+	/*color:rgb(25,28,35);*/
+	/*background-color: rgb(160,160,160);*/
+}
+
+.posttext{
+	font-family: Arial, Helvetica, sans-serif;
 }
