@@ -39,6 +39,13 @@
 	/*background-color: rgb(160,160,160);*/
 }
 
+
+
 .posttext{
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+.DictionaryDef{
+	font-family: Trebuchet MS, sans-serif; font-size: large;
+	white-space: pre;
 }
