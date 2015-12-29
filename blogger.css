@@ -1,0 +1,18 @@
+/*This file is for the main CSS on my blog's homepage*/
+.labelbubble{
+		border-radius: 20px;
+		border-color: red;
+		border-style: solid;
+		border-width: 2px;
+		text-decoration: none;
+		padding: 5px;
+	}
+
+.labelbubble:hover{
+	border-radius: 20px;
+	border-color: blue;
+	border-style: solid;
+	border-width: 2px;
+	text-decoration: none;
+	padding: 5px;
+}
