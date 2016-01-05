@@ -1,0 +1,28 @@
+<html>
+	<script>
+		function goIn(newurl){
+		}
+		function showup(){
+			document.title = "Recursive fun";
+			var y = window.location.search.replace("?", "").split("=");
+			var t = 0;
+			for(var i=0; i<y.length;i++){
+				if (y[i] == "recur") {
+					t = y[i+1];
+				}
+				
+			}
+
+			document.getElementById("pageText").innerHTML = "Recursive Level: "+(t).toString();
+			t++;
+			var s = "http://jspann.me/recursive/index.html?recur="+(t).toString();
+			setTimeout(function(){ document.location.href = s; }, 5000);
+
+			
+		}
+	</script>
+	<body onload="showup()">
+		<p id="pageText" style="text-align: center;"></p>
+		<!-- html canvas?-->
+	</body>
+</html>
