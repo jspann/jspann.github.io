@@ -3,95 +3,121 @@
 <head>
 	<title>MCU Countdown</title>
 </head>
-<style>
-body{
-	background: -webkit-linear-gradient(#E00016, #90000C); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#E00016, #90000C); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#E00016, #90000C); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#E00016,#90000C); /* Standard syntax */
-}
+	<style type="text/css">
 
-.movietimer{
-	color: white;
-	display: inline-block;
-}
+		h1{
+			color: purple;
+		}
 
-#maintitle{
-	font-family: Avengeance Heroic Avenger;
-    src: url(./fonts/AVENGEANCE HEROIC AVENGER.ttf);
-    text-align:center;
-}
-</style>
-<script type="text/javascript" src="countdown.js"></script>
-<script type="text/javascript">
-	//224,0,22
-	//144,0,12
-	//title font from http://www.dafont.com/avengeance.font
-	function getnewtimes() {
-		var CivilWarTime = countdown(new Date("May 6, 2016 12:00:00")).toString();
-		document.getElementById("CivilWarTime").innerHTML = CivilWarTime;
-		
-		var StrangeTime = countdown(new Date("May 6, 2016 12:00:00")).toString();
-		document.getElementById("StrangeTime").innerHTML = StrangeTime;
-		
-		var Guardians2Time = countdown(new Date("May 5, 2017 12:00:00")).toString();
-		document.getElementById("Guardians2Time").innerHTML = Guardians2Time;
+		.backgroundImage{
+			position: absolute;
+			height: 100%;
+			z-index: -1;
+			opacity: 0.6;
+			left: 65%;
+		}
 
-		var SpiderManTime = countdown(new Date("July 28, 2017 12:00:00")).toString();
-		document.getElementById("SpiderManTime").innerHTML = SpiderManTime;
-		
-		var ThorRagnarokTime = countdown(new Date("November 3, 2017 12:00:00")).toString();
-		document.getElementById("ThorRagnarokTime").innerHTML = ThorRagnarokTime;
-		
-		var InfinityWar1Time = countdown(new Date("May 4, 2018 12:00:00")).toString();
-		document.getElementById("InfinityWar1Time").innerHTML = InfinityWar1Time;
+		.mainContent{
+			position: relative;
+		}
 
-		var BlackPantherTime = countdown(new Date("July 6, 2018 12:00:00")).toString();
-		document.getElementById("BlackPantherTime").innerHTML = BlackPantherTime;
-		
-		var CaptainMarvelTime = countdown(new Date("November 2, 2018 12:00:00")).toString();
-		document.getElementById("CaptainMarvelTime").innerHTML = CaptainMarvelTime;
+		.movieView{
+			display: flex;
+			width: 16%;
+			text-align: center;
+		}
 
-		var InfinityWar2Time = countdown(new Date("May 3, 2019 12:00:00")).toString();
-		document.getElementById("InfinityWar2Time").innerHTML = InfinityWar2Time;
-		
-		var InhumanTime = countdown(new Date("July 12, 2019 12:00:00")).toString();
-		document.getElementById("InhumanTime").innerHTML = InhumanTime;
-	}
+		.movieBox{
+			display: table;
+			margin: 2%;
+		}
 
-	setInterval(function () {getnewtimes()}, 1000);
-</script>
+		.movieBox img{
+			width: 100%;
+			/*height: auto;*/
+			/*display: none;*/
+		}
+
+		.movieBox img:hover{
+			border: 1.5px solid #999;
+			-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+			-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+			/*-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */*/
+			/*filter: grayscale(100%);*/
+		}
+
+		.movieBox p{
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+		}
+
+		.title{
+			color: blue;
+
+		}
+	</style>
 <body>
-<h1 id="maintitle">MCU Phase 3 Countdown</h1>
-<h1>Phase 1 - <p style="color:green; display: inline-block;">Complete</p></h1>
-<h1>Phase 2 - <p style="color:green; display: inline-block;">Complete</p></h1>
-<h1>Civil War - <p id="CivilWarTime" class="movietimer">~</p></h1>
-	<p>After the events of Avengers: Age of Ultron, Captain America and the Avengers continue to protect the world, but the team becomes divided after extensive collateral damage prompts politicians to pass an act regulating superhuman activity.</p>
+	<!--Background "A"-->
+	<img src="avengersA.png" class="backgroundImage">
+	<div id="mainContent">
+		<h1>Phase 1</h1>
+		<div class="movieView">
 
-<h1>Doctor Strange - <p id="StrangeTime" class="movietimer">~</p></h1>
-	<p>After Stephen Strange, the world's top neurosurgeon, is involved in a car accident that ruins his career, he sets out on a journey of healing, where he encounters the Ancient One.</p>
+			<div class="movieBox">
+				<img src="ironman.jpg">
+				<p class="title">Iron Man</p>
+				<p>May 2, 2008</p>
+			</div>
+			<div class="movieBox">
+				<img src="hulk.jpg">
+				<p class="title">The Incredible Hulk</p>
+				<p>June 13, 2008</p>
+			</div>
 
-<h1>Guardians of the Galaxy Volume 2 - <p id="Guardians2Time" class="movietimer">~</p></h1>
-	<p>description</p>
+			<div class="movieBox">
+				<img src="ironman2.jpg">
+				<p class="title">Iron Man 2</p>
+				<p>May 7, 2010</p>
+			</div>
 
-<h1>Spider Man - <p id="SpiderManTime" class="movietimer">~</p></h1>
-	<p>description</p>
+			<div class="movieBox">
+				<img src="thor.jpg">
+				<p class="title">Thor</p>
+				<p>May 2, 2011</p>
+			</div>
 
-<h1>Thor: Ragnarok - <p id="ThorRagnarokTime" class="movietimer">~</p></h1>
-	<p>description</p>
-<h1>Avengers: Infinity War Part 1 - <p id="InfinityWar1Time" class="movietimer">~</p></h1>
-	<p>description</p>
-<h1>Black Panther - <p id="BlackPantherTime" class="movietimer">~</p></h1>
-	<p>description</p>
-<h1>Captain Marvel - <p id="CaptainMarvelTime" class="movietimer">~</p></h1>
-	<p>description</p>
-<h1>Avengers: Infinity War Part 2 - <p id="InfinityWar2Time" class="movietimer">~</p></h1>
-	<p>description</p>
-<h1>Inhumans - <p id="InhumanTime" class="movietimer">~</p></h1>
-	<p>description</p>
+			<div class="movieBox">
+				<img src="captainamerica.jpg">
+				<p class="title">Captain America: The first Avenger</p>
+				<p>July 22, 2011</p>
+			</div>
 
+			<div class="movieBox">
+				<img src="avengers.jpg">
+				<p class="title">The Avengers</p>
+				<p>May 4th 2012</p>
+			</div>
+		</div>
+		<hr>
+		<div class="movieView">
+			<h1>Phase 2</h1>
 
- <p style="text-align:center;"><a href="http://www.jspann.me">Main site</a> | <a href="mailto:thedeveloper4@gmail.com">Contact Me</a> | Copyright James Spann 2015</p>
+		</div>
+		
+		<div class="movieView">
+			<h1>Phase 3</h1>
+		</div>
+		
+		<div class="movieView">
+			<h1>ABC Shows</h1>
+		</div>
 
+		<div class="movieView">
+			<h1>Netflix Shows</h1>
+		</div>
+	</div>
 </body>
 </html>
