@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript">
+		function addTableback() {
+			var boxes = document.getElementsByTagName("td");
+			for (var i = 0; i<boxes.length;i++) {
+
+				z = "blank";
+				boxes[i].innerHTML = "<img src=\""+z+".png\" class=\"gamePiece\" ondrop=\"drop(event)\"ondragover=\"allowDrop(event)\" draggable=\"no\" id=\"gameimage"+(i+1)+"\"/>";
+			};
+		}
+
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			if (placePiece(ev.target.id) == true){
+				ev.target.setAttribute("src",getCurrentColor()+".png");	
+
+				swapPlayers();
+				document.getElementById("pieces").setAttribute("src", getNotCurrentColor()+".png");
+			}else{
+				alert("Sorry! Your move was illegal!");
+			}
+		}
+
+		function drag(ev){
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function init(){
+			playerNum = 1;//Black moves first
+			addTableback();
+			initBoard();
+			initPieces();
+			
+			document.getElementById("pieces").setAttribute("src", getCurrentColor()+".png");
+		}
+
+	</script>
+
+	<style>
+		body, html{
+			height:100%
+		}
+
+		table, th, td {
+			border: 4px solid black;
+			border-collapse: collapse;
+		}
+
+		table{
+			@media min-width: 648px{
+				width:650px;
+			}
+		}
+		td{
+			background-color: green;
+		}
+
+		#pieces{
+			background-color: blue;
+		}
+
+		.gamePiece{
+			width:100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body onload="init();">
+<table>
+	<tr>
+		<td></td>
+		<td></td> 
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td> 
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td> 
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td> 
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td> 
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td> 
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td> 
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td> 
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<img id="pieces" draggable="true" ondragstart="drag(event)" width="100" height="100">
+</body>
+</html>
+
