@@ -1,4 +1,10 @@
-var board = new Array(8);
+/*
+ * Othello game logic in javascript
+ * Copyright James Spann 2016
+ */
+
+const BOARD_LENGTH = 8;
+var board = new Array(BOARD_LENGTH);
 var playerNum;//0(Black) or 1(White)
 var moves = [-1, -1, -1, -1, -1, -1, -1, -1];
 
@@ -12,22 +18,22 @@ var y3 = function (a) {return a+1};
 var xyplaces = [[x1,y1],[x1,y2],[x1,y3],[x2,y1],[x2,y3],[x3,y1],[x3,y2],[x3,y3]];
 
 function initBoard(){
-	for (var i = 0; i < 8; i++) {
-	  board[i] = new Array(8);
+	for (var i = 0; i < BOARD_LENGTH; i++) {
+	  board[i] = new Array(BOARD_LENGTH);
 	}
 
-	for(var h = 0; h < 8; h++){
-		for(var w = 0; w < 8; w++){
+	for(var h = 0; h < BOARD_LENGTH; h++){
+		for(var w = 0; w < BOARD_LENGTH; w++){
 			board[h][w] = "-";
 		}
 	}
 }
 
 function initPieces(){
-	var elemNames = [28,29,36,37];
+	var elemNames = [28,29,36,37];//These are the IDs of the initial pieces
 	for (var i = 0; i<elemNames.length; i++) {
 		var t = idToArray(elemNames[i]);
-		console.log(t);
+		// console.log(t);
 
 		var ename = "gameimage"+elemNames[i];
 		var color = "";
@@ -39,6 +45,8 @@ function initPieces(){
 		}
 		addToBoard(t[0],t[1],color[0]);
 		document.getElementById(ename).setAttribute("src",color+".png");
+		document.getElementById("blackPieces").innerHTML = "Black: 2 pieces";
+		document.getElementById("whitePieces").innerHTML = "White: 2 pieces";
 	};
 	
 
@@ -69,7 +77,7 @@ function getColorAt(x,y){
 }
 
 function isValidPoint(x,y){
-	if (x < 0 || x > 8 || y > 8 || y < 1) {
+	if (x < 0 || x > BOARD_LENGTH || y > BOARD_LENGTH || y < 1) {
 		return false;
 	}
 	return true
@@ -86,7 +94,7 @@ function checkLine(x,y,color,func1,func2){
 		}else{
 			//not same color
 			var c = checkLine(func1(x),func2(y),color,func1,func2);
-			console.log("RETURNED: "+c);
+			// console.log("RETURNED: "+c);
 			return (c == -1)?-1:c+1;
 		}
 	}
@@ -108,7 +116,7 @@ function isValidMove(x,y,color){
 	moves[5] = checkLine(x,y,color,x3,y1);//6
 	moves[6] = checkLine(x,y,color,x3,y2);//7
 	moves[7] = checkLine(x,y,color,x3,y3);//8
-	console.log(moves);
+	// console.log(moves);
 	//array will be number of flips to make (what checkLine() returns)
 	
 	for (var i = 0; i<moves.length; i++) {
@@ -125,7 +133,7 @@ function flipPiece(elem,color,func1,func2,elemfunc,times){
 	}else{
 		var ename = "gameimage"+elemfunc( elem );
 		// console.log("BRO:"+ename);
-		console.log("coloring:"+elemfunc( elem ));
+		// console.log("coloring:"+elemfunc( elem ));
 		document.getElementById(ename).setAttribute("src",color+".png");
 		var t = idToArray(elemfunc( elem ));
 		addToBoard(t[0],t[1],color[0]);
@@ -180,6 +188,7 @@ function placePiece(elem){
 	if (isValidMove(t[0],t[1], myColor[0])) {
 		addToBoard(t[0],t[1],myColor[0]);
 		flip( t[0],t[1],pieceNum, getCurrentColor() );
+		audio.play();
 		return true;
 	};
 	return false;	

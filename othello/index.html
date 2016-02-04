@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript" src="game.js"></script>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Exo+2:400,200,700' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="blockui.js"></script>
+	<script type="text/javascript" src="game.js"></script>
 	<script type="text/javascript">
+		var audio;
+
 		function addTableback() {
 			var boxes = document.getElementsByTagName("td");
 			for (var i = 0; i<boxes.length;i++) {
 
 				z = "blank";
-				boxes[i].innerHTML = "<img src=\""+z+".png\" class=\"gamePiece\" ondrop=\"drop(event)\"ondragover=\"allowDrop(event)\" draggable=\"no\" id=\"gameimage"+(i+1)+"\"/>";
+				boxes[i].innerHTML = "<img src=\""+z+".png\" class=\"gamePiece\" ondrop=\"drop(event)\"ondragover=\"allowDrop(event)\" ondragleave=\"leavePossible(event)\" draggable=\"no\" id=\"gameimage"+(i+1)+"\"/>";
 			};
+		}
+
+		function leavePossible(ev) {
+			ev.preventDefault();
+			document.getElementById(ev.target.id).parentElement.style.backgroundColor = "green";
 		}
 
 		function allowDrop(ev) {
 			ev.preventDefault();
+			document.getElementById(ev.target.id).parentElement.style.backgroundColor = "red";
 		}
 
 		function drop(ev) {
@@ -25,8 +36,15 @@
 
 				swapPlayers();
 				document.getElementById("pieces").setAttribute("src", getNotCurrentColor()+".png");
+
+				document.getElementById(ev.target.id).parentElement.style.backgroundColor = "orange";
+
+				setTimeout(function(){document.getElementById(ev.target.id).parentElement.style.backgroundColor = "green";}, 1000);
+				
 			}else{
 				alert("Sorry! Your move was illegal!");
+				
+				document.getElementById(ev.target.id).parentElement.style.backgroundColor = "green";
 			}
 		}
 
@@ -34,20 +52,56 @@
 			ev.dataTransfer.setData("text", ev.target.id);
 		}
 
+		function initAudio() {
+			audio = document.getElementById("myAudio");
+			audio.controls = false;
+			audio.loop = false;
+
+			audio.canPlayType('audio/ogg');
+
+		}
+
 		function init(){
 			playerNum = 1;//Black moves first
 			addTableback();
 			initBoard();
 			initPieces();
-			
+			initAudio();
+
 			document.getElementById("pieces").setAttribute("src", getCurrentColor()+".png");
 		}
 
 	</script>
 
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			//http://malsup.com/jquery/block/#overview
+			$.blockUI({
+				onOverlayClick: $.unblockUI
+			});
+
+		});
+		function gotomysite(){
+			window.location.href = "http://jspann.me";
+		}
+	</script>
+
 	<style>
+		*{
+			font-family: 'Exo 2', sans-serif;
+			/*margin: 0px;*/
+			/*padding: 0px;*/
+		}
 		body, html{
 			height:100%
+		}
+		body{
+			margin-top:0px;
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+			/*min-width: 520px;*/
 		}
 
 		table, th, td {
@@ -56,9 +110,14 @@
 		}
 
 		table{
-			@media min-width: 648px{
+			/*@media min-width: 648px{
 				width:650px;
-			}
+			}*/
+			max-width:640px;
+			min-width:400px;
+			margin-left: 8px;
+			margin-right: 8px;
+			margin-top: 8px;
 		}
 		td{
 			background-color: green;
@@ -66,15 +125,95 @@
 
 		#pieces{
 			background-color: blue;
+			float: right;
+		}
+
+		#pieces:hover{
+			background-color: blue;
+			cursor: pointer;
+		}
+
+		#pieces:active{
+			background-color: blue;
+			cursor: pointer;
+		}
+
+		#gameData{
+			background-color: blue;
+			position: relative;
+			float: right;
+		}
+
+		#highbar{
+			width:100%;
+			background-color: aliceblue;
+			margin-top: 0px;
+			padding-top: 0px;
+
+		}
+
+		#superImportantStuff{
+			background-color: blue;
+			height: 100px;
+			width: 230px;
+			float: right;
 		}
 
 		.gamePiece{
 			width:100%;
 			height: auto;
 		}
+
+		.highbutton{
+			display: inline-block;
+			border-bottom: none;
+			cursor: auto;
+			width: 20%;
+			text-align: center;
+			  font-size: 2vmin;
+
+		}
+
+		.highbutton:hover{
+			background-color: lightblue;
+			border-bottom: 2px solid blue;
+			cursor: pointer;
+			width: 20%;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		@media only screen and (max-width: 500px) {
+			#superImportantStuff{
+				width: 100px;
+			}
+			#pieces {
+				/*display:inline*/
+				margin-left: 8px;
+				clear: left;
+			}
+			#gameData{
+				display: none;
+			}
+		}
 	</style>
 </head>
 <body onload="init();">
+	<div id="highbar">
+		<b style="margin-left: 8px; display:inline-block">Quantum Othello</b>
+		<div class="highbutton">How to play</div>
+		<div class="highbutton">About</div>
+		<div class="highbutton" onclick="gotomysite()">My website</div>
+		
+	</div>
+	<div id="superImportantStuff">
+		<img id="pieces" draggable="true" ondragstart="drag(event)" width="100" height="100">
+		<div id="gameData">
+			<b id="blackPieces"></b></br>
+			<b id="whitePieces"></b></br>
+		</div>
+	</div>
+
 <table>
 	<tr>
 		<td></td>
@@ -157,7 +296,13 @@
 		<td></td>
 	</tr>
 </table>
-<img id="pieces" draggable="true" ondragstart="drag(event)" width="100" height="100">
+
+
+<audio id="myAudio">
+  <source src="pieceDown.ogg" type="audio/ogg">
+  <source src="pieceDown.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 </body>
 </html>
 
