@@ -1,3 +1,22 @@
 *{
 	font-family: 'Montserrat', sans-serif;
 }
+
+body{
+	margin: 0px;
+}
+
+a{
+
+}
+
+#headbar{
+	border-bottom: 4px solid purple;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	/*margin-bottom: 10px;*/
+	/*box-shadow: -4px red;*/
+	box-shadow: 0px 2px 50px purple;
+
+}
