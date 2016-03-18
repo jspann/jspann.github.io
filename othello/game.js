@@ -178,6 +178,26 @@ function idToArray(elemId) {
 	return [column,row];
 }
 
+
+function updateLabels() {
+	var blackp = 0;
+	var whitep = 0;
+
+	for(var h = 0; h < BOARD_LENGTH; h++){
+		for(var w = 0; w < BOARD_LENGTH; w++){
+			if (board[h][w] == "W") {
+				whitep++;
+			}else if (board[h][w] == "B") {
+				blackp++;
+			}
+
+		}
+	}
+	document.getElementById('whitePieces').innerHTML = "White: "+whitep+" pieces";
+	document.getElementById('blackPieces').innerHTML = "Black: "+blackp+" pieces";
+
+}
+
 function placePiece(elem){
 	
 	var pieceNum = Number(elem.substring(9,elem.length));
@@ -189,6 +209,7 @@ function placePiece(elem){
 		addToBoard(t[0],t[1],myColor[0]);
 		flip( t[0],t[1],pieceNum, getCurrentColor() );
 		audio.play();
+		updateLabels();
 		return true;
 	};
 	return false;	
