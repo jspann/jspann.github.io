@@ -17,9 +17,10 @@ var y3 = function (a) {return a+1};
 
 var xyplaces = [[x1,y1],[x1,y2],[x1,y3],[x2,y1],[x2,y3],[x3,y1],[x3,y2],[x3,y3]];
 
+
 function initBoard(){
 	for (var i = 0; i < BOARD_LENGTH; i++) {
-	  board[i] = new Array(BOARD_LENGTH);
+	  board[i] = new Array(BOARD_LENGTH+1);
 	}
 
 	for(var h = 0; h < BOARD_LENGTH; h++){
@@ -32,8 +33,7 @@ function initBoard(){
 function initPieces(){
 	var elemNames = [28,29,36,37];//These are the IDs of the initial pieces
 	for (var i = 0; i<elemNames.length; i++) {
-		var t = idToArray(elemNames[i]);
-		// console.log(t);
+		var t = idToboardArray(elemNames[i]);
 
 		var ename = "gameimage"+elemNames[i];
 		var color = "";
@@ -45,11 +45,26 @@ function initPieces(){
 		}
 		addToBoard(t[0],t[1],color[0]);
 		document.getElementById(ename).setAttribute("src",color+".png");
-		document.getElementById("blackPieces").innerHTML = "Black: 2 pieces";
-		document.getElementById("whitePieces").innerHTML = "White: 2 pieces";
+		updateLabels();
 	};
-	
+}
 
+function idToScreenLocation(elemId) {
+	column = elemId%BOARD_LENGTH;
+	row = Math.ceil(elemId/BOARD_LENGTH);
+
+	return [column,row];
+}
+
+function idToboardArray(elemId) {
+	real = idToScreenLocation(elemId);
+	column = real[0] - 1;
+	if ( column == -1) {
+		column = BOARD_LENGTH-1;
+	}
+	row = real[1] - 1;
+
+	return [column,row];
 }
 
 function addToBoard(x,y,color) {
@@ -68,7 +83,20 @@ function getNotCurrentColor(){
 /////Test place functions
 ///////////////////////////
 
+function isGameOver(){
+	for(var h = 0; h < BOARD_LENGTH; h++){
+		for(var w = 0; w < BOARD_LENGTH; w++){
+			if (board[h][w] == "-") {
+				return false;
+			}
+
+		}
+	}
+	return true;
+}
+
 function isOccupied(x,y){
+	console.log("Occu[x: "+x+"y:"+y);
 	return !(board[x][y] == '-');
 }
 
@@ -77,7 +105,7 @@ function getColorAt(x,y){
 }
 
 function isValidPoint(x,y){
-	if (x < 0 || x > BOARD_LENGTH || y > BOARD_LENGTH || y < 1) {
+	if (x < 0 || x >= BOARD_LENGTH || y >= BOARD_LENGTH || y < 1) {
 		return false;
 	}
 	return true
@@ -135,7 +163,7 @@ function flipPiece(elem,color,func1,func2,elemfunc,times){
 		// console.log("BRO:"+ename);
 		// console.log("coloring:"+elemfunc( elem ));
 		document.getElementById(ename).setAttribute("src",color+".png");
-		var t = idToArray(elemfunc( elem ));
+		var t = idToboardArray(elemfunc( elem ));
 		addToBoard(t[0],t[1],color[0]);
 		return flipPiece( elemfunc(elem),color,func1,func2,elemfunc,times-1);
 	}
@@ -169,16 +197,6 @@ function swapPlayers(){
 	playerNum = (playerNum == 1)?2:1;
 }
 
-function idToArray(elemId) {
-	//Returns the values that will be used when the element
-	//is referenced in the board's array.
-	column = ((elemId%8) == 0)?8:(elemId%8)-1;
-	row = Math.ceil(elemId/8);
-
-	return [column,row];
-}
-
-
 function updateLabels() {
 	var blackp = 0;
 	var whitep = 0;
@@ -201,9 +219,9 @@ function updateLabels() {
 function placePiece(elem){
 	
 	var pieceNum = Number(elem.substring(9,elem.length));
-	// console.log("Row: "+Math.ceil(pieceNum/8));
-	// console.log("Column: "+pieceNum%8);
-	var t = idToArray(pieceNum);
+	var t = idToboardArray(pieceNum);
+	console.log("yo");
+	console.log(t);
 	var myColor = getCurrentColor();
 	if (isValidMove(t[0],t[1], myColor[0])) {
 		addToBoard(t[0],t[1],myColor[0]);
