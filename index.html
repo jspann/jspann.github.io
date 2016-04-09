@@ -167,6 +167,19 @@
 	}
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript">
+	function gethvz(){
+//https://hvz.rit.edu/api/v2/status/players?search=James%20Spann
+$.get(
+    "https://hvz.rit.edu/api/v2/status/players?search=James%20Spann",
+    function(data) {
+       alert('page content: ' + data);
+    }
+);
+	}
+</script>
+
 <body onload="init()">
 	<div id="header">
 			<canvas id="sineCanvas"></canvas>
@@ -211,6 +224,8 @@
 		</td>
 	</tr>
 	</table>
+
+	<h1 id="hvzstatus">HvZ Status</h1>
 	<h1>Contact</h1>
 	<div id="contactBox">
 		<p>Email: <a href="mailto:thedeveloperj@gmail.com">thedeveloperj@gmail.com</a></p>
