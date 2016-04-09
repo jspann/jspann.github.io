@@ -171,24 +171,21 @@
 <script type="text/javascript">
 	function gethvz(){
 //https://hvz.rit.edu/api/v2/status/players?search=James%20Spann
-/*$.ajax({
+var oReq = new XMLHttpRequest();  
+oReq.onload = reqListener;  
+oReq.onerror = reqError;  
+oReq.open('get', 'http://hvz.rit.edu/api/v2/status/players?search=James%20Spann', true);  
+oReq.send();
 
-    url: 'https://hvz.rit.edu/api/v2/status/players',
-    type: 'GET',
-    search : "James Spann",
-    crossDomain: true,
-    dataType: 'json',
-    success: function(z) { alert("Success"); },
-    error: function(z) { alert('Failed!'); console.log(z);},
-});*/
-
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://hvz.rit.edu/api/v2/status/players?search=James%20Spann", true);
-xhr.send();
-
-console.log(xhr.status);
-console.log(xhr.statusText);
 	}
+function reqListener() {  
+  var data = JSON.parse(this.responseText);  
+  console.log(data);  
+}
+
+function reqError(err) {  
+  console.log('Fetch Error :-S', err);  
+}
 </script>
 
 <body onload="init()">
