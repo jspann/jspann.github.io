@@ -171,12 +171,23 @@
 <script type="text/javascript">
 	function gethvz(){
 //https://hvz.rit.edu/api/v2/status/players?search=James%20Spann
-$.get(
-    "http://hvz.rit.edu/api/v2/status/players?search=James%20Spann",
-    function(data) {
-       alert('page content: ' + data);
-    }
-);
+/*$.ajax({
+
+    url: 'https://hvz.rit.edu/api/v2/status/players',
+    type: 'GET',
+    search : "James Spann",
+    crossDomain: true,
+    dataType: 'json',
+    success: function(z) { alert("Success"); },
+    error: function(z) { alert('Failed!'); console.log(z);},
+});*/
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "http://hvz.rit.edu/api/v2/status/players?search=James%20Spann", true);
+xhr.send();
+
+console.log(xhr.status);
+console.log(xhr.statusText);
 	}
 </script>
 
