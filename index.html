@@ -167,27 +167,6 @@
 	}
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script type="text/javascript">
-	function gethvz(){
-//https://hvz.rit.edu/api/v2/status/players?search=James%20Spann
-var oReq = new XMLHttpRequest();  
-oReq.onload = reqListener;  
-oReq.onerror = reqError;  
-oReq.open('get', 'http://hvz.jspann.me', true);  
-oReq.send();
-
-	}
-function reqListener() {  
-  var data = JSON.parse(this.responseText);  
-  console.log(data);  
-}
-
-function reqError(err) {  
-  console.log('Fetch Error :-S', err);  
-}
-</script>
-
 <body onload="init()">
 	<div id="header">
 			<canvas id="sineCanvas"></canvas>
@@ -233,7 +212,7 @@ function reqError(err) {
 	</tr>
 	</table>
 
-	<h1 id="hvzstatus">HvZ Status</h1>
+	<h1 id="hvzstatus">HvZ Status: <p style="color:#00FF48;">Human</p> </h1>
 	<h1>Contact</h1>
 	<div id="contactBox">
 		<p>Email: <a href="mailto:thedeveloperj@gmail.com">thedeveloperj@gmail.com</a></p>
