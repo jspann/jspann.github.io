@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My photos</title>
+	<link rel="stylesheet" type="text/css" href="photostyle.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript">
+		function initialSetup(){
+			document.getElementById("allimages").addEventListener("click", getAllImages);
+			document.getElementById("bandwimages").addEventListener("click", getBlackAndWhiteImages);
+			document.getElementById("colorimages").addEventListener("click", getColorImages);
+		}
+
+		function getAllImages(){
+			console.log("Loading color images");
+		}
+
+		function getBlackAndWhiteImages(){
+			console.log("Loading color images");
+		}
+
+		function getColorImages(){
+			console.log("Loading color images");
+		}
+	</script>
+
+</head>
+<body onload="initialSetup()">
+	<div id="siteHead">
+		<h1 id="title">My Photos</h1>
+		<p class="headerButton" id="allimages">All</p>
+		<p class="headerButton" id="bandwimages">Black and White</p>
+		<p class="headerButton" id="colorimages">Color</p>
+
+		<p id="numImages">~ images</p>
+	</div>
+	</br>
+	<div id="imagesBox">
+		<img src="http://jspann.me/jspann.png" class="imagebox"/>
+	</div>
+</body>
+</html>
