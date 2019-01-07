@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<meal refimage="" reference="https://kirbiecravings.com/instant-pot-garlic-parmesan-macaroni-and-cheese/">
+<title>Macaroni and Cheese</title>
+<ingredients>
+	<item amount="1" units="Pound">Elbow Macaroni</item>
+	<item amount="4" units="Cup">Water</item>
+	<item amount="4" units="Clove">Large Garlic Cloves</item>
+	<item amount="1/2" units="Tbsp">Garlic Powder</item>
+	<item amount="1" units="Tbsp">Mustard Powder</item>
+	<item amount="2" units="Tbsp">Butter</item>
+	<item amount="1" units="Cup">Heavy Cream</item>
+	<item amount="6" units="Ounces">Shredded Cheddar Cheese</item>
+	<item amount="4" units="Ounces">Shredded Mozarella Cheese</item>
+	<item amount="1" units="Tbsp">Black Pepper</item>
+</ingredients>
+<steps>
+	<step>Add all of the water to the pot</step>
+	<step>Add all of the Garlic Cloves to the pot</step>
+	<step>Add all of the Garlic Powder to the pot</step>
+	<step>Add all of the Mustard Powder to the pot</step>
+	<step>Add all of the Butter to the pot</step>
+	<step>Stir to mix all of the contents together</step>
+	<step>Close the instant pot</step>
+	<step>Set the timer for 30 Minutes on the instant pot</step>
+	<step>When finished, open the instant pot</step>
+	<step>Add all of the heavy cream to the pot</step>
+	<step>Add all of the cheeses to the pot</step>
+	<step>Add all of the black pepper</step>
+	<step>Stir to mix all of the contents together</step>
+</steps>
+</meal>
