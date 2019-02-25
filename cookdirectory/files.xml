@@ -1,3 +1,5 @@
 <meals>
-	<mealxml name="Macaroni and Cheese">http://jspann.me/cookdirectory/macAndCheese.xml</mealxml>
+	<mealxml name="Instant Pot Spaghetti">http://jspann.me/cookdirectory/Spaghetti.xml</mealxml>
+    <mealxml name="Instant Pot Shredded Chicken">http://jspann.me/cookdirectory/shreddedChicken.xml</mealxml>
+    <mealxml name="Macaroni and Cheese">http://jspann.me/cookdirectory/macAndCheese.xml</mealxml>
 </meals>
