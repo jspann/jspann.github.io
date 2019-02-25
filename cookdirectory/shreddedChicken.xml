@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<meal refimage="" reference="https://amindfullmom.com/instant-pot-chicken-breasts/">
+<title>Shredded Chicken</title>
+<ingredients>
+	<item amount="1.5" units="Quarts">Pineapple Juice</item>
+    <item amount="5" units="Breasts">Chicken Breast</item>
+</ingredients>
+<steps>
+    <step>Put all of the meat in the Instant Pot</step>
+    <step>Put all of the Pineapple Juice in the Instant Pot. All of the breasts should be covered by the liquid</step>
+    <step>Set the Instant Pot to 12 minutes and cook</step>
+    <step>After cooking, do an instant release and separate the broth from the chicken breasts</step>
+	<step>Mash the chicken pieces with a fork or spatula to make sure the pieces rip apart</step>
+</steps>
+</meal>

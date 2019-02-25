@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<meal refimage="" reference="https://thesaltymarshmallow.com/instant-pot-spaghetti/">
+<title>Instant Pot Spaghetti</title>
+<ingredients>
+	<item amount="1" units="Pound">Pasta</item>
+    <item amount="1" units="Pound">Ground Beef</item>
+    <item amount="14.5" units="Ounces">Diced Tomatoes</item>
+    <item amount="23.5" units="Ounces">Roasted Garlic Tomato Sauce</item>
+    <item amount="" units="">Scallions</item>
+    <item amount="8" units="Ounces">Sliced Baby Bella Mushrooms</item>
+</ingredients>
+<steps>
+	<step>Set the Instant Pot to Sauté and add all of the ground beef</step>
+    <step>Add seasoning (Black Pepper, onion powder) and mix the meat until it appears to be golden brown</step>
+    <step>Add all of the Pasta to the pot</step>
+    <step>Add all of the Diced Tomatoes to the pot</step>
+    <step>Add all of the Scallions to the pot</step>
+    <step>Add all of the Tomato Sauce to the pot</step>
+    <step>Stir to mix all of the contents together</step>
+    <step>Set the Instant Pot to Manual and cook for 10 minutes</step>
+</steps>
+</meal>
