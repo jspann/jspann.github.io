@@ -1,4 +1,6 @@
 {
+"projects":[
+{
 	"title":"deskTouch",
 	"timeframe":"",
 	"backgroundImage":"",
@@ -24,4 +26,5 @@
 	"timeframe":"Summer 2019",
 	"backgroundImage":"",
 	"color":"red"
-},
+}]
+}
