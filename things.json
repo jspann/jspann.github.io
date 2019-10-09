@@ -1,30 +1,61 @@
 {
+
 "projects":[
 {
 	"title":"deskTouch",
+	"description":"",
 	"timeframe":"",
-	"backgroundImage":"",
+	"backgroundImage":"http://jspann.me/jspann.png",
 	"color":"red"
 },
 
 {
 	"title":"Bitcoin Blender",
+	"description":"",
 	"timeframe":"",
-	"backgroundImage":"",
-	"color":"red"
+	"backgroundImage":"http://jspann.me/jspann.png",
+	"color":"blue"
 },
 
 {
 	"title":"Foodcam-Classifier",
+	"description":"",
 	"timeframe":"Summer 2019",
-	"backgroundImage":"",
+	"backgroundImage":"http://jspann.me/jspann.png",
 	"color":"red"
 },
 
 {
 	"title":"Datachain",
+	"description":"",
 	"timeframe":"Summer 2019",
-	"backgroundImage":"",
+	"backgroundImage":"http://jspann.me/jspann.png",
 	"color":"red"
-}]
+},
+
+
+{
+	"title":"Cooking App",
+	"description":"",
+	"timeframe":"",
+	"backgroundImage":"http://jspann.me/jspann.png",
+	"color":"red"
+},
+
+{
+	"title":"iEssay",
+	"description":"",
+	"timeframe":"",
+	"backgroundImage":"http://jspann.me/jspann.png",
+	"color":"red"
+},
+{
+	"title":"jspann.github.io",
+	"description":"This website along with it's subdomains",
+	"timeframe":"",
+	"backgroundImage":"http://jspann.me/jspann.png",
+	"color":"red"
+}
+]
+
 }
