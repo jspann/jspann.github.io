@@ -1,0 +1,208 @@
+<!-- Created by James Spann (but you knew that already).
+Github logo from: https://github.com/logos
+Twitter logo from: https://about.twitter.com/en_us/company/brand-resources.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello There!</title>
+</head>
+<script type="text/javascript" src="loadboxes.js"></script>
+<link rel="stylesheet" type="text/css" href="boxstyles.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:700&display=swap" rel="stylesheet">
+
+<body onload="loadprojects()">
+<style type="text/css">
+
+	*{
+		margin: 0px;
+		padding: 0px;
+		font-family: 'Nunito', sans-serif;
+
+
+	}
+
+	body {
+		background-color: #5E4B4D;
+	}
+
+	#backimagebox{
+
+	}
+
+	#topbackimg{
+		width: auto;
+		/*height: 80%;*/
+		min-width: 100%;
+		max-height: 80%;
+		/*filter: blur(5px);*/
+
+		/*-webkit-filter: grayscale(100%);*/
+
+		max-height: 60%;
+		max-width: 100%;
+		overflow: scroll;
+       
+	}
+
+	#topprofilebox{
+
+	}
+
+	#faceimg{
+		width: 20%;
+		position: absolute;
+		border-radius: 50%;
+		border: solid white 2px;
+		top: 10%;
+		left: 5%;
+	}
+
+	.imglogo{
+		height: 1em;
+	}
+
+
+	#profileSideTextBox{
+		position: absolute;
+		left: 50%;
+		top: 15%;
+	}
+
+
+	#topbox{
+		height: 100%;
+	}
+
+	#topbox img{
+		
+	}
+
+	#toptextboxmenu{
+		margin-top: 8%;
+	}
+
+
+	/* My name in the h1 tag */
+	#mynamebox{
+		display: inline-block;
+		white-space: nowrap;
+		overflow: hidden;
+
+		font-size: 150%;
+	}
+
+	.topoverlaybox{
+		background-color: rgba(0,0,0,0.7);
+		color: white;
+
+	    white-space: nowrap;
+
+		-webkit-animation-name: swipeLoad; /* Safari 4.0 - 8.0 */
+		-webkit-animation-duration: 2s; /* Safari 
+		4.0 - 8.0 */
+		-webkit-animation-iteration-count:1; /*infinite */
+		/*animation-name: example;*/
+		/*animation-duration: 4s;*/
+
+
+	}
+
+@-webkit-keyframes swipeLoad {
+  /*from {
+  		overflow: hidden;
+  		width: 0px;
+  		}
+  to {
+  		overflow: visible;
+  		width: auto;
+  	}*/
+
+    0% {width:0px;}
+    100% { width: 12em;}
+    /* width:11em;*/
+}
+
+/* Safari 4.0 - 8.0 */
+/*
+@-webkit-keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+*/
+/* Standard syntax */
+/*
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+*/
+
+
+
+</style>
+
+<div id="topbox">
+	<div id="topprofilebox">
+		<img src="http://jspann.me/jspann.png" id="faceimg">
+
+		<div id="profileSideTextBox">
+			
+			<!-- <h1 class="topoverlaybox" id="mynamebox">James Spann</h1> -->
+			<div class="topoverlaybox" id="mynamebox"> <h1 style="margin-left: 2px; margin-right: 2px;">James Spann</h1> </div>
+			
+
+			<div id="toptextboxmenu">
+				<a href="" class="topoverlaybox">My Blog</a>
+				<a href="" class="topoverlaybox">My Photos</a>
+				<a href="http://github.com/jspann" class="topoverlaybox"><img src="./ghlogo.png" class="imglogo"></a>
+
+				<a href="https://twitter.com/thedeveloperj" class="topoverlaybox"><img src="./twlogo.png" class="imglogo"></a>
+
+				<a href="" class="topoverlaybox">Linkedin</a>
+			</div>
+		
+		</div>
+		
+	</div>
+	<div id="backimagebox">
+		<img src="centercityimg.png" id="topbackimg">	
+	</div>
+	
+</div>
+
+<div id="projectsBox">
+	<!--
+	<div class="projectSquare">
+		<img class="projectImage" src="http://jspann.me/jspann.png">
+		<div class="projectText">
+			<p class="projectTitle">This goes here</p>
+			<p class="projectDescription">Possibly a short description about how cool this </p>
+		</div>
+	</div>
+	<div class="projectSquare">
+		<img class="projectImage" src="http://jspann.me/jspann.png">
+		<div class="projectText">
+			<p class="projectTitle">This goes here</p>
+			<p class="projectDescription">Possibly a short description about how cool this </p>
+		</div>
+	</div>
+	<div class="projectSquare">
+		<img class="projectImage" src="http://jspann.me/jspann.png">
+		<div class="projectText">
+			<p class="projectTitle">This goes here</p>
+			<p class="projectDescription">Possibly a short description about how cool this </p>
+		</div>
+	</div>
+	<div class="projectSquare">
+		<img class="projectImage" src="http://jspann.me/jspann.png">
+		<div class="projectText">
+			<p class="projectTitle">This goes here</p>
+			<p class="projectDescription">Possibly a short description about how cool this </p>
+		</div>
+	</div>
+-->
+</div>
+
+
+</body>
+</html>

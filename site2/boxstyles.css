@@ -1,0 +1,59 @@
+/** Second half of the web page **/
+:root {
+  /*--main-bg-color: coral;*/
+  /*--main-txt-color: blue;*/
+  /*--main-padding: 15px;*/
+  --proj-box-width: 23vw;
+}
+
+#projectsBox{
+
+}
+
+.projectSquare{
+    background: red;
+    width: var(--proj-box-width);
+    height: 25vw;
+    border: solid 1px blue;
+    position: relative;
+    display: inline-block;
+    margin-left: 1vw;
+    overflow: hidden;
+}
+
+.projectSquare:hover {
+	/* add a border? */
+}
+
+
+.projectImage{
+	min-width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	height: auto;
+
+}
+
+
+.projectText{
+	top: 0px;
+	position: absolute;
+	height: 100%;
+	opacity: 0.6;
+  text-align: center;
+  color: white;
+}
+
+.projectText:hover{
+	-webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+	opacity: 0;
+}
+
+.projectTitle{
+}
+
+.projectDescription{
+}
