@@ -10,7 +10,8 @@ function loadprojects(){
 	    for (var i = myProjects["projects"].length - 1; i >= 0; i--) {
 			console.log(myProjects["projects"][i]);
 			console.log(myProjects["projects"][i].title);
-			buildProjectBlock(myProjects["projects"][i].title, "wow a cool description would go here probably", "https://www.thisiscolossal.com/wp-content/uploads/2018/04/agif1opt.gif",myProjects["projects"][i].color);//myProjects["projects"][i].backgroundImage);
+			// buildProjectBlock(myProjects["projects"][i].title, "wow a cool description would go here probably", "https://www.thisiscolossal.com/wp-content/uploads/2018/04/agif1opt.gif",myProjects["projects"][i].color);//myProjects["projects"][i].backgroundImage);
+			buildProjectBlock(myProjects["projects"][i].title, "wow a cool description would go here probably", "https://raw.githubusercontent.com/jspann/jspann.github.io/site2/frontimages/iessayicon.png",myProjects["projects"][i].color);//myProjects["projects"][i].backgroundImage);
 		}
 	    // document.getElementById("demo").innerHTML = myObj.name;
 	  }
@@ -45,7 +46,8 @@ function buildProjectBlock(projectName,projectSubtitle,projectImageURL,refcolor)
 
 	var projectText = document.createElement("div");
 	projectText.className = "projectText";
-	projectText.style.cssText = "opacity 0.6; background-color:"+refcolor+";";
+	// projectText.style.cssText = "opacity 0.6; background-color:"+refcolor+";";
+	// projectText.style.cssText = "opacity 0.6; background-color:"+refcolor+";";
 	projectText.onclick = function () {
 		alert("stuff goes here!");
 	};
