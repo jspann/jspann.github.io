@@ -14,7 +14,7 @@
     background: red;
     width: var(--proj-box-width);
     height: 25vw;
-    border: solid 1px blue;
+    border: solid 1px white;
     position: relative;
     display: inline-block;
     margin-left: 1vw;
@@ -39,17 +39,21 @@
 	top: 0px;
 	position: absolute;
 	height: 100%;
-	opacity: 0.6;
+	/*opacity: 0.6;*/
+  opacity: 0.0;
   text-align: center;
   color: white;
+
+  background-color: black;
 }
 
 .projectText:hover{
-	-webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -ms-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-	opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  /*opacity: 0;*/
+  opacity: 0.6;
 }
 
 .projectTitle{
