@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Research!</title>
+</head>
+
+<style type="text/css">
+	
+	* {
+		font-family: "Figtree";
+	}
+
+	body {
+		backdrop-color: #E7DFDD;
+	}
+
+	h3, h5 {
+		display: inline;
+	}
+
+	.titleTag{
+		margin-top: 40px;
+	}
+
+	.imageHolder {
+		width: 100%;
+	}
+
+	.imageHolder img {
+		display: inline-block;
+	}
+
+	#navigationBox {
+		position: fixed;
+		right: 10px;
+		border: 4px solid #FF9AA2;
+		display: inline-grid;
+		padding: 4px;
+/*		background-color: #FF9AA2;*/
+		background-color: rgba(255, 154, 162, 0.7);
+	}
+
+	#navigationBox a {
+		margin-top: 5px;
+	}
+
+</style>
+
+<body>
+
+
+<div id="navigationBox">
+	<a href="#peerreviewed">Peer Reviewed</a>
+	<a href="#projects">Projects</a>
+</div>
+
+<u><h1>Research</h1></u>
+
+<h2 id="peerreviewed">Peer Reviewed Publications</h2>
+<img src="./research_pictures/MARQ.png" width="25%"><br>
+<h3>Hitting your MARQ: Multimodal ARgument Quality Assessment in Long Debate Video</h3>
+<p>The combination of gestures, intonations, and textual content plays a key role in argument delivery. However, the current literature mostly considers textual content while assessing the quality of an argument, and it is limited to datasets containing short sequences (18-48 words). In this paper, we study argument quality assessment in a multimodal context, and experiment on DBATES, a publicly available dataset of long debate videos. First, we propose a set of interpretable debate centric features such as clarity, content variation, body movement cues, and pauses, inspired by theories of argumentation quality. Second, we design the Multimodal ARgument Quality assessor (MARQ)–a hierarchical neural network model that summarizes the multimodal signals on long sequences and enriches the multimodal embedding with debate centric features. Our proposed MARQ model achieves an accuracy of 81.91% on the argument quality prediction task and outperforms established baseline models with an error rate reduction of 22.7%. Through ablation studies, we demonstrate the importance of multimodal cues in modeling argument quality.</p>
+<a href="https://aclanthology.org/2021.emnlp-main.515/">Link to Paper</a><br>
+
+
+<img src="./research_pictures/farout.png" style="margin-top: 100px;" width="25%"><br>
+<h3>FarOut Touch: Extending the Range of ad hoc Touch Sensing with Depth Cameras</h3>
+<p>The ability to co-opt everyday surfaces for touch interactivity has been an area of HCI research for several decades. Ideally, a sensor operating in a device (such as a smart speaker) would be able to enable a whole room with touch sensing capabilities. Such a system could allow for software-defined light switches on walls, gestural input on countertops, and in general, more digitally flexible environments. While advances in depth sensors and computer vision have led to step-function improvements in the past, progress has slowed in recent years. We surveyed the literature and found that the very best ad hoc touch sensing systems are able to operate at ranges up to around 1.5 m. This limited range means that sensors must be carefully positioned in an environment to enable specific surfaces for interaction. In this research, we set ourselves the goal of doubling the sensing range of the current state of the art system. To achieve this goal, we leveraged an interesting finger ”denting” phenomena and adopted a marginal gains philosophy when developing our full stack. When put together, these many small improvements compound and yield a significant stride in performance. At 3 m range, our system offers a spatial accuracy of 0.98 cm with a touch segmentation accuracy of 96.1%, in line with prior systems operating at less than half the range. While more work remains to be done to achieve true room-scale ubiquity, we believe our system constitutes a useful advance over prior work.</p>
+<a href="https://dl.acm.org/doi/abs/10.1145/3485279.3485281">Link to Paper</a><br>
+
+<hr>
+<h2 id="projects">Projects</h2>
+<h3>Open Algorithms (OPAL)</h3><br>
+<p>Applications on the internet (ex. social media video streaming sites) want to create an engaging personalized experience but do so by sharing a user’s data without their direct knowledge. Users are not immediately aware of which institutions have access to their data, what kinds of new insight is being generated from that data, and what kinds of algorithms are being used on their data. The goal of our work was to create a tool that allows a user to explicitly state which algorithms can be used on their data and let the user audit how that data was used with different algorithms later on. This will help to build trust between users and their applications.</p>
+
+<a href="https://www.media.mit.edu/projects/opal-health/overview/">More here...</a>
+
+</body>
+</html>
