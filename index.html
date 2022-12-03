@@ -85,7 +85,10 @@
 	td:hover {
 		border: 2px solid grey;
 /*		background: rgba(255,154,162,0.5);*/
-		
+	}
+
+	.clickable {
+		cursor: pointer;
 	}
 
 	.hackathon {
@@ -229,7 +232,7 @@
 	</tr>
 	<tr>
 
-		<td onclick="location.href='https://github.com/jspann/jspann.github.io';" class="website">
+		<td onclick="location.href='https://github.com/jspann/jspann.github.io';" class="website clickable">
 			<img src="./project_pictures/website.png">
 			<h3>jspann.me</h3>
 			<p style="text-indent: 30px;">This website along with it's subdomains</p>
@@ -245,7 +248,7 @@
 		</th>
 	</tr>
 
-	<td onclick="location.href='https://devpost.com/software/datachain';" class="hackathon">
+	<td onclick="location.href='https://devpost.com/software/datachain';" class="hackathon clickable">
 			<div class="imageOverlay">
 				<!-- https://unsplash.com/photos/OKOOGO578eo -->
 				<img src="./project_pictures/nastya-dulhiier-OKOOGO578eo-unsplash.jpg">
@@ -263,7 +266,7 @@
 	</tr>
 
 	<tr>
-		<td class="iosapp" onclick="location.href='https://github.com/jspann/MapAPI';">
+		<td class="iosapp clickable" onclick="location.href='https://github.com/jspann/MapAPI';">
 			<!-- https://unsplash.com/photos/qoAIlAmLJBU -->
 			<!-- <img src="./project_pictures/oxana-v-qoAIlAmLJBU-unsplash.jpg"> -->
 			<img src="./project_pictures/map_api_referencepage.png">
@@ -281,7 +284,7 @@
 	</tr>
 
 	<!-- <td class="website" onclick="location.href='https://github.com/jspann/jspann.github.io/tree/master/othello';"> -->
-	<td class="website" onclick="location.href='https://jspann.me/othello/';">
+	<td class="website clickable" onclick="location.href='https://jspann.me/othello/';">
 		<img src="./project_pictures/qothello.png">
 		<h3>Quantum Othello</h3>
 		<p style="text-indent: 30px;">Inspired by <a href="https://www.youtube.com/watch?v=Hi0BzqV_b44">quantum chess</a> I built a site that lets you play Othello with or without pieces being in superposition (source is on Github)</p>
@@ -295,7 +298,7 @@
 	</tr>
 
 	<tr>
-		<td class="iosapp" onclick="location.href='http://jspann.me/doteo';">
+		<td class="iosapp clickable" onclick="location.href='http://jspann.me/doteo';">
 			<img src="./project_pictures/ddots.png">
 			<h3>Doteo</h3>
 			<p style="text-indent: 30px;">A fast paced puzzle game for iOS (~1,000 downloads - no longer on the App Store)</p>
@@ -320,7 +323,7 @@
 		<h3>Hydrogen VM</h3>
 		<p style="text-indent: 30px;">A tiny process virtual machine for running programs</p>
 	</td>
-	<td onclick="location.href='https://github.com/jspann/MouseLib';">
+	<td onclick="location.href='https://github.com/jspann/MouseLib';" class="clickable">
 			<div class="imageOverlay">
 				<img src="./project_pictures/mouselib.png">
 			</div>
@@ -328,7 +331,7 @@
 			<p style="text-indent: 30px;">Some C standard functions</p>
 		</td>
 
-	<td onclick="location.href='https://github.com/jspann/GiraffeLang';">
+	<td onclick="location.href='https://github.com/jspann/GiraffeLang';" class="clickable">
 			<div class="imageOverlay">
 				<img src="./project_pictures/giraffe.png">
 			</div>
