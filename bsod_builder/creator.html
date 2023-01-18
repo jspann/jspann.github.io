@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript" src="kinetic-v5.1.0.min.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="qrcode.min.js"></script>
+	
+</head>
+
+<style type="text/css">
+
+	@import url('https://fonts.googleapis.com/css?family=Cantarell&display=swap');
+/*	@import url('https://fonts.googleapis.com/css?family=Cantarell&display=swap');*/
+
+
+	* {
+		font-family: "Avenir";
+	}
+
+
+	html {
+		height: 100%;
+	}
+
+	body {
+		margin: 0px;
+/*		background-color: red;*/
+/*		background-image: linear-gradient(black, white, 10%);*/
+/*		background-image: linear-gradient(0deg, white, .1%, black);*/
+
+
+		height: 100%;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+
+	#currentBSOD {
+		margin-left: 1vw;
+		margin-top: 20vh;
+	}
+
+	#texteditorwindow{
+/*		position: absolute;*/
+		margin-left: 70vw;
+/*		margin-top: 0px;*/
+   position:absolute;
+   top:0;
+/*   right:0;*/
+
+
+	}
+</style>
+
+
+
+<script type="text/javascript">
+	
+	function addStartup() {
+		var canvas = document.getElementById("currentBSOD");
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = "rgba(21,94,153, 1.0)";
+		// ctx.fillStyle = "red";
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+
+
+		// rgb(21,94,153);
+		// ctx.font = "30px Arial";
+		// ctx.fillText("Hello World", 10, 50);
+	}
+
+
+	function redrawCanvas() {
+		var canvas = document.getElementById("currentBSOD");
+		var ctx = canvas.getContext("2d");
+		
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		
+
+
+		ctx.translate(0.5, 0.5);
+
+
+		/////
+		// To calculate the size of the canvas window
+		/////
+
+		// 1. Make the width half the page width (then minus 2vw for margin)
+		// 2. make the height based on the resolution (ex. 4:3)
+		// 3. 
+		var resolution_value = document.getElementById("screenres").value;
+		var relevantResolution = 1.0;
+		if (resolution_value == "fullscreen"){
+			relevantResolution = 3/4;
+		} else if (resolution_value == "widescreen"){
+			relevantResolution = 9/16
+		}
+// <option value=>4:3</option>
+// <option value=>16:9</option>
+
+		
+		// Set display size (vw/vh).
+		var sizeWidth = 50 * window.innerWidth / 100;
+		// var sizeHeight = 100;//100 * window.innerHeight / 100 || 766;
+		var sizeHeight = sizeWidth*relevantResolution;
+
+		//Setting the canvas site and width to be responsive 
+		canvas.width = sizeWidth;
+		canvas.height = sizeHeight;
+		canvas.style.width = sizeWidth;
+		canvas.style.height = sizeHeight
+
+		/// Reset the blue color
+
+		ctx.fillStyle = "rgba(21,94,153, 1.0)";
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+		// Update with the text from the side bar
+		// ctx.font = "30px Arial";
+
+
+		var text_margin_left = (sizeWidth*.1);
+
+		// Draw sad face
+		var sadface_height = (sizeHeight*.17);
+
+		ctx.font = sadface_height+"px Cantarell";//17% of the overall height
+		ctx.fillStyle = "white";
+		ctx.fillText(":(", text_margin_left, (sizeHeight*.17));//10% of the width, 17% of the height
+
+		//Draw main message
+		ctx.font = (sizeHeight*.07)/2+"px Cantarell";
+		ctx.fillStyle = "white";
+		ctx.fillText(document.getElementById("mainmessage").value, text_margin_left, (sizeHeight*.32));//10% of the width, 17% of the height
+
+
+		//TODO - wrap mainmessage text
+
+		//Draw secondary message
+		ctx.font = (sizeHeight*.07)/2+"px Cantarell";
+		ctx.fillStyle = "white";
+		ctx.fillText(document.getElementById("secondmessage").value, text_margin_left, (sizeHeight*.57));//10% of the width, 17% of the height
+
+
+		// Draw QR Code
+		var left_text_space = 0.0;
+
+		if (document.getElementById("siteurl").value != "") {
+
+			// var qr_size = (sizeHeight*.75)-(sizeHeight*.65);
+			var qr_size = (sizeHeight*.1);
+
+			const qrDiv = document.getElementById('qrcode')
+			var qrCode = new QRCode(
+			    qrDiv,
+			    {
+			        text: document.getElementById("siteurl").value,
+			        width: qr_size,
+			        height: qr_size,
+			        colorDark : "rgba(21,94,153, 1.0)",
+					colorLight : "#ffffff",
+			        onSuccess: (value) => {
+			            console.log('value',value);
+
+
+			        }
+			    }
+			);
+
+			const src = document.getElementById('qrcode').children[0].toDataURL("image/png");
+			document.getElementById('qrcode').remove();
+
+			var image = new Image();
+			image.onload = function() {
+				ctx.drawImage(image, text_margin_left, (sizeHeight*.65));
+			};
+			image.src = src;
+
+			
+			/*
+			var qrcode = new QRCode("test", {
+				text: "http://jspann.me",
+				width: 128,
+				height: 128,
+				colorDark : "#000000",
+				colorLight : "#ffffff",
+				correctLevel : QRCode.CorrectLevel.H
+			});
+			*/
+
+		// ctx.drawImage(qrcode, 10, 10);
+
+			left_text_space = text_margin_left+qr_size+(sizeWidth*.01);
+		} else {
+			left_text_space = text_margin_left;
+		}
+
+		
+
+
+		ctx.font = (sizeHeight*.02)+"px Cantarell";
+		ctx.fillStyle = "white";
+		ctx.fillText("your help text will go here", left_text_space, (sizeHeight*.65));//10% of the 
+		
+	}
+
+	function saveBSOD() {
+		var canvas = document.getElementById("currentBSOD");
+		var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+
+
+		window.location.href=image; // it will save locally
+	}
+
+</script>
+
+
+
+<body onload="redrawCanvas()">
+
+	<div id="referencewindow">
+		<canvas id="currentBSOD"></canvas>
+	</div>
+
+	<div id="texteditorwindow">
+
+		<h3 class="screenResolution">Resolution</h3>
+		<select name="screenres" id="screenres">
+			<option value="fullscreen">4:3</option>
+			<option value="widescreen">16:9</option>
+		</select>
+
+
+		<h3 class="sectionTitle">Main message</h3>
+		<input type="text" id="mainmessage"><br>
+
+		<h3 class="sectionTitle">Secondary title</h3>
+		<input type="text" id="secondmessage"><br>
+
+
+		<h3 class="sectionTitle">QR Code link</h3>
+		<input type="url" id="siteurl"><br>
+
+		<button id="updatebutton" onclick="redrawCanvas()">Update Image</button>
+
+		<button id="savebutton" onclick="saveBSOD()">Save Image</button>
+
+		<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+
+	</div>
+
+</body>
+</html>

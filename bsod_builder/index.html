@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BSOD Builder</title>
+</head>
+
+<style>
+
+
+	* {
+		font-family: "Avenir";
+	}
+
+	body{
+		background-color: blue;
+		animation: backgroundChange 5s linear infinite;
+	}
+
+	#descriptionholder{
+		width: 50vw;
+		margin-left: 25vw;
+		margin-top: 10vh;
+
+		background-color: rgba(100, 100, 100, 0.25);
+	}
+
+	.exampleBox{
+		max-width: 15vw;
+	}
+
+
+	@keyframes backgroundChange {
+		0%, 100% {
+			background-color: blue;
+		}
+
+		50% {
+			background-color: cyan;
+		}
+	}
+</style>
+
+<body>
+	<div id="descriptionholder">
+
+		<h1>BSOD Builder</h1>
+		<a href="https://old.reddit.com/r/funny/comments/1089zej/coworkers_screen_saver_for_context_it_looks_like/">Inspired by a reddit post</a>, this website is designed to let you build your own Blue Screen of death wallpapers/screensavers. Choose from different colors, fonts, and text sizes!<br><br>
+		
+		<button onclick="window.location.href='./creator.html'">Let's go!</button>
+
+
+
+		<br><br><br><br>
+		<h3>Examples</h3>
+		<!-- Side by side divs tha get bigger when you click them -->
+		<img class="exampleBox" src="https://jspann.me/jspann.jpeg" style="margin-left: 2vw;" />
+		<img class="exampleBox" src="https://jspann.me/jspann.jpeg" />
+		<img class="exampleBox" src="https://jspann.me/jspann.jpeg" />
+		<br><br>
+		<i>Built by <a href="http://jspann.me">James Spann</a></i>
+	</div>
+
+</body>
+</html>
