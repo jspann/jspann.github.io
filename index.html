@@ -40,15 +40,16 @@
 	#describeBox {
 		display: inline-block;
 		width: 70%;
-		float: right;
+		/*float: right;*/
 
 
 /*  white-space: nowrap; /* Prevents text from wrapping */
 		word-break: break-word; /* If you have long words, they will break */
+		box-sizing: border-box;
 	}
 
 	#describeBox p{
-		width: 670px; /* This was added, along with the word-break above, to keep the text from running around as the window's width was adjusted */
+		/*width: 670px; /* This was added, along with the word-break above, to keep the text from running around as the window's width was adjusted */
 	}
 
 
@@ -191,11 +192,23 @@
 	text-align: initial;
 }
 
+@media (max-width: 768px) {
+    
+    /* 1. HIDE THE SPECIFIC IMAGE */
+    #profileholder img {
+        display: none; /* This ensures the image doesn't appear when the screen is narrow */
+    }
+
+    #profileholder {
+    	padding: 5px;
+    }
+}
+
 </style>
 <body>
 
 	<div id="profileholder">
-		<img src="jspann.jpeg">
+		<img src="jspann.jpeg" style="margin-right: 25px; float: inline-start">
 		
 		<div id="describeBox">
 			<div>
